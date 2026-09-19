@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+:root {
+  --news: oklch(0.955 0.018 95);
+  --ink: oklch(0.20 0.02 40);
+  --rule: oklch(0.78 0.02 90);
+  --stamp: oklch(0.52 0.19 28);
+  --flag: oklch(0.93 0.04 85);
+  --paper-dark: oklch(0.28 0.03 40);
+}
+
+@theme inline {
+  --color-news: var(--news);
+  --font-sans: var(--font-ui);
+  --font-serif: var(--font-essay);
+}
+
+html,
+body {
+  background: var(--news);
+  color: var(--ink);
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-ui), sans-serif;
+}
+
+.wrap {
+  width: min(1180px, calc(100% - 1.6rem));
+  margin-inline: auto;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+  padding: 1.4rem 0 1rem;
+  border-bottom: 3px solid var(--ink);
+  flex-wrap: wrap;
+}
+
+.paper-name {
+  font-family: var(--font-essay), serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.03em;
+}
+
+.deck {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+}
+
+.masthead nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+  font-weight: 700;
+}
+
+.masthead nav a,
+a {
+  color: var(--stamp);
+}
+
+.paper-foot {
+  border-top: 1px solid var(--rule);
+  margin-top: 3rem;
+  padding: 1.2rem 0 2rem;
+  font-size: 0.92rem;
+}
+
+.flag {
+  background: var(--flag);
+  padding: 0.85rem 1rem;
+  margin: 1.2rem 0;
+  border: 1px solid var(--rule);
+}
+
+h1 {
+  font-family: var(--font-essay), serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  margin: 1.2rem 0 0.6rem;
+}
+
+.essay {
+  font-family: var(--font-essay), serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 70ch;
+}
+
+.listings {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.listings th,
+.listings td {
+  text-align: left;
+  padding: 0.55rem 0.45rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.listings th {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.stamp {
+  background: var(--stamp);
+  color: oklch(0.97 0.02 95);
+  border: 0;
+  padding: 0.45rem 0.7rem;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.stamp.small {
+  padding: 0.2rem 0.45rem;
+  font-size: 0.82rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 2rem;
+}
+
+.index a {
+  display: block;
+  margin: 0.35rem 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.status {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}

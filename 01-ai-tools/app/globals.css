@@ -1,0 +1,277 @@
+@import "tailwindcss";
+
+:root {
+  --paper: oklch(0.965 0.022 88);
+  --ink: oklch(0.23 0.035 52);
+  --ochre: oklch(0.72 0.155 72);
+  --ochre-deep: oklch(0.58 0.14 62);
+  --soot: oklch(0.30 0.03 50);
+  --rule: oklch(0.82 0.03 80);
+  --rust: oklch(0.48 0.12 38);
+  --wash: oklch(0.93 0.03 85);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ochre: var(--ochre);
+  --font-sans: var(--font-ui);
+  --font-serif: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui), ui-sans-serif, system-ui, sans-serif;
+  min-height: 100%;
+}
+
+a {
+  color: var(--rust);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--ochre-deep);
+}
+
+.shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: end;
+  padding: 1.75rem 0 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.tag {
+  margin: 0.15rem 0 0;
+  font-size: 0.92rem;
+  color: var(--soot);
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.1rem;
+  font-size: 0.92rem;
+}
+
+.site-header nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-header nav a:hover {
+  color: var(--ochre-deep);
+}
+
+.site-footer {
+  margin-top: 4.5rem;
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 2.5rem;
+  padding: 3rem 0 2.5rem;
+}
+
+.hero h1 {
+  font-family: var(--font-body), serif;
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.lede {
+  font-family: var(--font-body), serif;
+  font-size: 1.2rem;
+  line-height: 1.55;
+  max-width: 62ch;
+}
+
+.ochre-panel {
+  background: var(--ochre);
+  color: var(--soot);
+  padding: 1.4rem 1.3rem;
+  align-self: start;
+}
+
+.ochre-panel strong {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 2.8rem 0 0.8rem;
+}
+
+.catalog {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.catalog th,
+.catalog td {
+  text-align: left;
+  padding: 0.85rem 0.6rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.catalog th {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  color: var(--soot);
+  width: 3rem;
+}
+
+.prose {
+  font-family: var(--font-body), serif;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  max-width: 70ch;
+}
+
+.prose p {
+  margin: 0 0 1rem;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.1rem;
+  font-size: 0.92rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.chip {
+  background: var(--wash);
+  padding: 0.15rem 0.5rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.compare {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+
+.compare th,
+.compare td {
+  border: 1px solid var(--rule);
+  padding: 0.7rem 0.75rem;
+  vertical-align: top;
+}
+
+.compare th {
+  background: var(--wash);
+}
+
+.stack {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 36rem;
+}
+
+.form input,
+.form textarea,
+.form select {
+  font: inherit;
+  padding: 0.65rem 0.7rem;
+  border: 1px solid var(--rule);
+  background: white;
+  color: var(--ink);
+}
+
+.form button,
+.btn {
+  appearance: none;
+  border: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.7rem 1rem;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-ochre {
+  background: var(--ochre);
+  color: var(--soot);
+}
+
+.grid-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.4rem 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .hero,
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
