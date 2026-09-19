@@ -14,6 +14,7 @@ export function SiteHeader() {
     <header className="masthead">
       <div>
         <Link href="/" className="paper-name">
+          <img src="/mark.png" alt="" width={36} height={36} />
           Rolepaper
         </Link>
         <p className="deck">Third-party tech &amp; electrical listings. We are not the employer.</p>

@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   description:
     "A small house of focused sites: Kiln for AI tools, Rolepaper for tech jobs. Unrelated niches stay apart.",
   robots: { index: true, follow: true },
+  icons: {
+    icon: [{ url: "/mark.png", type: "image/png" }],
+    apple: "/mark.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -40,6 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="frame">
           <header className="mast">
             <Link className="wordmark" href="/">
+              <img src="/mark.png" alt="" width={28} height={28} />
               Toolfolio
             </Link>
             <nav>

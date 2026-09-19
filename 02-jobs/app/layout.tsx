@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   description:
     "Live tech and electrical engineering listings from public job APIs. We are not the employer. Apply on the original posting.",
   robots: { index: true, follow: true },
+  icons: {
+    icon: [{ url: "/mark.png", type: "image/png" }],
+    apple: "/mark.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

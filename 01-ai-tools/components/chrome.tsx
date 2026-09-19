@@ -15,6 +15,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="brand-lockup">
         <Link href="/" className="wordmark">
+          <img src="/mark.png" alt="" width={32} height={32} />
           {site.name}
         </Link>
         <p className="tag">{site.tagline}</p>

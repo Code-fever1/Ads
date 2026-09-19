@@ -52,10 +52,19 @@ a {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-display), serif;
   font-size: 1.65rem;
   letter-spacing: -0.03em;
   text-decoration: none;
+}
+
+.wordmark img {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 0.38rem;
 }
 
 .mast nav {

@@ -60,11 +60,20 @@ a:hover {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-weight: 700;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   letter-spacing: -0.04em;
   color: var(--ink);
   text-decoration: none;
+}
+
+.wordmark img {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 0.4rem;
 }
 
 .tag {
