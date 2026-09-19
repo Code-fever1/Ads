@@ -1,0 +1,18 @@
+---
+description: Check and update SEO_RECORD.md before new sites, pages, or AdSense work.
+alwaysApply: true
+---
+
+# SEO record
+
+Before adding a site folder, a public route, AdSense/ads.txt, robots, sitemap, or schema, read `/SEO_RECORD.md` and follow its blueprint.
+
+After the change ships, tick or add the matching site section in that file. Do not invent a parallel SEO setup.
+
+Hard rules from the record:
+
+- One AdSense site: `toolfolio.page`. Same `ca-pub-5974580626732926` snippet on subdomains.
+- `ads.txt` only at `https://toolfolio.page/ads.txt`.
+- Never set `alternates.canonical: "/"` on a root layout.
+- Footer Privacy + Ads disclosure must point at the hub URLs.
+- Do not mix niches on one subdomain.

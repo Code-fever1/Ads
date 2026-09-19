@@ -52,7 +52,6 @@ export const metadata: Metadata = {
     description,
   },
   alternates: {
-    canonical: "/",
     types: { "application/rss+xml": "/feed.xml" },
   },
   robots: {

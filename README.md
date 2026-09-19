@@ -10,6 +10,8 @@ Apex domain: **toolfolio.page**
 
 Each site is a separate Vercel project so one niche cannot take the other down.
 
+SEO, AdSense, and new-site checklist: **[SEO_RECORD.md](./SEO_RECORD.md)**. Read it before adding a folder or ad tags.
+
 ## Name.com DNS (required)
 
 Nameservers are currently Name.com (`ns1bcp.name.com` …). Add two CNAME records:
