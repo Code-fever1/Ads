@@ -31,6 +31,7 @@ Duplicate from Kiln, then change names/domains:
 9. `app/opengraph-image.tsx` — site-specific OG image.
 10. Semantic HTML: `<time dateTime>`, visible “we are not the vendor/employer”, answer-first H1/H2. Tables on desktop, cards on small screens.
 11. After deploy: add a section below, tick what shipped, leave Search Console boxes unchecked until the user submits them.
+12. **Search Console Indexing Protocol**: After adding the property and submitting `/sitemap.xml`, wait for status to flip to **Success**. Then manually request indexing for the homepage and 1–2 top pillar URLs via URL Inspection to seed Googlebot crawl pipelines immediately.
 
 ## AdSense (network-wide)
 
@@ -57,27 +58,37 @@ Duplicate from Kiln, then change names/domains:
 - **Niche**: Publisher hub
 - **Live**: yes
 - **Shipped**: metadata/`pageMeta`, Organization + WebSite JSON-LD, robots + AI crawlers, sitemap, `/llms.txt`, AdSense in `<head>`, **ads.txt**, `/privacy`, `/disclosure`
-- **Search Console** (user):
-  - [ ] Add `https://toolfolio.page`
-  - [ ] Submit `https://toolfolio.page/sitemap.xml`
+- **Search Console**:
+  - [x] Property added: `https://toolfolio.page`
+  - [x] Sitemap submitted: `https://toolfolio.page/sitemap.xml` — **Status: SUCCESS** (20 Sep 2026)
+  - [x] Seed page indexing requested:
+    - `https://toolfolio.page/` (Homepage)
 
 ## 2. Kiln — kiln.toolfolio.page (`01-ai-tools`)
 
 - **Niche**: AI tools directory
 - **Live**: yes
 - **Shipped**: `pageMeta` + canonicals, SoftwareApplication / ItemList / Article / Breadcrumb, OG/Twitter + `opengraph-image`, robots, sitemap, `/feed.xml`, `/llms.txt`, AdSense, Privacy + Ads footer
-- **Search Console** (user):
-  - [ ] Add `https://kiln.toolfolio.page`
-  - [ ] Submit `https://kiln.toolfolio.page/sitemap.xml`
+- **Search Console**:
+  - [x] Property added: `https://kiln.toolfolio.page`
+  - [x] Sitemap submitted: `https://kiln.toolfolio.page/sitemap.xml` — **Status: SUCCESS** (20 Sep 2026)
+  - [x] Seed pages indexing requested:
+    - `https://kiln.toolfolio.page/` (Homepage)
+    - `https://kiln.toolfolio.page/tools` (Full interactive catalog)
+    - `https://kiln.toolfolio.page/best/ai-coding-tools` (Top ranking guide)
 
 ## 3. Rolepaper — rolepaper.toolfolio.page (`02-jobs`)
 
 - **Niche**: Tech and electrical jobs aggregator
 - **Live**: yes
 - **Shipped**: `pageMeta` + canonicals, JobPosting / ItemList / Article / Breadcrumb, OG/Twitter + `opengraph-image`, robots, sitemap (includes live `/job/[id]`), `/feed.xml`, `/llms.txt`, AdSense, Privacy + Ads footer
-- **Search Console** (user):
-  - [ ] Add `https://rolepaper.toolfolio.page`
-  - [ ] Submit `https://rolepaper.toolfolio.page/sitemap.xml`
+- **Search Console**:
+  - [x] Property added: `https://rolepaper.toolfolio.page`
+  - [x] Sitemap submitted: `https://rolepaper.toolfolio.page/sitemap.xml` — **Status: SUCCESS** (20 Sep 2026)
+  - [x] Seed pages indexing requested:
+    - `https://rolepaper.toolfolio.page/` (Homepage)
+    - `https://rolepaper.toolfolio.page/jobs` (Live classifieds board)
+    - `https://rolepaper.toolfolio.page/remote-jobs` (Top remote role hub)
 
 ## 4. Floor Price — TBD (`03-gaming-deals`)
 
