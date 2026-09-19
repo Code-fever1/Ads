@@ -2,7 +2,7 @@ export const site = {
   name: "Rolepaper",
   domain: "rolepaper.toolfolio.page",
   description:
-    "Live tech and electrical engineering listings from public job APIs. We are not the employer. Apply on the original posting.",
+    "Live software, machine learning, and electrical engineering jobs from public APIs. Rolepaper is not the employer — apply on the original posting.",
 };
 
 export function absUrl(path: string) {

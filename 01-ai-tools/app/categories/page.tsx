@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { categories } from "@/data/categories";
 import { toolsInCategory } from "@/data/tools";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Categories",
-  description: "AI tool categories on Kiln, from assistants to automation.",
-};
+export const metadata = pageMeta({
+  title: "AI tool categories",
+  description: "AI tool categories on Kiln, from assistants and coding agents to image, video, and automation.",
+  path: "/categories",
+});
 
 export default function CategoriesPage() {
   return (

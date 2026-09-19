@@ -14,7 +14,7 @@ export function SiteHeader() {
     <header className="masthead">
       <div>
         <Link href="/" className="paper-name">
-          <img src="/mark.png" alt="" width={36} height={36} />
+          <img src="/mark.png" alt="Rolepaper logo" width={36} height={36} />
           Rolepaper
         </Link>
         <p className="deck">Third-party tech &amp; electrical listings. We are not the employer.</p>
@@ -34,11 +34,13 @@ export function SiteFooter() {
   return (
     <footer className="paper-foot">
       <p>
-        Listings are fetched from public APIs (Remote OK, Himalayas, Arbeitnow), dated, and dropped when
-        stale. Apply on the original posting.
+        Rolepaper is a third-party job aggregator on rolepaper.toolfolio.page. We are not the employer.
+        Listings come from Remote OK, Himalayas, and Arbeitnow, then drop after 30 days. Apply on the
+        original posting. Part of <a href="https://toolfolio.page">Toolfolio</a>.
       </p>
       <p>
-        <Link href="/sources">Attribution</Link> · <Link href="/career">Career desk</Link>
+        <Link href="/sources">Attribution</Link> · <Link href="/career">Career desk</Link> ·{" "}
+        <a href="/llms.txt">llms.txt</a>
       </p>
     </footer>
   );
@@ -48,7 +50,7 @@ export function JsonLd({ data }: { data: unknown }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}
     />
   );
 }

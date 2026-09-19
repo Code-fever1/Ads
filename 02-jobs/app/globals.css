@@ -169,6 +169,45 @@ h1 {
   font-size: 0.9rem;
 }
 
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.55rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+.crumbs li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.55rem;
+  opacity: 0.55;
+}
+
+.faq {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  max-width: 70ch;
+}
+
+.faq h2 {
+  font-family: var(--font-essay), serif;
+  font-size: 1.45rem;
+  margin: 0 0 1rem;
+}
+
+.faq h3 {
+  font-size: 1.02rem;
+  margin: 1.1rem 0 0.3rem;
+}
+
+.faq p {
+  margin: 0;
+  line-height: 1.55;
+}
+
 @media (max-width: 800px) {
   .columns {
     grid-template-columns: 1fr;

@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { guides } from "@/data/guides";
+import { pageMeta } from "@/lib/seo";
 import { formatDate } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Notes",
-  description: "Method, pricing traps, and policy notes from Kiln.",
-};
+export const metadata = pageMeta({
+  title: "Notes on AI tools",
+  description: "How Kiln evaluates tools, pricing traps in 2026, and when not to use an AI coding agent.",
+  path: "/blog",
+});
 
 export default function BlogIndex() {
   return (

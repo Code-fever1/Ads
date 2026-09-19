@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { comparisons } from "@/data/comparisons";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Compare",
-  description: "Side-by-side AI tool comparisons with a pick-A and pick-B line.",
-};
+export const metadata = pageMeta({
+  title: "AI tool comparisons",
+  description: "Side-by-side comparisons such as ChatGPT vs Claude and Cursor vs GitHub Copilot, with a pick-A and pick-B line.",
+  path: "/compare",
+});
 
 export default function CompareIndex() {
   return (

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Atkinson_Hyperlegible, Libre_Baskerville } from "next/font/google";
-import { SiteFooter, SiteHeader } from "@/components/chrome";
+import { JsonLd, SiteFooter, SiteHeader } from "@/components/chrome";
+import { orgJsonLd, webSiteJsonLd } from "@/lib/jsonld";
 import "./globals.css";
 
 const ui = Atkinson_Hyperlegible({
@@ -15,15 +16,56 @@ const essay = Libre_Baskerville({
   weight: ["400", "700"],
 });
 
+const description =
+  "Live software, machine learning, and electrical engineering jobs from public APIs. Rolepaper is not the employer — apply on the original posting.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://rolepaper.toolfolio.page"),
   title: {
-    default: "Rolepaper · third-party software & electrical jobs",
+    default: "Rolepaper · live software and electrical jobs",
     template: "%s · Rolepaper",
   },
-  description:
-    "Live tech and electrical engineering listings from public job APIs. We are not the employer. Apply on the original posting.",
-  robots: { index: true, follow: true },
+  description,
+  applicationName: "Rolepaper",
+  authors: [{ name: "Rolepaper", url: "https://rolepaper.toolfolio.page" }],
+  creator: "Rolepaper",
+  publisher: "Toolfolio",
+  category: "jobs",
+  keywords: [
+    "software engineer jobs",
+    "remote developer jobs",
+    "machine learning jobs",
+    "frontend developer jobs",
+    "electrical engineer jobs",
+  ],
+  openGraph: {
+    title: "Rolepaper · live software and electrical jobs",
+    description,
+    url: "https://rolepaper.toolfolio.page",
+    siteName: "Rolepaper",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rolepaper · live software and electrical jobs",
+    description,
+  },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": "/feed.xml" },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [{ url: "/mark.png", type: "image/png" }],
     apple: "/mark.png",
@@ -41,6 +83,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
       </head>
       <body className="min-h-full">
+        <JsonLd data={orgJsonLd()} />
+        <JsonLd data={webSiteJsonLd()} />
         <div className="wrap">
           <SiteHeader />
           {children}

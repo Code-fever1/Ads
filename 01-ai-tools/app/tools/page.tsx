@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { tools } from "@/data/tools";
+import { pageMeta } from "@/lib/seo";
 import { formatDate } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "All tools",
-  description: "Every AI tool currently on the Kiln bench, with last-verified dates.",
-};
+export const metadata = pageMeta({
+  title: "All AI tools",
+  description: `Every AI tool currently on the Kiln bench (${tools.length} listings), with last-verified dates and skip-if notes.`,
+  path: "/tools",
+});
 
 export default function ToolsIndex() {
   return (

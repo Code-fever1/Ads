@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Submit a tool",
-  description: "Suggest an AI tool for Kiln. Manual review only.",
-};
+export const metadata = pageMeta({
+  title: "Submit an AI tool",
+  description: "Suggest an AI tool for Kiln. Manual review only — no cracked software.",
+  path: "/submit",
+});
 
 export default async function SubmitPage({
   searchParams,

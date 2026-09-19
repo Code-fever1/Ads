@@ -74,7 +74,9 @@ export function JobsBoard({
           <tbody>
             {jobs.map((job) => (
               <tr key={job.id}>
-                <td>{when(job.postedAt)}</td>
+                <td>
+                  <time dateTime={job.postedAt}>{when(job.postedAt)}</time>
+                </td>
                 <td>
                   <Link href={`/job/${job.id}`}>{job.title}</Link>
                 </td>

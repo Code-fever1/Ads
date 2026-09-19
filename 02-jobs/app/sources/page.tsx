@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Sources",
-  description: "Where Rolepaper’s live jobs come from, and why we do not scrape LinkedIn.",
-};
+export const metadata = pageMeta({
+  title: "Job sources",
+  description: "Where Rolepaper’s live jobs come from, and why we do not scrape LinkedIn or Indeed.",
+  path: "/sources",
+});
 
 export default function SourcesPage() {
   return (

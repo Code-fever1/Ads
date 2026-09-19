@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { careerPages } from "@/data/career";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Career desk",
-  description: "CV, interviews, salaries, and how-to pages. Better ad inventory than listing tables.",
-};
+export const metadata = pageMeta({
+  title: "Career desk for software engineers",
+  description:
+    "CV, cover letters, interviews, salaries, and how to become a software engineer — written for Rolepaper readers, not a course funnel.",
+  path: "/career",
+});
 
 export default function CareerIndex() {
   return (

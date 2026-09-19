@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
 import { getGuide } from "@/data/guides";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Methodology",
-  description: "How Kiln decides what to list.",
-};
+export const metadata = pageMeta({
+  title: "How Kiln evaluates AI tools",
+  description: "We only list products with a public website, a last-verified date, and a skip-if line. Cracked software is out.",
+  path: "/methodology",
+});
 
 export default function MethodologyPage() {
   const guide = getGuide("how-we-evaluate");

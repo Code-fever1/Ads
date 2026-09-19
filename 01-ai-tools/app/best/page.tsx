@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { rankings } from "@/data/rankings";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Best of",
-  description: "Ranked AI tool shortlists with a method and last-verified dates.",
-};
+export const metadata = pageMeta({
+  title: "Best AI tools by job",
+  description: "Ranked AI tool shortlists for coding, writing, image, video, agents, and students — with methods and last-verified dates.",
+  path: "/best",
+});
 
 export default function BestIndex() {
   return (

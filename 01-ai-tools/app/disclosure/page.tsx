@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
 import { getGuide } from "@/data/guides";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Disclosure",
-  description: "How Kiln will use ads and affiliates.",
-};
+export const metadata = pageMeta({
+  title: "Ads and affiliates",
+  description: "How Kiln will use ads and affiliates. We are not the vendor.",
+  path: "/disclosure",
+});
 
 export default function DisclosurePage() {
   const guide = getGuide("ads-and-affiliates");

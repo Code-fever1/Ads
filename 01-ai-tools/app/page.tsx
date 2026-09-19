@@ -3,9 +3,18 @@ import { comparisons } from "@/data/comparisons";
 import { categories } from "@/data/categories";
 import { rankings } from "@/data/rankings";
 import { tools } from "@/data/tools";
+import { Faq } from "@/components/faq";
 import { JsonLd } from "@/components/chrome";
-import { orgJsonLd } from "@/lib/jsonld";
-import { formatDate } from "@/lib/site";
+import { itemListJsonLd } from "@/lib/jsonld";
+import { pageMeta } from "@/lib/seo";
+import { formatDate, site } from "@/lib/site";
+
+export const metadata = pageMeta({
+  title: "Best AI tools, ranked with last-verified dates",
+  description: site.description,
+  path: "/",
+  absoluteTitle: `${site.name} · ${site.tagline}`,
+});
 
 export default function Home() {
   const featured = tools.filter((tool) =>
@@ -14,7 +23,13 @@ export default function Home() {
 
   return (
     <main>
-      <JsonLd data={orgJsonLd()} />
+      <JsonLd
+        data={itemListJsonLd(
+          "Featured AI tools on Kiln",
+          "/",
+          featured.map((tool) => ({ name: tool.name, path: `/tools/${tool.slug}` })),
+        )}
+      />
       <section className="hero">
         <div>
           <p className="section-label" style={{ marginTop: 0 }}>
@@ -22,9 +37,9 @@ export default function Home() {
           </p>
           <h1>Which AI tool still earns its seat.</h1>
           <p className="lede">
-            Kiln is a dated directory of assistants, coding agents, image tools, and automations. Each
-            entry has a skip-if line and a last-verified date. We send you to the vendor. Unrelated
-            niches (jobs, gaming, coupons) live on other sites.
+            Kiln is an independent AI tools directory at kiln.toolfolio.page. Each listing is a product
+            with a public site, a last-verified date, and a skip-if line. We send you to the vendor. We
+            are not ChatGPT, Claude, or Cursor — we review them.
           </p>
         </div>
         <aside className="ochre-panel">
@@ -57,7 +72,9 @@ export default function Home() {
               </td>
               <td>{tool.bestFor}</td>
               <td>{tool.priceBand}</td>
-              <td>{formatDate(tool.lastVerified)}</td>
+              <td>
+                <time dateTime={tool.lastVerified}>{formatDate(tool.lastVerified)}</time>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -98,6 +115,26 @@ export default function Home() {
           </Link>
         ))}
       </div>
+
+      <Faq
+        items={[
+          {
+            question: "What is Kiln?",
+            answer:
+              "Kiln is a dated AI tools directory. We list assistants, coding agents, image tools, and automations with skip-if notes and a last-verified date. We do not sell the software.",
+          },
+          {
+            question: "How do you pick the best AI tool?",
+            answer:
+              "We rank for a job, not a leaderboard. A coding page is editors and agents. A writing page is models, checkers, and platforms. Criteria sit on each best-of page. Method: /methodology.",
+          },
+          {
+            question: "Is this ChatGPT, Claude, or another vendor?",
+            answer:
+              "No. Kiln is independent. Official product pages are linked from each profile. Jobs live on Rolepaper, not here.",
+          },
+        ]}
+      />
     </main>
   );
 }

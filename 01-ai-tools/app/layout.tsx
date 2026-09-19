@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Commissioner, Source_Serif_4 } from "next/font/google";
-import { SiteFooter, SiteHeader } from "@/components/chrome";
+import { JsonLd, SiteFooter, SiteHeader } from "@/components/chrome";
+import { orgJsonLd, webSiteJsonLd } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -23,12 +24,46 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: site.description,
+  applicationName: site.name,
+  authors: [{ name: site.name, url: "https://kiln.toolfolio.page" }],
+  creator: site.name,
+  publisher: "Toolfolio",
+  category: "technology",
+  keywords: [
+    "AI tools",
+    "AI tools directory",
+    "best AI coding tools",
+    "ChatGPT alternatives",
+    "AI image generators",
+  ],
   openGraph: {
-    title: site.name,
+    title: `${site.name} · ${site.tagline}`,
     description: site.description,
+    url: "https://kiln.toolfolio.page",
+    siteName: site.name,
+    locale: "en_US",
     type: "website",
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} · ${site.tagline}`,
+    description: site.description,
+  },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": "/feed.xml" },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [{ url: "/mark.png", type: "image/png" }],
     apple: "/mark.png",
@@ -46,6 +81,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
       </head>
       <body className="min-h-full">
+        <JsonLd data={orgJsonLd()} />
+        <JsonLd data={webSiteJsonLd()} />
         <div className="shell">
           <SiteHeader />
           {children}

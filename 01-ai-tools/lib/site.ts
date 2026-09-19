@@ -24,6 +24,30 @@ export function formatDate(iso: string) {
   });
 }
 
+export function relatedForTool(slug: string) {
+  return {
+    rankings: rankings.filter((item) => item.toolSlugs.includes(slug)),
+    comparisons: comparisons.filter((item) => item.a === slug || item.b === slug),
+  };
+}
+
+export function lastVerifiedForPath(path: string) {
+  if (path.startsWith("/tools/")) {
+    return tools.find((tool) => `/tools/${tool.slug}` === path)?.lastVerified;
+  }
+  if (path.startsWith("/blog/")) {
+    return guides.find((guide) => `/blog/${guide.slug}` === path)?.date;
+  }
+  if (path.startsWith("/best/")) {
+    const ranking = rankings.find((item) => `/best/${item.slug}` === path);
+    const dates = ranking?.toolSlugs
+      .map((slug) => tools.find((tool) => tool.slug === slug)?.lastVerified)
+      .filter(Boolean) as string[];
+    return dates.sort().at(-1);
+  }
+  return undefined;
+}
+
 export function allIndexablePaths() {
   return [
     "/",
