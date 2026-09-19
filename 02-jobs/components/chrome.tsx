@@ -17,7 +17,7 @@ export function SiteHeader() {
           <img src="/mark.png" alt="Rolepaper logo" width={36} height={36} />
           Rolepaper
         </Link>
-        <p className="deck">Third-party tech &amp; electrical listings. We are not the employer.</p>
+        <p className="deck">Live software &amp; electrical jobs. We are not the employer.</p>
       </div>
       <nav aria-label="Desks">
         {nav.map(([label, href]) => (
@@ -38,9 +38,11 @@ export function SiteFooter() {
         Listings come from Remote OK, Himalayas, and Arbeitnow, then drop after 30 days. Apply on the
         original posting. Part of <a href="https://toolfolio.page">Toolfolio</a>.
       </p>
-      <p>
-        <Link href="/sources">Attribution</Link> · <Link href="/career">Career desk</Link> ·{" "}
-        <a href="/llms.txt">llms.txt</a>
+      <p className="footer-links">
+        <a href="https://toolfolio.page/privacy">Privacy</a>
+        <a href="https://toolfolio.page/disclosure">Ads disclosure</a>
+        <Link href="/sources">Attribution</Link>
+        <Link href="/career">Career desk</Link>
       </p>
     </footer>
   );

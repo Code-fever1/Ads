@@ -36,12 +36,12 @@ export default function ToolsIndex() {
             .map((tool, index) => (
               <tr key={tool.slug}>
                 <td className="num">{String(index + 1).padStart(2, "0")}</td>
-                <td>
+                <td data-label="Tool">
                   <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
                 </td>
-                <td>{tool.categories.join(", ")}</td>
-                <td>{tool.pricing}</td>
-                <td>{formatDate(tool.lastVerified)}</td>
+                <td data-label="Categories">{tool.categories.join(", ")}</td>
+                <td data-label="Pricing">{tool.pricing}</td>
+                <td data-label="Verified">{formatDate(tool.lastVerified)}</td>
               </tr>
             ))}
         </tbody>

@@ -88,11 +88,11 @@ export default async function RankingPage({ params }: Props) {
           {ranked.map(({ index, tool }) => (
             <tr key={tool.slug}>
               <td className="num">{String(index + 1).padStart(2, "0")}</td>
-              <td>
+              <td data-label="Tool">
                 <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
               </td>
-              <td>{tool.bestFor}</td>
-              <td>
+              <td data-label="Why it is here">{tool.bestFor}</td>
+              <td data-label="Verified">
                 <time dateTime={tool.lastVerified}>{formatDate(tool.lastVerified)}</time>
               </td>
             </tr>

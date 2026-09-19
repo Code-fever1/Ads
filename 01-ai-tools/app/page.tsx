@@ -66,13 +66,13 @@ export default function Home() {
           {featured.map((tool, index) => (
             <tr key={tool.slug}>
               <td className="num">{String(index + 1).padStart(2, "0")}</td>
-              <td>
+              <td data-label="Tool">
                 <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
                 <div>{tool.vendor}</div>
               </td>
-              <td>{tool.bestFor}</td>
-              <td>{tool.priceBand}</td>
-              <td>
+              <td data-label="Job">{tool.bestFor}</td>
+              <td data-label="Price">{tool.priceBand}</td>
+              <td data-label="Verified">
                 <time dateTime={tool.lastVerified}>{formatDate(tool.lastVerified)}</time>
               </td>
             </tr>

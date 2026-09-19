@@ -322,4 +322,60 @@ a:hover {
   .split {
     grid-template-columns: 1fr;
   }
+
+  .catalog thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .catalog,
+  .catalog tbody,
+  .catalog tr,
+  .catalog td {
+    display: block;
+    width: 100%;
+  }
+
+  .catalog tr {
+    margin: 0 0 0.85rem;
+    padding: 0.9rem 1rem 0.75rem;
+    background: var(--wash);
+    border: 1px solid var(--rule);
+  }
+
+  .catalog th,
+  .catalog td {
+    border: 0;
+    padding: 0.28rem 0;
+  }
+
+  .catalog td[data-label] {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 0.55rem;
+    align-items: start;
+  }
+
+  .catalog td[data-label]::before {
+    content: attr(data-label);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--soot);
+    padding-top: 0.15rem;
+  }
+
+  .catalog td.num {
+    width: auto;
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .compare {
+    display: block;
+    overflow-x: auto;
+  }
 }

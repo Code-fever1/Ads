@@ -9,6 +9,12 @@ function when(iso: string) {
   return iso.slice(0, 10);
 }
 
+function where(job: Job) {
+  if (job.remote && job.location) return `Remote · ${job.location}`;
+  if (job.remote) return "Remote";
+  return job.location || "On-site";
+}
+
 export function JobsBoard({
   initial,
   emptyNote,
@@ -58,6 +64,32 @@ export function JobsBoard({
         </button>
       </div>
       {status ? <p className="status">{status}</p> : null}
+
+      <ul className="job-cards">
+        {jobs.map((job) => (
+          <li key={job.id} className="job-card">
+            <p className="job-card-meta">
+              <time dateTime={job.postedAt}>{when(job.postedAt)}</time>
+              {" · "}
+              {where(job)}
+            </p>
+            <Link className="job-card-title" href={`/job/${job.id}`}>
+              {job.title}
+            </Link>
+            <p className="job-card-co">{job.company}</p>
+            <p className="job-card-pay">{job.salary}</p>
+            <div className="job-card-actions">
+              <a href={job.sourceHome} rel="noopener noreferrer" target="_blank">
+                {job.sourceLabel}
+              </a>
+              <a className="stamp small" href={job.applyUrl} rel="noopener noreferrer" target="_blank">
+                Apply
+              </a>
+            </div>
+          </li>
+        ))}
+      </ul>
+
       <div className="table-wrap">
         <table className="listings">
           <thead>
@@ -81,11 +113,7 @@ export function JobsBoard({
                   <Link href={`/job/${job.id}`}>{job.title}</Link>
                 </td>
                 <td>{job.company}</td>
-                <td>
-                  {job.remote ? "Remote" : null}
-                  {job.remote && job.location ? " · " : null}
-                  {job.location}
-                </td>
+                <td>{where(job)}</td>
                 <td>{job.salary}</td>
                 <td>
                   <a href={job.sourceHome} rel="noopener noreferrer" target="_blank">

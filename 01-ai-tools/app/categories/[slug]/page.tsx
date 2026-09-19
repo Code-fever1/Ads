@@ -82,11 +82,11 @@ export default async function CategoryPage({ params }: Props) {
         <tbody>
           {list.map((tool) => (
             <tr key={tool.slug}>
-              <td>
+              <td data-label="Tool">
                 <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
               </td>
-              <td>{tool.bestFor}</td>
-              <td>
+              <td data-label="Best for">{tool.bestFor}</td>
+              <td data-label="Verified">
                 <time dateTime={tool.lastVerified}>{formatDate(tool.lastVerified)}</time>
               </td>
             </tr>

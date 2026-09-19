@@ -40,10 +40,10 @@ export function SiteFooter() {
         <a href="https://toolfolio.page">Toolfolio</a>.
       </p>
       <p className="footer-links">
-        <Link href="/methodology">Method</Link>
+        <a href="https://toolfolio.page/privacy">Privacy</a>
         <Link href="/disclosure">Ads and affiliates</Link>
+        <Link href="/methodology">Method</Link>
         <Link href="/submit">Submit a tool</Link>
-        <a href="/llms.txt">llms.txt</a>
       </p>
     </footer>
   );
