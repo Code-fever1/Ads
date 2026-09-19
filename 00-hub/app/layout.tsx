@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Figtree } from "next/font/google";
 import Link from "next/link";
-import { JsonLd } from "@/components/chrome";
+import { JsonLd, NetworkBar } from "@/components/chrome";
 import { orgJsonLd, webSiteJsonLd } from "@/lib/jsonld";
 import "./globals.css";
 
@@ -45,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full">
         <JsonLd data={orgJsonLd()} />
         <JsonLd data={webSiteJsonLd()} />
+        <NetworkBar current="hub" />
         <div className="frame">
           <header className="mast">
             <Link className="wordmark" href="/">

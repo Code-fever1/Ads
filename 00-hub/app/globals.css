@@ -44,6 +44,65 @@ a {
   padding: 2.5rem 0 4rem;
 }
 
+/* Network Ribbon */
+.network-ribbon {
+  border-bottom: 1px dashed var(--line);
+  padding: 0.45rem 0 0.65rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.78rem;
+}
+
+.network-ribbon-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.network-brand {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--mute);
+}
+
+.network-icon {
+  color: var(--teal);
+}
+
+.network-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.network-nav-item {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.network-nav-item:hover {
+  color: var(--teal);
+}
+
+.network-nav-item.current-site {
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.net-sub {
+  color: var(--mute);
+  font-size: 0.72rem;
+}
+
+.net-divider {
+  color: var(--line);
+}
+
 .mast {
   display: flex;
   justify-content: space-between;

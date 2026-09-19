@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/chrome";
 import { Crumbs, Faq } from "@/components/faq";
 import { JobsBoard } from "@/components/JobsBoard";
+import { careerPages } from "@/data/career";
 import { hubs } from "@/data/hubs";
 import { fetchLiveJobs, matchesHub } from "@/lib/jobs";
 import { breadcrumbJsonLd, hubListJsonLd } from "@/lib/jsonld";
@@ -35,6 +37,10 @@ export default async function HubPage({ params }: Props) {
   if (!hub) notFound();
   const jobs = (await fetchLiveJobs(100)).filter((job) => matchesHub(job, hub.keywords));
 
+  // Sister role hubs for cross-discovery
+  const sisterHubs = roleHubs.filter((h) => h.slug !== hub.slug).slice(0, 8);
+  const featuredEssays = careerPages.slice(0, 3);
+
   return (
     <main>
       <JsonLd data={hubListJsonLd(hub, jobs)} />
@@ -57,11 +63,49 @@ export default async function HubPage({ params }: Props) {
       <article className="essay">
         <p>{hub.intro}</p>
       </article>
+
       <JobsBoard
         initial={jobs}
         keywords={hub.keywords}
         emptyNote="No live matches in the current 100. The copy on this page is still the unique value; we will not pad with expired rows."
       />
+
+      {/* Featured Career Desk Callout */}
+      <section className="hub-career-callout">
+        <div className="callout-header">
+          <span className="stamp small">From the Career Desk</span>
+          <h3>Practical Advice for {hub.title}</h3>
+        </div>
+        <p className="callout-desc">
+          Applying to positions directly from this board? Review our no-fluff guides on preparing CVs,
+          handling technical interviews, and understanding compensation bands.
+        </p>
+        <div className="career-cards-row">
+          {featuredEssays.map((essay) => (
+            <Link key={essay.slug} href={`/career/${essay.slug}`} className="career-mini-card">
+              <span className="mini-card-title">{essay.title}</span>
+              <span className="mini-card-summary">{essay.summary}</span>
+              <span className="mini-card-read">Read Essay →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Cross-Discovery: Related Desks */}
+      <section className="related-desks-section">
+        <h3>Explore Other Role Desks</h3>
+        <div className="related-desks-pills">
+          <Link href="/jobs" className="r-desk-pill all-pill">
+            ← Live 100 Index
+          </Link>
+          {sisterHubs.map((sister) => (
+            <Link key={sister.slug} href={sister.path} className="r-desk-pill">
+              {sister.title}
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <Faq
         items={[
           {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Atkinson_Hyperlegible, Libre_Baskerville } from "next/font/google";
-import { JsonLd, SiteFooter, SiteHeader } from "@/components/chrome";
+import { JsonLd, NetworkBar, SiteFooter, SiteHeader } from "@/components/chrome";
 import { orgJsonLd, webSiteJsonLd } from "@/lib/jsonld";
 import "./globals.css";
 
@@ -52,6 +52,7 @@ export const metadata: Metadata = {
     description,
   },
   alternates: {
+    canonical: "/",
     types: { "application/rss+xml": "/feed.xml" },
   },
   robots: {
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={orgJsonLd()} />
         <JsonLd data={webSiteJsonLd()} />
         <div className="wrap">
+          <NetworkBar current="rolepaper" />
           <SiteHeader />
           {children}
           <SiteFooter />

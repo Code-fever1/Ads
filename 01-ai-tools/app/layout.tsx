@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Commissioner, Source_Serif_4 } from "next/font/google";
-import { JsonLd, SiteFooter, SiteHeader } from "@/components/chrome";
+import { JsonLd, NetworkBar, SiteFooter, SiteHeader } from "@/components/chrome";
 import { orgJsonLd, webSiteJsonLd } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     description: site.description,
   },
   alternates: {
+    canonical: "/",
     types: { "application/rss+xml": "/feed.xml" },
   },
   robots: {
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={orgJsonLd()} />
         <JsonLd data={webSiteJsonLd()} />
         <div className="shell">
+          <NetworkBar current="kiln" />
           <SiteHeader />
           {children}
           <SiteFooter />

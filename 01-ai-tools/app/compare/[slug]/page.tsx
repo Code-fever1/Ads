@@ -32,6 +32,8 @@ export default async function ComparePage({ params }: Props) {
   const a = getTool(comparison.a);
   const b = getTool(comparison.b);
 
+  const otherComparisons = comparisons.filter((c) => c.slug !== comparison.slug);
+
   return (
     <main>
       <JsonLd
@@ -57,13 +59,15 @@ export default async function ComparePage({ params }: Props) {
           { name: comparison.title, href: `/compare/${comparison.slug}` },
         ]}
       />
-      <p className="section-label">Comparison</p>
-      <h1 style={{ fontFamily: "var(--font-body)", fontSize: "clamp(2rem,4vw,3.2rem)" }}>
+
+      <p className="section-label" style={{ marginTop: "1.5rem" }}>Head-to-Head Comparison</p>
+      <h1 style={{ fontFamily: "var(--font-body)", fontSize: "clamp(2rem,4vw,3.2rem)", margin: "0 0 0.5rem" }}>
         {comparison.title}: which to pick
       </h1>
       <article className="prose">
         <p>{comparison.intro}</p>
       </article>
+
       <table className="compare">
         <thead>
           <tr>
@@ -82,21 +86,88 @@ export default async function ComparePage({ params }: Props) {
           ))}
         </tbody>
       </table>
-      <div className="split" style={{ marginTop: "2rem" }}>
-        <section>
-          <h2>When to pick {a?.name ?? comparison.a}</h2>
-          <p>{comparison.pickA}</p>
+
+      <div className="split review-split" style={{ marginTop: "2rem" }}>
+        <section className="verdict-card use-card">
+          <h2 className="section-label" style={{ marginTop: 0 }}>
+            When to pick {a?.name ?? comparison.a}
+          </h2>
+          <p style={{ margin: 0 }}>{comparison.pickA}</p>
         </section>
-        <section>
-          <h2>When to pick {b?.name ?? comparison.b}</h2>
-          <p>{comparison.pickB}</p>
+        <section className="verdict-card use-card">
+          <h2 className="section-label" style={{ marginTop: 0 }}>
+            When to pick {b?.name ?? comparison.b}
+          </h2>
+          <p style={{ margin: 0 }}>{comparison.pickB}</p>
         </section>
       </div>
-      <p className="section-label">Profiles</p>
-      <div className="grid-links">
-        {a ? <Link href={`/tools/${a.slug}`}>{a.name} review</Link> : null}
-        {b ? <Link href={`/tools/${b.slug}`}>{b.name} review</Link> : null}
+
+      {/* Deep-Dive Profile Cards */}
+      <h2 className="section-label" style={{ marginTop: "2.5rem" }}>Full Dedicated Reviews</h2>
+      <div className="comparison-profiles-grid">
+        {a && (
+          <div className="comp-profile-card">
+            <div className="comp-card-top">
+              <span className="comp-role-tag">Option A</span>
+              <span className="comp-price">{a.pricing}</span>
+            </div>
+            <h3>{a.name}</h3>
+            <p className="comp-vendor">by {a.vendor}</p>
+            <p className="comp-desc">{a.bestFor}</p>
+            <div className="comp-card-actions">
+              <Link href={`/tools/${a.slug}`} className="btn btn-ochre small">
+                Read {a.name} Review →
+              </Link>
+              <a href={a.website} target="_blank" rel="noopener noreferrer" className="alt-ext-link">
+                Official Site ↗
+              </a>
+            </div>
+          </div>
+        )}
+        {b && (
+          <div className="comp-profile-card">
+            <div className="comp-card-top">
+              <span className="comp-role-tag">Option B</span>
+              <span className="comp-price">{b.pricing}</span>
+            </div>
+            <h3>{b.name}</h3>
+            <p className="comp-vendor">by {b.vendor}</p>
+            <p className="comp-desc">{b.bestFor}</p>
+            <div className="comp-card-actions">
+              <Link href={`/tools/${b.slug}`} className="btn btn-ochre small">
+                Read {b.name} Review →
+              </Link>
+              <a href={b.website} target="_blank" rel="noopener noreferrer" className="alt-ext-link">
+                Official Site ↗
+              </a>
+            </div>
+          </div>
+        )}
       </div>
+
+      {/* Cross-Discovery: Other Comparisons */}
+      {otherComparisons.length > 0 && (
+        <section className="other-comparisons-section">
+          <div className="section-header-flex">
+            <h2 className="section-label" style={{ margin: 0 }}>
+              Other Head-to-Head Comparisons
+            </h2>
+            <Link href="/compare" className="view-all-link">
+              View all comparisons ({comparisons.length}) →
+            </Link>
+          </div>
+          <div className="other-comps-grid">
+            {otherComparisons.map((comp) => (
+              <Link key={comp.slug} href={`/compare/${comp.slug}`} className="comp-nav-card">
+                <span className="comp-nav-vs">Versus</span>
+                <span className="comp-nav-title">{comp.title}</span>
+                <span className="comp-nav-action">Compare Picks →</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       <Faq
         items={[
           {

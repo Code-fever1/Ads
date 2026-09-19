@@ -49,6 +49,64 @@ a:hover {
   margin-inline: auto;
 }
 
+/* Network Ribbon */
+.network-ribbon {
+  border-bottom: 1px dashed var(--rule);
+  padding: 0.5rem 0 0.6rem;
+  font-size: 0.78rem;
+}
+
+.network-ribbon-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.network-brand {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--soot);
+}
+
+.network-icon {
+  color: var(--ochre-deep);
+}
+
+.network-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.network-nav-item {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.network-nav-item:hover {
+  color: var(--ochre-deep);
+}
+
+.network-nav-item.current-site {
+  font-weight: 700;
+  color: var(--ochre-deep);
+}
+
+.net-sub {
+  color: var(--soot);
+  font-size: 0.72rem;
+}
+
+.net-divider {
+  color: var(--rule);
+}
+
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -955,3 +1013,305 @@ a:hover {
     align-items: flex-start;
   }
 }
+
+/* ==========================================================================
+   Podium Cards & Comparisons Exploration
+   ========================================================================== */
+
+.podium-section {
+  margin: 2.5rem 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.podium-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.podium-card {
+  padding: 1.4rem;
+  background: var(--wash);
+  border: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border-radius: 2px;
+  position: relative;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.podium-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ochre-deep);
+}
+
+.podium-card.rank-1 {
+  border-top: 4px solid var(--ochre-deep);
+  background: oklch(0.95 0.035 80);
+}
+
+.podium-card.rank-2 {
+  border-top: 4px solid var(--soot);
+}
+
+.podium-card.rank-3 {
+  border-top: 4px solid var(--rust);
+}
+
+.podium-badge {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--soot);
+}
+
+.podium-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.podium-name {
+  margin: 0;
+  font-family: var(--font-body), serif;
+  font-size: 1.3rem;
+}
+
+.podium-name a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.podium-name a:hover {
+  color: var(--ochre-deep);
+}
+
+.podium-vendor {
+  font-size: 0.8rem;
+  color: var(--soot);
+}
+
+.podium-price {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.podium-best {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.podium-skip {
+  font-size: 0.82rem;
+  color: var(--rust);
+  background: var(--paper);
+  padding: 0.55rem;
+  border-left: 2px solid var(--rust);
+}
+
+.podium-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding-top: 0.65rem;
+  border-top: 1px dashed var(--rule);
+}
+
+.podium-vendor-link {
+  font-size: 0.82rem;
+  color: var(--soot);
+}
+
+/* Other Rankings Section */
+.other-rankings-section {
+  margin: 3rem 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.other-guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.85rem;
+}
+
+.guide-nav-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem;
+  background: var(--wash);
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+}
+
+.guide-nav-card:hover {
+  border-color: var(--ochre-deep);
+  background: var(--paper);
+  transform: translateY(-2px);
+}
+
+.guide-kw {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ochre-deep);
+  margin-bottom: 0.2rem;
+}
+
+.guide-title {
+  font-family: var(--font-body), serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.guide-arrow {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--rust);
+  margin-top: auto;
+}
+
+/* Comparison Profiles Grid */
+.comparison-profiles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.comp-profile-card {
+  padding: 1.25rem;
+  background: var(--wash);
+  border: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  border-radius: 2px;
+}
+
+.comp-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comp-role-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ochre-deep);
+  letter-spacing: 0.08em;
+}
+
+.comp-price {
+  font-size: 0.74rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 0.15rem 0.45rem;
+  text-transform: capitalize;
+}
+
+.comp-profile-card h3 {
+  margin: 0;
+  font-family: var(--font-body), serif;
+  font-size: 1.3rem;
+}
+
+.comp-vendor {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--soot);
+}
+
+.comp-desc {
+  margin: 0.35rem 0 0.75rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.comp-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--rule);
+}
+
+/* Other Comparisons Grid */
+.other-comparisons-section {
+  margin: 3rem 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.other-comps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.85rem;
+}
+
+.comp-nav-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem;
+  background: var(--wash);
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+}
+
+.comp-nav-card:hover {
+  border-color: var(--ochre-deep);
+  background: var(--paper);
+  transform: translateY(-2px);
+}
+
+.comp-nav-vs {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ochre-deep);
+  margin-bottom: 0.2rem;
+}
+
+.comp-nav-title {
+  font-family: var(--font-body), serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.comp-nav-action {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--rust);
+  margin-top: auto;
+}
+
+@media (max-width: 700px) {
+  .comparison-profiles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
