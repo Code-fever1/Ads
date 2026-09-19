@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Commissioner, Source_Serif_4 } from "next/font/google";
+import Script from "next/script";
 import { SiteFooter, SiteHeader } from "@/components/chrome";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -34,6 +35,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${ui.variable} ${body.variable} h-full`}>
+      <head>
+        <Script
+          id="adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5974580626732926"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className="min-h-full">
         <div className="shell">
           <SiteHeader />

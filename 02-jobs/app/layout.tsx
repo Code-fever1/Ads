@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Atkinson_Hyperlegible, Libre_Baskerville } from "next/font/google";
+import Script from "next/script";
 import { SiteFooter, SiteHeader } from "@/components/chrome";
 import "./globals.css";
 
@@ -29,6 +30,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${ui.variable} ${essay.variable} h-full`}>
+      <head>
+        <Script
+          id="adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5974580626732926"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className="min-h-full">
         <div className="wrap">
           <SiteHeader />
