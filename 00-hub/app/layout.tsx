@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Fraunces, Figtree } from "next/font/google";
 import Link from "next/link";
+import { JsonLd } from "@/components/chrome";
+import { orgJsonLd, webSiteJsonLd } from "@/lib/jsonld";
 import "./globals.css";
 
 const display = Fraunces({
@@ -41,6 +43,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
       </head>
       <body className="min-h-full">
+        <JsonLd data={orgJsonLd()} />
+        <JsonLd data={webSiteJsonLd()} />
         <div className="frame">
           <header className="mast">
             <Link className="wordmark" href="/">

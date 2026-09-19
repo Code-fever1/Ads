@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Ads disclosure",
-};
+  description: "Ads and affiliate disclosure for the Toolfolio publisher hub.",
+  path: "/disclosure",
+});
 
 export default function DisclosurePage() {
   return (

@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Privacy",
-};
+  description: "Privacy policy for the Toolfolio publisher hub.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

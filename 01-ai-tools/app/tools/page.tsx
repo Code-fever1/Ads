@@ -1,51 +1,31 @@
-import Link from "next/link";
+import { categories } from "@/data/categories";
 import { tools } from "@/data/tools";
+import { ToolExplorer } from "@/components/ToolExplorer";
 import { pageMeta } from "@/lib/seo";
-import { formatDate } from "@/lib/site";
 
 export const metadata = pageMeta({
-  title: "All AI tools",
-  description: `Every AI tool currently on the Kiln bench (${tools.length} listings), with last-verified dates and skip-if notes.`,
+  title: "All AI tools · Interactive Directory",
+  description: `Every AI tool currently on the Kiln bench (${tools.length} listings), with interactive live filtering, last-verified dates, and skip-if notes.`,
   path: "/tools",
 });
 
 export default function ToolsIndex() {
   return (
     <main>
-      <h1 className="hero" style={{ display: "block", paddingBottom: "1rem" }}>
-        <span style={{ fontFamily: "var(--font-body)", fontSize: "clamp(2rem,4vw,3.2rem)" }}>
-          Full catalog
-        </span>
-      </h1>
-      <p className="lede">
-        {tools.length} active listings. Sorted A–Z. Open a profile for skip-if notes and alternatives.
-      </p>
-      <table className="catalog">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Tool</th>
-            <th>Categories</th>
-            <th>Pricing</th>
-            <th>Verified</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[...tools]
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map((tool, index) => (
-              <tr key={tool.slug}>
-                <td className="num">{String(index + 1).padStart(2, "0")}</td>
-                <td data-label="Tool">
-                  <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
-                </td>
-                <td data-label="Categories">{tool.categories.join(", ")}</td>
-                <td data-label="Pricing">{tool.pricing}</td>
-                <td data-label="Verified">{formatDate(tool.lastVerified)}</td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
+      <div className="hero" style={{ display: "block", paddingBottom: "1.25rem" }}>
+        <p className="section-label" style={{ marginTop: 0 }}>
+          Interactive Catalog
+        </p>
+        <h1 style={{ fontFamily: "var(--font-body)", fontSize: "clamp(2rem,4vw,3.2rem)", margin: "0 0 0.5rem" }}>
+          Full AI tools bench
+        </h1>
+        <p className="lede" style={{ marginTop: 0 }}>
+          {tools.length} active listings. Filter dynamically by workflow, budget, or vendor name.
+          Open any profile for unvarnished skip-if criteria, verified pricing, and direct alternatives.
+        </p>
+      </div>
+
+      <ToolExplorer initialTools={tools} availableCategories={categories} />
     </main>
   );
 }

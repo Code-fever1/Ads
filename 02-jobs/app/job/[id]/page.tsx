@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/chrome";
 import { Crumbs, Faq } from "@/components/faq";
-import { fetchJobById } from "@/lib/jobs";
+import { JobActions } from "@/components/JobActions";
+import { fetchJobById, fetchLiveJobs } from "@/lib/jobs";
 import { breadcrumbJsonLd, jobPostingJsonLd } from "@/lib/jsonld";
 import { pageMeta } from "@/lib/seo";
 
@@ -29,6 +30,17 @@ export default async function JobPage({ params }: Props) {
   const job = await fetchJobById(id);
   if (!job) notFound();
 
+  // Find similar jobs to keep readers browsing
+  const livePool = await fetchLiveJobs(40);
+  const similarJobs = livePool
+    .filter((j) => j.id !== job.id)
+    .filter((j) => {
+      if (job.remote && j.remote) return true;
+      const jobWords = job.title.toLowerCase().split(/\s+/);
+      return jobWords.some((w) => w.length > 3 && j.title.toLowerCase().includes(w));
+    })
+    .slice(0, 4);
+
   return (
     <main>
       <JsonLd data={jobPostingJsonLd(job)} />
@@ -46,56 +58,120 @@ export default async function JobPage({ params }: Props) {
           { name: job.title, href: `/job/${job.id}` },
         ]}
       />
+
       <p className="flag">
-        Third-party posting. Rolepaper is not hiring for this role. Applications go to the original
-        URL.
+        Third-party classified. Rolepaper is an independent aggregator. Applications submit directly
+        to the origin source.
       </p>
-      <h1>
-        {job.title} at {job.company}
-      </h1>
-      <p>
-        {job.company} · {job.remote ? "Remote" : job.location || "On-site"} · {job.employmentType} ·{" "}
-        {job.salary}
-      </p>
-      <p>
-        Posted <time dateTime={job.postedAt}>{new Date(job.postedAt).toUTCString()}</time>
-        {job.expiresAt ? (
-          <>
-            {" "}
-            · listed expiry <time dateTime={job.expiresAt}>{new Date(job.expiresAt).toUTCString()}</time>
-          </>
-        ) : (
-          " · Rolepaper drops listings older than 30 days"
-        )}
-      </p>
+
+      <div className="job-headline-block">
+        <h1>
+          {job.title} at {job.company}
+        </h1>
+        <JobActions jobId={job.id} jobTitle={job.title} applyUrl={job.applyUrl} />
+      </div>
+
+      <div className="job-meta-chips">
+        <span className="job-chip company-chip">{job.company}</span>
+        <span className="job-chip loc-chip">{job.remote ? "Remote 🌐" : job.location || "On-site"}</span>
+        <span className="job-chip type-chip">{job.employmentType}</span>
+        {job.salary && <span className="job-chip pay-chip">{job.salary}</span>}
+      </div>
+
+      <div className="job-timestamp-bar">
+        <span>Posted <time dateTime={job.postedAt}>{new Date(job.postedAt).toUTCString()}</time></span>
+        <span>·</span>
+        <span>
+          {job.expiresAt ? (
+            <>Expiry: <time dateTime={job.expiresAt}>{new Date(job.expiresAt).toUTCString()}</time></>
+          ) : (
+            "Auto-expires in 30 days"
+          )}
+        </span>
+        <span>·</span>
+        <span>
+          Origin:{" "}
+          <a href={job.sourceHome} rel="noopener noreferrer" target="_blank" className="source-link">
+            {job.sourceLabel}
+          </a>
+        </span>
+      </div>
+
       {job.remote ? (
-        <p className="essay">
-          This listing is advertised as remote. Country eligibility, if any, is on the original
-          posting — Rolepaper does not invent a work-authorization country.
+        <p className="essay remote-notice">
+          <strong>Remote Notice:</strong> This listing is marked as remote. Regional or national work-authorization requirements, if any, are governed by the hiring company on the origin application page.
         </p>
       ) : null}
-      <p>
-        Source:{" "}
-        <a href={job.sourceHome} rel="noopener noreferrer" target="_blank">
-          {job.sourceLabel}
-        </a>
-      </p>
-      <article className="essay">
-        <h2>About this role</h2>
+
+      <article className="essay job-content-box">
+        <h2>About this opening</h2>
         <p>{job.description || job.excerpt || "Full description is on the apply page."}</p>
       </article>
-      <p style={{ marginTop: "1.5rem" }}>
+
+      <div className="apply-banner">
+        <div>
+          <h3 style={{ margin: 0, fontSize: "1.2rem" }}>Ready to apply?</h3>
+          <p style={{ margin: "0.2rem 0 0", fontSize: "0.9rem", opacity: 0.9 }}>
+            Submit your resume directly on {job.sourceLabel} without intermediary accounts.
+          </p>
+        </div>
         <a className="stamp" href={job.applyUrl} rel="noopener noreferrer" target="_blank">
-          Apply on the original posting
+          Apply on original posting ↗
         </a>
-      </p>
-      <p>
-        <Link href="/jobs">Back to the live 100</Link>
-        {" · "}
-        <Link href="/software-jobs">Software jobs</Link>
-        {" · "}
-        <Link href="/remote-jobs">Remote jobs</Link>
-      </p>
+      </div>
+
+      {/* Similar Live Openings Module */}
+      {similarJobs.length > 0 && (
+        <section className="similar-jobs-section">
+          <div className="similar-header">
+            <h2>Similar Openings on the Wires</h2>
+            <Link href="/jobs" className="view-more-jobs">
+              View all live classifieds ({livePool.length}) →
+            </Link>
+          </div>
+
+          <div className="similar-grid">
+            {similarJobs.map((simJob) => (
+              <div key={simJob.id} className="similar-job-card">
+                <div className="similar-card-top">
+                  <span className="sim-where">{simJob.remote ? "Remote" : simJob.location || "On-site"}</span>
+                  <span className="sim-pay">{simJob.salary}</span>
+                </div>
+                <h3 className="sim-title">
+                  <Link href={`/job/${simJob.id}`}>{simJob.title}</Link>
+                </h3>
+                <p className="sim-co">{simJob.company}</p>
+                <div className="similar-card-footer">
+                  <Link href={`/job/${simJob.id}`} className="sim-details-btn">
+                    Read Details →
+                  </Link>
+                  <a
+                    href={simJob.applyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="sim-apply-btn"
+                  >
+                    Apply ↗
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div className="desk-nav-footer">
+        <Link href="/jobs" className="desk-foot-link">
+          ← Back to Live 100
+        </Link>
+        <div className="desk-foot-pills">
+          <Link href="/software-jobs">Software Jobs</Link>
+          <Link href="/remote-jobs">Remote Jobs</Link>
+          <Link href="/electrical-engineer-jobs">Electrical Roles</Link>
+          <Link href="/career">Career Essays</Link>
+        </div>
+      </div>
+
       <Faq
         items={[
           {

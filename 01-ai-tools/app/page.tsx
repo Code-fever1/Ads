@@ -80,6 +80,15 @@ export default function Home() {
         </tbody>
       </table>
 
+      <div style={{ marginTop: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem" }}>
+        <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--soot)" }}>
+          Want to filter by pricing, coding workflows, or search all verified listings?
+        </p>
+        <Link href="/tools" className="btn btn-ochre" style={{ textDecoration: "none" }}>
+          Open Full Interactive Bench ({tools.length} tools) →
+        </Link>
+      </div>
+
       <div className="split" style={{ marginTop: "3rem" }}>
         <div>
           <p className="section-label" style={{ marginTop: 0 }}>
