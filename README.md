@@ -1,17 +1,22 @@
 # Multi-niche SEO sites
 
-Three **separate** websites. Unrelated niches stay on their own domains so one weak vertical cannot drag the others.
+Apex domain: **toolfolio.page**
 
-| Folder | Working name | Niche | Status |
+| Folder | Site | Live URL | Niche |
 | --- | --- | --- | --- |
-| `01-ai-tools` | Kiln | AI tools directory + SaaS comparisons | Build first |
-| `02-jobs` | Rolepaper | Third-party jobs aggregator (tech + electrical) | Build second |
-| `03-gaming-deals` | Floor Price | Gaming / gadget verified deals | Research now, build later |
+| `01-ai-tools` | Kiln | https://kiln.toolfolio.page | AI tools directory |
+| `02-jobs` | Rolepaper | https://rolepaper.toolfolio.page | Tech / electrical jobs aggregator |
+| `03-gaming-deals` | Floor Price | later | Gaming / gadget deals |
 
-Each folder has a `research/` directory with keywords, IA, and the content plan. Applications are Next.js App Router (TypeScript, SSR/ISR) so custom domains can go to **Vercel** when you buy them. InfinityFree is only a fallback and is a poor fit for AdSense crawlers.
+Each site is a separate Vercel project so one niche cannot take the other down.
 
-## Dynamic jobs (no visitor-side scraping)
+## Name.com DNS (required)
 
-The visitor’s browser **cannot** legally or reliably scrape Indeed, LinkedIn, or Glassdoor. Those sites block CORS and forbid scraping in their terms. Option 1 is already in `02-jobs`: our Next.js server fetches **public job APIs** (Remote OK, Himalayas, Arbeitnow) and the page refreshes listings on each visit (cached a few minutes). That does **not** need a VPS.
+Nameservers are currently Name.com (`ns1bcp.name.com` …). Add two CNAME records:
 
-Use a VPS later only if you want 24/7 polling of many company Greenhouse/Lever boards beyond what these APIs cover.
+| Type | Host | Value |
+| --- | --- | --- |
+| CNAME | `kiln` | `cname.vercel-dns.com` |
+| CNAME | `rolepaper` | `cname.vercel-dns.com` |
+
+Do not point both sites at one Vercel project.
