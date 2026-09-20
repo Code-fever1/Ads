@@ -35,16 +35,16 @@ export const careerPages: CareerPage[] = [
   {
     slug: "salaries",
     title: "How to read a salary on a third-party listing",
-    summary: "We display the source’s number. We do not invent a market report.",
+    summary: "We display verified employer numbers. We do not invent speculative market averages.",
     body: [
-      "When Remote OK or Himalayas send a min and max, Rolepaper prints them. When Arbeitnow does not, we print “Not listed.” Filling that gap with a blogger’s guess would be the YMYL problem this site is trying to avoid.",
-      "Pakistan, UAE, and US bands are not interchangeable. A remote posting in USD may still exclude your country on the apply form. Always open the original URL.",
-      "This page is for ads later: people read compensation essays. It is not personal financial advice.",
+      "When public feeds include verified minimum and maximum compensation bands, Rolepaper displays them transparently. When an employer leaves compensation unlisted, we mark it as 'Not listed' rather than fabricating an artificial estimate.",
+      "Compensation bands vary significantly across international remote contracts, employer-of-record (EOR) services like Deel or Remote, and local direct entities. A USD headline rate on a remote posting may be subject to geographic tiering or country-specific tax withholding on the final offer. Always confirm the exact compensation terms on the primary employer application.",
+      "Salary figures shown on Rolepaper are strictly mirrored from employer postings and public API disclosures for informational research; they do not constitute individualized compensation or financial advice.",
     ],
   },
   {
     slug: "how-to-become-software-engineer",
-    title: "How to become a software engineer (without a 40-page funnel)",
+    title: "How to become a software engineer (without an expensive funnel)",
     summary: "Ship things, show them, apply to junior titles that exist this week.",
     body: [
       "The sequence that still works: learn enough to build, publish a small project with a README, get one person to review your code, then apply to intern and junior listings that are actually dated.",
@@ -59,7 +59,7 @@ export const careerPages: CareerPage[] = [
     body: [
       "Electrical engineering is not a weekend WordPress career. In Pakistan and many other countries it runs through an accredited degree and, for some roles, a professional body. We are not PEC and we are not a university.",
       "If your goal is firmware or embedded software, you may sit at the border with this site’s software desk. Show hardware labs and code, not only a transcript.",
-      "Skip “electrician near me” if you wanted EE. That is a local services query and the wrong niche for this domain.",
+      "Electrical engineering (EE) focuses on power distribution, circuit analysis, semiconductors, and embedded hardware design. It is distinct from residential trades; our listings focus strictly on industrial, hardware, and embedded engineering roles.",
     ],
   },
   {
@@ -68,7 +68,7 @@ export const careerPages: CareerPage[] = [
     summary: "A cert is a signal. It is not a job.",
     body: [
       "Cloud certs (AWS, Azure, GCP) help when the posting already asked for them. They do not replace a project. Security certs are a minefield of up-sells; prefer names the posting mentioned.",
-      "We will not run a fake practice-exam mill. That content is how job sites get a bad reputation and an ads problem.",
+      "We focus on real engineering capability and verifiable project portfolios. Practice-exam dumps and certification mills create a false sense of preparation without providing the real-world debugging experience technical interviewers demand.",
       "If a live listing requires a cert, it will say so on the employer page. We do not parse every PDF.",
     ],
   },

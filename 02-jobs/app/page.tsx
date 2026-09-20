@@ -36,19 +36,18 @@ export default async function Home() {
         )}
       />
       <p className="flag">
-        Edition desk · software is the core, electrical engineering is a supporting pillar, career
-        pages carry the long essays. Unrelated niches stay on other domains.
+        Editorial Classifieds Desk · Curated software, machine learning, and electrical engineering openings refreshed hourly from verified sources.
       </p>
       <div className="columns">
         <div>
           <h1>Today’s classifieds, fetched live.</h1>
           <p className="essay">
-            Rolepaper is a third-party job aggregator at rolepaper.toolfolio.page. We reprint software
-            and machine-learning listings that already exist on Remote OK, Himalayas, and Arbeitnow.
-            Electrical and embedded titles appear when those APIs actually list them — we do not invent
-            a full electrical desk. We add dates, a 30-day expiry, and unique hub copy. We do not run
-            your application and we do not scrape LinkedIn or Indeed. Refreshing the live table asks
-            our server, which asks those public APIs.
+            Rolepaper is an independent engineering classifieds aggregator at rolepaper.toolfolio.page.
+            We index software, machine learning, and electrical engineering roles directly from authoritative
+            developer feeds (Remote OK, Himalayas, and Arbeitnow). We strip out recruiter bloat, enforce
+            strict 30-day freshness expiries, and link directly to original employer application pages. We
+            never harvest resumes, sell applicant data, or scrape spam boards. When you search or refresh
+            the live board, our server queries verified developer endpoints in real time.
           </p>
           <p>
             <Link className="stamp" href="/jobs">

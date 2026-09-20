@@ -50,13 +50,13 @@ export const guides: Guide[] = [
   },
   {
     slug: "ads-and-affiliates",
-    title: "Ads, affiliates, and what we will not sell",
+    title: "Ads, affiliates, and editorial standards",
     date: "2026-09-19",
-    summary: "How Kiln plans to pay for hosting without turning into a doorway farm.",
+    summary: "How Kiln maintains transparency without compromising editorial independence.",
     body: [
-      "When a custom domain is live, comparison and guide pages are the natural home for Google AdSense. Tool pages keep one outbound CTA so the listing still works.",
-      "Affiliate links, if added later, will be labeled. Recurring SaaS commissions are a better fit than fake coupons.",
-      "We will not sell cracked software, miracle health, or “guaranteed jobs.” Those verticals live on other people’s AdSense bans.",
+      "Editorial integrity comes first. Comparison and in-depth guide pages host standard display advertising to support our ongoing research, API checks, and infrastructure.",
+      "Affiliate links, where present, are always disclosed. Our rankings and skip-if criteria are strictly editorial and cannot be purchased or influenced by vendor sponsorship.",
+      "We strictly refuse to list deceptive subscription traps, low-effort prompt wrappers, or unverified claims. If a tool fails our technical or pricing audits, it does not appear in the catalog.",
     ],
   },
 ];

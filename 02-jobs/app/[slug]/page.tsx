@@ -67,7 +67,7 @@ export default async function HubPage({ params }: Props) {
       <JobsBoard
         initial={jobs}
         keywords={hub.keywords}
-        emptyNote="No live matches in the current 100. The copy on this page is still the unique value; we will not pad with expired rows."
+        emptyNote="No active postings match this filter in the current feed window. Check back during daily updates or explore related categories below."
       />
 
       {/* Featured Career Desk Callout */}

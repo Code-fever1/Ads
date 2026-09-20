@@ -15,11 +15,11 @@ export const tools: Tool[] = [
     status: "active",
     summary:
       "The default assistant for hundreds of millions of people. Strong at writing, analysis, and light coding. Weak when you need sources or a specialist IDE.",
-    body: "ChatGPT is the tool people mean when they say they “tried AI.” That ubiquity is the product: one account covers drafts, image generation, file analysis, and a coding sandbox. Head search terms are owned by OpenAI, so Kiln covers it as a baseline, not as a ranking stunt. The useful comparison is against Claude for long professional prose, Gemini if you live in Google Docs, and Perplexity if the job is research with links. Free usage is real but gated. Paid seats sit in the same $20 band as every other flagship assistant. We last opened the pricing and product pages on 19 Sep 2026. Treat feature screenshots older than a quarter as folklore.",
+    body: "ChatGPT is the benchmark product against which all consumer and workplace assistants are judged. That ubiquity is its core strength: a single login provides drafting, multimodal document analysis, native DALL-E generation, custom GPTs, and a Python execution sandbox. For generalists, it remains the most versatile multi-tool on the market. The critical distinction is when you need specialists: Claude dominates long-form technical prose and nuanced editing; Cursor and Claude Code outclass it on complex codebases; and Perplexity is vastly superior for cited research. Free tier usage is generous but rate-capped during peak hours. Plus sits in the standard $20/month band. We last verified OpenAI's public pricing and feature limits on 19 Sep 2026.",
     notes: [
-      "Best as a generalist, not as a cited researcher",
-      "Image and file tools are bundled, which hides the true cost of each job",
-      "Do not target “ChatGPT login” as an SEO page. That is navigational junk.",
+      "Best as an all-purpose generalist; not a dedicated research citation engine",
+      "Multimodal tools and sandboxes are bundled into the subscription rather than billed per-job",
+      "For deep codebase edits, dedicated IDE agents offer significantly better repository context",
     ],
     alternatives: ["claude", "gemini", "perplexity"],
   },
@@ -59,7 +59,7 @@ export const tools: Tool[] = [
     status: "active",
     summary:
       "The assistant that wins on distribution: Gmail, Docs, Drive, and Android. Image models are competitive. Coding IDEs are not the point.",
-    body: "Gemini’s advantage is not a clever landing page. It is already sitting in the Google account you use to pay invoices. For Workspace teams, that beats a third chat tab. Image generation (including the Nano Banana line Google has been pushing) is a reason to open Gemini even if you write elsewhere. Coding still trails Cursor-class tools. If SEO copy promises “Gemini vs ChatGPT winner,” ignore it. Pick based on where the files live. Pricing and bundle names change with Google One. We checked the public Gemini site on 19 Sep 2026.",
+    body: "Gemini’s distinct advantage is native integration across Google Workspace, Android, and YouTube. For teams already storing documents in Google Drive, drafting in Docs, and operating out of Gmail, having an assistant embedded directly in those tools removes the constant friction of copy-pasting across browser tabs. Its multimodal reasoning and 2M-token context window on Advanced tiers handle massive technical manuals and hour-long video transcripts with ease. However, its coding assistance still lags dedicated tools like Cursor or Claude Code for complex multi-file engineering. Choose Gemini if your team lives inside the Google ecosystem. Pricing integrates with Google One AI Premium. We verified plans and models on 19 Sep 2026.",
     notes: [
       "Workspace admin controls matter for any company deployment",
       "Do not treat Android preinstall as a quality signal",
@@ -721,7 +721,7 @@ export const tools: Tool[] = [
       "The automation tool we actually self-host. Fair-code, execution-priced cloud, and a real code node.",
     body: "n8n is how you keep Zapier’s idea without renting every execution at consumer SaaS rates. Self-hosting is the point for a lot of us. Cloud is there when you do not want a VPS. Agents and AI nodes exist; they are not a reason to ignore error handling. We re-read n8n’s public pricing on 18 Sep 2026. If you outgrow Make/Zapier on cost, start here before writing a custom worker.",
     notes: [
-      "Self-hosting is Option 2 for people who asked about a VPS. This is a healthy VPS workload.",
+      "Self-hosting on a modest VPS or private server keeps operational costs predictable as workflows grow.",
       "Log failures. Silent workflows destroy trust.",
       "Not a “set and forget wealth” toy",
     ],

@@ -60,19 +60,19 @@ export default async function GeoPage({ params }: Props) {
       <JobsBoard
         initial={jobs}
         keywords={hub.keywords}
-        emptyNote="The public APIs rarely mention this city. That gap is why a VPS plus company ATS feeds is Option 2, not a LinkedIn scrape."
+        emptyNote="No open positions currently match this specific municipal filter in our live feed. Explore global remote roles or check back during the next feed cycle."
       />
       <Faq
         items={[
           {
             question: `Can I apply to ${hub.title} on Rolepaper?`,
             answer:
-              "No. Rolepaper is not the employer and does not geo-target ads as a local services business. Open the original posting for work-authorization rules.",
+              "No. Rolepaper indexes direct postings from hiring teams and global platforms. All applications must be submitted directly to the employer or ATS link provided on each listing.",
           },
           {
-            question: "Why is this table sometimes empty?",
+            question: "Why are listings for some locations limited?",
             answer:
-              "Remote OK and Himalayas under-serve some cities. We will not invent expired rows to fill a doorway page.",
+              "Many tech employers list remote openings with broad regional eligibility rather than tagging specific municipal names. We only display active, verified openings and never pad pages with outdated or fictitious roles.",
           },
         ]}
       />

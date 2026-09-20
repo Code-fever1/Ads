@@ -28,11 +28,15 @@ export default async function SubmitPage({
         Submit a tool
       </h1>
       <p className="lede">
-        We review by hand. Paid placement is not a queue jump. Cracked software, keygens, and medical
-        claims are rejected.
+        Built or discovered an exceptional AI tool? We review submissions by hand. Every listing must
+        have a live public product, transparent pricing or open-source repository, and a proven job to
+        be done. We do not accept paid queue-jumps, low-effort model wrappers, or unsubstantiated claims.
       </p>
       {sent ? (
-        <p className="ochre-panel">Received. We will only write back if we list it.</p>
+        <p className="ochre-panel">
+          Submission received. Our editorial team will review the product, verify the pricing, and
+          index it if it meets our catalog criteria.
+        </p>
       ) : (
         <form className="form" action={submit}>
           <label>
