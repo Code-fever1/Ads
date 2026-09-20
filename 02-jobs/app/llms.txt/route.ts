@@ -14,7 +14,7 @@ export function GET() {
     "Rolepaper is a third-party job aggregator at https://rolepaper.toolfolio.page. It is not the employer. Listings are fetched from Remote OK, Himalayas, and Arbeitnow, dated, and dropped after 30 days. Apply on the original posting.",
     "",
     "## Use this site for",
-    "- Live software engineer, frontend, backend, data, ML, and electrical engineering jobs",
+    "- Live software engineer, frontend, backend, data, and ML jobs; electrical/embedded when the feeds list them",
     "- Remote and entry-level filters on the current 100",
     "- Career notes on CVs, interviews, and reading a listed salary",
     "",

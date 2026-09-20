@@ -8,8 +8,9 @@ Copy working patterns from `01-ai-tools` (Kiln). Do not invent a second SEO stac
 
 - Mix niches on one subdomain (no jobs on Kiln, no AI tools on Rolepaper).
 - Add `kiln.toolfolio.page` or `rolepaper.toolfolio.page` as extra AdSense **sites**. One property: **toolfolio.page**.
-- Put `ads.txt` on a subdomain. Apex only: `https://toolfolio.page/ads.txt`.
+- Put `ads.txt` on a subdomain. Apex only: `https://toolfolio.page/ads.txt`. Subdomain `ads.txt` 404 is expected.
 - Set `alternates.canonical: "/"` in `app/layout.tsx`. That canonicalizes every URL to the homepage. Each page sets its own canonical via `pageMeta`.
+- Inflate hub metrics. Kiln has **37** tool profiles. Rolepaper caps the live board at **100** software/ML jobs. Electrical is a supporting filter, not a full inventory.
 - Turn on Auto ads until AdSense status is **Ready**.
 - Chase head terms: `jobs`, `job search`, `Indeed`, `ChatGPT` login, `electrician near me`.
 
@@ -57,10 +58,11 @@ Duplicate from Kiln, then change names/domains:
 
 - **Niche**: Publisher hub
 - **Live**: yes
-- **Shipped**: metadata/`pageMeta`, Organization + WebSite JSON-LD, robots + AI crawlers, sitemap, `/llms.txt`, AdSense in `<head>`, **ads.txt**, `/privacy`, `/disclosure`
+- **Shipped**: metadata/`pageMeta`, Organization + WebSite JSON-LD, robots + AI crawlers, sitemap, `/llms.txt`, AdSense in `<head>`, **ads.txt**, `/privacy`, `/disclosure`, hub metrics match live inventory (37 tools, up to 100 jobs), intent pills hit real slugs (`/categories/coding`, `/frontend-developer-jobs`)
 - **Search Console**:
-  - [x] Property added: `https://toolfolio.page`
+  - [x] URL-prefix property: `https://toolfolio.page`
   - [x] Sitemap submitted: `https://toolfolio.page/sitemap.xml` — **Status: SUCCESS** (20 Sep 2026)
+  - [ ] Domain property `toolfolio.page` (covers all subdomains) — still a Search Console UI action
   - [x] Seed page indexing requested:
     - `https://toolfolio.page/` (Homepage)
 
@@ -68,9 +70,9 @@ Duplicate from Kiln, then change names/domains:
 
 - **Niche**: AI tools directory
 - **Live**: yes
-- **Shipped**: `pageMeta` + canonicals, SoftwareApplication / ItemList / Article / Breadcrumb, OG/Twitter + `opengraph-image`, robots, sitemap, `/feed.xml`, `/llms.txt`, AdSense, Privacy + Ads footer
+- **Shipped**: `pageMeta` + canonicals, SoftwareApplication / ItemList / Article / Breadcrumb, OG/Twitter + `opengraph-image`, robots, sitemap, `/feed.xml`, `/llms.txt`, AdSense, Privacy + Ads footer, default title **Kiln · AI tools directory**, 301s `/compare/cursor-vs-claude` → `/compare/cursor-vs-claude-code` and `/categories/code` → `/categories/coding`
 - **Search Console**:
-  - [x] Property added: `https://kiln.toolfolio.page`
+  - [x] URL-prefix property: `https://kiln.toolfolio.page`
   - [x] Sitemap submitted: `https://kiln.toolfolio.page/sitemap.xml` — **Status: SUCCESS** (20 Sep 2026)
   - [x] Seed pages indexing requested:
     - `https://kiln.toolfolio.page/` (Homepage)
@@ -79,11 +81,11 @@ Duplicate from Kiln, then change names/domains:
 
 ## 3. Rolepaper — rolepaper.toolfolio.page (`02-jobs`)
 
-- **Niche**: Tech and electrical jobs aggregator
+- **Niche**: Software jobs aggregator (electrical/embedded is a supporting filter when feeds match)
 - **Live**: yes
-- **Shipped**: `pageMeta` + canonicals, JobPosting / ItemList / Article / Breadcrumb, OG/Twitter + `opengraph-image`, robots, sitemap (includes live `/job/[id]`), `/feed.xml`, `/llms.txt`, AdSense, Privacy + Ads footer
+- **Shipped**: `pageMeta` + canonicals, JobPosting / ItemList / Article / Breadcrumb, OG/Twitter + `opengraph-image`, robots, sitemap (includes live `/job/[id]`), `/feed.xml`, `/llms.txt`, AdSense, Privacy + Ads footer, software-first titles, 301 `/electrical-jobs` → `/electrical-engineer-jobs`
 - **Search Console**:
-  - [x] Property added: `https://rolepaper.toolfolio.page`
+  - [x] URL-prefix property: `https://rolepaper.toolfolio.page`
   - [x] Sitemap submitted: `https://rolepaper.toolfolio.page/sitemap.xml` — **Status: SUCCESS** (20 Sep 2026)
   - [x] Seed pages indexing requested:
     - `https://rolepaper.toolfolio.page/` (Homepage)

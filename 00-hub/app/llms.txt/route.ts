@@ -6,7 +6,7 @@ Each niche operates on its own dedicated subdomain.
 
 ## Active Sites
 - Kiln (https://kiln.toolfolio.page): An independent AI tools directory with skip-if notes and verified dates.
-- Rolepaper (https://rolepaper.toolfolio.page): A live tech, software, and electrical jobs aggregator sourced from public APIs.
+- Rolepaper (https://rolepaper.toolfolio.page): A live software and ML jobs aggregator from public APIs. Electrical/embedded is a supporting filter when those titles exist in the feeds.
 
 ## Organization Principles
 - Unrelated niches stay apart. Jobs, tools, and deals are never mixed on a single URL.

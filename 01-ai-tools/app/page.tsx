@@ -13,7 +13,7 @@ export const metadata = pageMeta({
   title: "Best AI tools, ranked with last-verified dates",
   description: site.description,
   path: "/",
-  absoluteTitle: `${site.name} · ${site.tagline}`,
+  absoluteTitle: "Kiln · AI tools directory",
 });
 
 export default function Home() {

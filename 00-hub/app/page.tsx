@@ -3,16 +3,16 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = pageMeta({
   title: "Toolfolio · Focused Multi-Niche Publications",
   description:
-    "A small house of focused, independent publications. Kiln for verified AI tools; Rolepaper for live engineering jobs.",
+    "A small house of focused, independent publications. Kiln for a dated AI tools directory; Rolepaper for live software jobs.",
   path: "/",
 });
 
 const intentPills = [
-  { label: "AI Coding Tools", href: "https://kiln.toolfolio.page/categories/code", niche: "Kiln" },
+  { label: "AI Coding Tools", href: "https://kiln.toolfolio.page/categories/coding", niche: "Kiln" },
   { label: "Remote Dev Jobs", href: "https://rolepaper.toolfolio.page/remote-jobs", niche: "Rolepaper" },
   { label: "AI Comparisons", href: "https://kiln.toolfolio.page/compare", niche: "Kiln" },
   { label: "Live Classifieds", href: "https://rolepaper.toolfolio.page/jobs", niche: "Rolepaper" },
-  { label: "Electrical Engineering", href: "https://rolepaper.toolfolio.page/electrical-engineer-jobs", niche: "Rolepaper" },
+  { label: "Frontend Jobs", href: "https://rolepaper.toolfolio.page/frontend-developer-jobs", niche: "Rolepaper" },
   { label: "Best AI 2026", href: "https://kiln.toolfolio.page/best", niche: "Kiln" },
 ];
 
@@ -50,16 +50,16 @@ export default function Home() {
 
       <section className="metrics-strip">
         <div className="metric">
-          <span className="metric-val">60+</span>
-          <span className="metric-lbl">Verified AI tools with skip-if criteria</span>
+          <span className="metric-val">37</span>
+          <span className="metric-lbl">Dated AI tool profiles on Kiln, each with a skip-if line</span>
         </div>
         <div className="metric">
-          <span className="metric-val">100+</span>
-          <span className="metric-lbl">Live tech & electrical jobs refreshed hourly</span>
+          <span className="metric-val">Up to 100</span>
+          <span className="metric-lbl">Live software jobs on Rolepaper from public APIs</span>
         </div>
         <div className="metric">
-          <span className="metric-val">100%</span>
-          <span className="metric-lbl">Zero cross-contamination or scraped spam</span>
+          <span className="metric-val">Separate</span>
+          <span className="metric-lbl">Niches stay on their own subdomains — no mixed spam</span>
         </div>
       </section>
 
@@ -103,12 +103,12 @@ export default function Home() {
               <span className="domain-pill">rolepaper.toolfolio.page</span>
             </div>
             <p className="card-desc">
-              Clean, newspaper-style aggregator pulling verified software, ML, and electrical roles
-              directly from authoritative public APIs.
+              Newspaper-style software and ML classifieds from public APIs. Electrical and embedded
+              titles appear when the feeds actually list them — we do not pad empty desks.
             </p>
             <div className="feature-tags">
               <span className="ftag">Software & ML</span>
-              <span className="ftag">Electrical Engineering</span>
+              <span className="ftag">Remote filters</span>
               <span className="ftag">Direct Apply Links</span>
               <span className="ftag">30-Day Auto-Expiry</span>
             </div>

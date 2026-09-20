@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s · Toolfolio",
   },
   description:
-    "A small house of focused sites: Kiln for AI tools, Rolepaper for tech jobs. Unrelated niches stay apart.",
+    "A small house of focused sites: Kiln for an AI tools directory, Rolepaper for live software jobs. Unrelated niches stay apart.",
   robots: { index: true, follow: true },
   icons: {
     icon: [{ url: "/mark.png", type: "image/png" }],

@@ -17,12 +17,12 @@ const essay = Libre_Baskerville({
 });
 
 const description =
-  "Live software, machine learning, and electrical engineering jobs from public APIs. Rolepaper is not the employer — apply on the original posting.";
+  "Live software and machine-learning jobs from public APIs. Electrical and embedded titles appear when the feeds list them. Rolepaper is not the employer — apply on the original posting.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rolepaper.toolfolio.page"),
   title: {
-    default: "Rolepaper · live software and electrical jobs",
+    default: "Rolepaper · live software jobs",
     template: "%s · Rolepaper",
   },
   description,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "electrical engineer jobs",
   ],
   openGraph: {
-    title: "Rolepaper · live software and electrical jobs",
+    title: "Rolepaper · live software jobs",
     description,
     url: "https://rolepaper.toolfolio.page",
     siteName: "Rolepaper",
@@ -48,11 +48,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rolepaper · live software and electrical jobs",
+    title: "Rolepaper · live software jobs",
     description,
   },
   alternates: {
-    canonical: "/",
     types: { "application/rss+xml": "/feed.xml" },
   },
   robots: {

@@ -9,7 +9,7 @@ export const site = {
   domain: "kiln.toolfolio.page",
   tagline: "AI tools, fired and dated.",
   description:
-    "A curated directory of AI software with last-verified dates, comparison tables, and honest skip-if notes. We are not the vendor.",
+    "Kiln is an independent AI tools directory: last-verified dates, comparison tables, and skip-if notes. We are not the vendor, and we are not the other product named Kiln.",
 };
 
 export function absUrl(path: string) {

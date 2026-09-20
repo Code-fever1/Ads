@@ -30,7 +30,7 @@ export default async function JobsPage() {
       />
       <h1>Live 100 software and engineering jobs</h1>
       <p className="essay">
-        Newest first, tech and electrical filters applied, older than 30 days removed. Click a title
+        Newest first, software and ML filters applied, older than 30 days removed. Click a title
         for JobPosting details. Click Apply to leave Rolepaper. Remote OK listings include a follow
         link to Remote OK as their API terms require.
       </p>

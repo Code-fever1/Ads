@@ -17,7 +17,7 @@ export function SiteHeader() {
           <img src="/mark.png" alt="Rolepaper logo" width={36} height={36} />
           Rolepaper
         </Link>
-        <p className="deck">Live software &amp; electrical jobs. We are not the employer.</p>
+        <p className="deck">Live software jobs from public APIs. We are not the employer.</p>
       </div>
       <nav aria-label="Desks">
         {nav.map(([label, href]) => (

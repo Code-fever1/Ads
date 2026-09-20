@@ -12,10 +12,10 @@ import { JobsBoard } from "@/components/JobsBoard";
 export const revalidate = 300;
 
 export const metadata = pageMeta({
-  title: "Live software and electrical jobs",
+  title: "Live software jobs",
   description: site.description,
   path: "/",
-  absoluteTitle: "Rolepaper · live software and electrical jobs",
+  absoluteTitle: "Rolepaper · live software jobs",
 });
 
 export default async function Home() {
@@ -43,11 +43,12 @@ export default async function Home() {
         <div>
           <h1>Today’s classifieds, fetched live.</h1>
           <p className="essay">
-            Rolepaper is a third-party job aggregator at rolepaper.toolfolio.page. We reprint software,
-            machine-learning, and electrical listings that already exist on Remote OK, Himalayas, and
-            Arbeitnow. We add dates, a 30-day expiry, and unique hub copy. We do not run your
-            application and we do not scrape LinkedIn or Indeed. Refreshing the live table asks our
-            server, which asks those public APIs.
+            Rolepaper is a third-party job aggregator at rolepaper.toolfolio.page. We reprint software
+            and machine-learning listings that already exist on Remote OK, Himalayas, and Arbeitnow.
+            Electrical and embedded titles appear when those APIs actually list them — we do not invent
+            a full electrical desk. We add dates, a 30-day expiry, and unique hub copy. We do not run
+            your application and we do not scrape LinkedIn or Indeed. Refreshing the live table asks
+            our server, which asks those public APIs.
           </p>
           <p>
             <Link className="stamp" href="/jobs">

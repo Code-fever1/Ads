@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/electrical-jobs",
+        destination: "/electrical-engineer-jobs",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -9,6 +9,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/compare/cursor-vs-claude",
+        destination: "/compare/cursor-vs-claude-code",
+        permanent: true,
+      },
+      {
+        source: "/categories/code",
+        destination: "/categories/coding",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

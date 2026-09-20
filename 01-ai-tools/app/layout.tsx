@@ -20,7 +20,7 @@ const body = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: new URL("https://kiln.toolfolio.page"),
   title: {
-    default: `${site.name} · ${site.tagline}`,
+    default: "Kiln · AI tools directory",
     template: `%s · ${site.name}`,
   },
   description: site.description,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "AI image generators",
   ],
   openGraph: {
-    title: `${site.name} · ${site.tagline}`,
+    title: "Kiln · AI tools directory",
     description: site.description,
     url: "https://kiln.toolfolio.page",
     siteName: site.name,
@@ -46,11 +46,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} · ${site.tagline}`,
+    title: "Kiln · AI tools directory",
     description: site.description,
   },
   alternates: {
-    canonical: "/",
     types: { "application/rss+xml": "/feed.xml" },
   },
   robots: {
