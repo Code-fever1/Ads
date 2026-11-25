@@ -1,4 +1,11 @@
-import type { Comparison, Guide, Ranking, Tool } from "@/lib/types";
+import type {
+  Comparison,
+  FaqItem,
+  Guide,
+  Ranking,
+  Tool,
+  ToolPricingTier,
+} from "@/lib/types";
 import { absUrl, site } from "@/lib/site";
 
 export const kilnOrg = {
@@ -6,7 +13,7 @@ export const kilnOrg = {
   "@id": absUrl("/#organization"),
   name: site.name,
   url: absUrl("/"),
-  logo: absUrl("/mark.png"),
+  logo: absUrl("/favicon.svg"),
   description: site.description,
   parentOrganization: {
     "@type": "Organization",
@@ -36,19 +43,41 @@ export function webSiteJsonLd() {
   };
 }
 
+function appCategoryForTool(tool: Tool): string {
+  if (tool.categories.includes("coding")) return "DeveloperApplication";
+  if (tool.categories.includes("design") || tool.categories.includes("image")) {
+    return "DesignApplication";
+  }
+  if (tool.categories.includes("video") || tool.categories.includes("audio")) {
+    return "MultimediaApplication";
+  }
+  return "BusinessApplication";
+}
+
 export function softwareJsonLd(tool: Tool) {
+  const numericTiers = tool.pricingTiers.filter(
+    (tier): tier is ToolPricingTier & { priceUsdPerMonth: number } =>
+      typeof tier.priceUsdPerMonth === "number",
+  );
+  const lowestTier =
+    numericTiers.length > 0
+      ? numericTiers.reduce((min, tier) =>
+          tier.priceUsdPerMonth < min.priceUsdPerMonth ? tier : min,
+        )
+      : undefined;
+
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: tool.name,
     url: tool.website,
-    applicationCategory: "BusinessApplication",
+    applicationCategory: appCategoryForTool(tool),
     operatingSystem: "Web",
-    isAccessibleForFree: tool.pricing === "free" || tool.pricing === "freemium",
+    isAccessibleForFree: tool.hasFreeTier,
     offers: {
       "@type": "Offer",
-      price: tool.pricing === "free" ? "0" : undefined,
-      priceCurrency: "USD",
+      ...(lowestTier !== undefined ? { price: String(lowestTier.priceUsdPerMonth) } : {}),
+      priceCurrency: lowestTier?.currency ?? "USD",
       description: tool.priceBand,
       url: tool.website,
     },
@@ -132,11 +161,27 @@ export function rankingJsonLd(ranking: Ranking, tools: Tool[]) {
   );
 }
 
-export function comparisonJsonLd(comparison: Comparison, a?: Tool, b?: Tool) {
-  const items = [a, b]
-    .filter((tool): tool is Tool => Boolean(tool))
-    .map((tool) => ({ name: tool.name, path: `/tools/${tool.slug}` }));
-  return itemListJsonLd(comparison.title, `/compare/${comparison.slug}`, items);
+export function comparisonJsonLd(comparison: Comparison, comparedTools: Tool[]) {
+  return itemListJsonLd(
+    comparison.title,
+    `/compare/${comparison.slug}`,
+    comparedTools.map((tool) => ({ name: tool.name, path: `/tools/${tool.slug}` })),
+  );
+}
+
+export function faqJsonLd(items: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
 }
 
 export function articleJsonLd(guide: Guide) {
@@ -146,11 +191,11 @@ export function articleJsonLd(guide: Guide) {
     headline: guide.title,
     description: guide.summary,
     datePublished: guide.date,
-    dateModified: guide.date,
+    dateModified: guide.updatedDate ?? guide.date,
     inLanguage: "en",
     author: kilnOrg,
     publisher: kilnOrg,
     mainEntityOfPage: absUrl(`/blog/${guide.slug}`),
-    image: absUrl("/mark.png"),
+    image: absUrl("/opengraph-image"),
   };
 }

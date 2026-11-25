@@ -1,7 +1,7 @@
 import { fetchLiveJobs } from "@/lib/jobs";
 import { absUrl, site } from "@/lib/site";
 
-export const revalidate = 300;
+export const revalidate = 86400;
 
 export async function GET() {
   const jobs = await fetchLiveJobs(30);
@@ -31,7 +31,7 @@ ${items}
   return new Response(xml, {
     headers: {
       "Content-Type": "application/rss+xml; charset=utf-8",
-      "Cache-Control": "public, max-age=300",
+      "Cache-Control": "public, max-age=86400",
     },
   });
 }

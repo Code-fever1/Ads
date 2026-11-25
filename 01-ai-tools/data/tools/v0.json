@@ -1,0 +1,55 @@
+{
+  "slug": "v0",
+  "name": "v0",
+  "vendor": "Vercel",
+  "website": "https://v0.app",
+  "affiliateUrl": null,
+  "categories": [
+    "coding",
+    "design"
+  ],
+  "tasks": [
+    "generate-ui",
+    "react-components",
+    "tailwind-layout"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Free tier available — check official limits.",
+  "pricingTiers": [
+    {
+      "name": "Plus",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "Free tier; Plus — check official pricing",
+  "bestFor": "Generating React/Tailwind UI that you then own in a Next.js repo",
+  "skipIf": "You need a general coding agent for backend systems",
+  "keyFeatures": [
+    "Outputs React, Tailwind, and shadcn UI code",
+    "Live browser preview and iteration",
+    "Tight workflow fit for Next.js and Vercel"
+  ],
+  "limitations": [
+    "Credits deplete quickly during iterative styling",
+    "Not built for backend systems or non-React stacks"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A UI generator that emits real components for the Next.js world. Not a whole engineering department.",
+  "body": "v0 is opinionated in a useful way: it speaks React, Tailwind, and shadcn-shaped interfaces, then hands you code. That is a different product from Lovable or Bolt, which try to be the app. If you already ship on Vercel, v0 shortens the blank-page problem. If you need a Python service, go to Cursor. Credits run out faster than the marketing site implies. Plans checked 18 Sep 2026.",
+  "notes": [
+    "Always paste the output into version control the same day",
+    "Design quality still needs a pass for accessibility",
+    "Pairs with Kiln’s own stack on purpose"
+  ],
+  "alternatives": [
+    "lovable",
+    "bolt",
+    "cursor"
+  ],
+  "color": "#171717",
+  "featured": false
+}

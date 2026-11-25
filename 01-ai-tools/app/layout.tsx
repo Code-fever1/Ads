@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Commissioner, Source_Serif_4 } from "next/font/google";
 import { JsonLd, NetworkBar, SiteFooter, SiteHeader } from "@/components/chrome";
 import { orgJsonLd, webSiteJsonLd } from "@/lib/jsonld";
-import { site } from "@/lib/site";
+import { GA4_MEASUREMENT_ID, GOOGLE_SITE_VERIFICATION, site } from "@/lib/site";
 import "./globals.css";
 
 const ui = Commissioner({
@@ -20,8 +21,8 @@ const body = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: new URL("https://kiln.toolfolio.page"),
   title: {
-    default: "Kiln · AI tools directory",
-    template: `%s · ${site.name}`,
+    default: "Kiln — Find the Right AI Tool (Verified Prices, Honest Verdicts)",
+    template: `%s | ${site.name}`,
   },
   description: site.description,
   applicationName: site.name,
@@ -34,10 +35,13 @@ export const metadata: Metadata = {
     "AI tools directory",
     "best AI coding tools",
     "ChatGPT alternatives",
-    "AI image generators",
+    "AI tool pricing",
   ],
+  ...(GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: GOOGLE_SITE_VERIFICATION } }
+    : {}),
   openGraph: {
-    title: "Kiln · AI tools directory",
+    title: "Kiln — Find the Right AI Tool (Verified Prices, Honest Verdicts)",
     description: site.description,
     url: "https://kiln.toolfolio.page",
     siteName: site.name,
@@ -46,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kiln · AI tools directory",
+    title: "Kiln — Find the Right AI Tool (Verified Prices, Honest Verdicts)",
     description: site.description,
   },
   alternates: {
@@ -64,7 +68,10 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/mark.png", type: "image/png" }],
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/mark.png", type: "image/png" },
+    ],
     apple: "/mark.png",
   },
 };
@@ -72,14 +79,21 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${ui.variable} ${body.variable} h-full`}>
-      <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5974580626732926"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className="min-h-full">
+        {GA4_MEASUREMENT_ID ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA4_MEASUREMENT_ID}');`}
+            </Script>
+          </>
+        ) : null}
         <JsonLd data={orgJsonLd()} />
         <JsonLd data={webSiteJsonLd()} />
         <div className="shell">

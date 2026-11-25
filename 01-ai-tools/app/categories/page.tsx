@@ -3,29 +3,43 @@ import { categories } from "@/data/categories";
 import { toolsInCategory } from "@/data/tools";
 import { pageMeta } from "@/lib/seo";
 
+export const dynamic = "force-static";
+
 export const metadata = pageMeta({
-  title: "AI tool categories",
-  description: "AI tool categories on Kiln, from assistants and coding agents to image, video, and automation.",
+  title: "AI Tool Categories — Curated Directory",
+  description:
+    "Browse Kiln's 10 verified AI tool categories, from coding editors and terminal agents to writing, image, video, and workflow automation.",
   path: "/categories",
 });
 
 export default function CategoriesPage() {
   return (
     <main>
-      <h1 style={{ fontFamily: "var(--font-body)", fontSize: "clamp(2rem,4vw,3rem)" }}>
-        Categories
+      <p className="section-label">Directory Index</p>
+      <h1 style={{ fontFamily: "var(--font-body)", fontSize: "clamp(2rem,4vw,3rem)", margin: "0 0 0.5rem" }}>
+        AI tool categories
       </h1>
-      <div className="stack" style={{ marginTop: "1.5rem" }}>
-        {categories.map((category) => (
-          <section key={category.slug}>
-            <h2 style={{ marginBottom: 0 }}>
-              <Link href={`/categories/${category.slug}`}>{category.title}</Link>
-            </h2>
-            <p style={{ marginTop: "0.35rem" }}>
-              {toolsInCategory(category.slug).length} tools · {category.headline}
-            </p>
-          </section>
-        ))}
+      <p className="lede">
+        Every tool is grouped by the job it actually performs—with verified prices and skip-if
+        criteria inside each hub.
+      </p>
+      <div className="category-grid-cards" style={{ marginTop: "1.75rem" }}>
+        {categories.map((category) => {
+          const count = toolsInCategory(category.slug).length;
+          return (
+            <Link
+              key={category.slug}
+              href={`/categories/${category.slug}`}
+              className="category-grid-card"
+            >
+              <div className="category-grid-top">
+                <span className="category-grid-name">{category.title}</span>
+                <span className="category-grid-count">{count} tools</span>
+              </div>
+              <span className="category-grid-head">{category.headline}</span>
+            </Link>
+          );
+        })}
       </div>
     </main>
   );

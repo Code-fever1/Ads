@@ -1,0 +1,56 @@
+{
+  "slug": "claude-code",
+  "name": "Claude Code",
+  "vendor": "Anthropic",
+  "website": "https://code.claude.com",
+  "affiliateUrl": null,
+  "categories": [
+    "coding"
+  ],
+  "tasks": [
+    "terminal-agent",
+    "repo-migration",
+    "debug-code",
+    "refactor-code"
+  ],
+  "pricing": "paid",
+  "hasFreeTier": false,
+  "freeTierNote": "Claude's $0 plan does not include Claude Code; included in all paid Claude plans.",
+  "pricingTiers": [
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": 20,
+      "note": "$20/mo monthly, or $17/mo billed annually ($200/yr upfront); included in all paid Claude plans"
+    }
+  ],
+  "priceBand": "Included in Claude Pro $20/mo ($17/mo annual); no free Claude Code (Nov 2026)",
+  "bestFor": "Architecture, debugging, and multi-file refactors from the terminal",
+  "skipIf": "You want inline tab completion as the main experience",
+  "keyFeatures": [
+    "Repo-wide terminal agent",
+    "Plans and executes multi-file diffs",
+    "Runs tests and shell commands with approval",
+    "Strong on migrations and architecture debugging"
+  ],
+  "limitations": [
+    "No inline IDE tab completion",
+    "Heavy afternoon runs quickly push users to Max or API billing"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A terminal agent with the whole repo in context. Slow and pricey if you use it for every semicolon.",
+  "body": "Claude Code is not an editor theme. It is an agent that reads the project, plans, and edits across files. That is why CTOs put it on architecture and migrations, then keep Cursor or Copilot for the daily keystrokes. The $20 Claude Pro bundle is the on-ramp. People who let it run all afternoon land on Max. If your only complaint about Copilot is “it does not rewrite the module,” try this before buying a $200 Ultra IDE plan. Site and bundle notes checked 19 Sep 2026.",
+  "notes": [
+    "Use it for jobs with a clear definition of done",
+    "Keep secrets out of the working tree you hand the agent",
+    "Works next to Cursor, not only instead of it"
+  ],
+  "alternatives": [
+    "cursor",
+    "aider",
+    "cline"
+  ],
+  "color": "#A84A28",
+  "featured": false
+}

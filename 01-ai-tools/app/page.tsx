@@ -2,24 +2,65 @@ import Link from "next/link";
 import { comparisons } from "@/data/comparisons";
 import { categories } from "@/data/categories";
 import { rankings } from "@/data/rankings";
-import { tools } from "@/data/tools";
+import {
+  getFeaturedTools,
+  getRecentlyVerifiedTools,
+  tools,
+  toolsInCategory,
+} from "@/data/tools";
 import { Faq } from "@/components/faq";
 import { JsonLd } from "@/components/chrome";
-import { itemListJsonLd } from "@/lib/jsonld";
+import { HomeSearch } from "@/components/HomeSearch";
+import { ToolLogo } from "@/components/ToolLogo";
+import { PricingBadge } from "@/components/PricingBadge";
+import { VerifiedDate } from "@/components/VerifiedDate";
+import { BUILD_NOW_MS, formatEntryPrice } from "@/lib/format";
+import { faqJsonLd, itemListJsonLd } from "@/lib/jsonld";
 import { pageMeta } from "@/lib/seo";
-import { formatDate, site } from "@/lib/site";
+import { site } from "@/lib/site";
+
+export const dynamic = "force-static";
 
 export const metadata = pageMeta({
-  title: "Best AI tools, ranked with last-verified dates",
+  title: "Find the Right AI Tool",
   description: site.description,
   path: "/",
-  absoluteTitle: "Kiln · AI tools directory",
+  absoluteTitle: "Kiln — Find the Right AI Tool (Verified Prices, Honest Verdicts)",
 });
 
+const homeFaqs = [
+  {
+    question: "What is Kiln?",
+    answer:
+      "Kiln is a human-verified AI tools directory. Every listing shows checked pricing tiers, free-tier limits, a skip-if warning, and a visible verification date. We do not sell software.",
+  },
+  {
+    question: "How do you keep prices honest?",
+    answer:
+      "Prices are checked manually on each vendor's public pricing page rather than scraped automatically. Any listing older than 45 days displays a visible amber warning asking you to re-check before paying.",
+  },
+  {
+    question: "Can a vendor pay to change a verdict or ranking?",
+    answer:
+      "No. Affiliate or future sponsored labels never alter our pricing notes, rankings, or skip-if warnings. See /disclosure for full details.",
+  },
+];
+
 export default function Home() {
-  const featured = tools.filter((tool) =>
-    ["cursor", "claude", "perplexity", "n8n", "midjourney", "notebooklm"].includes(tool.slug),
-  );
+  const featured = getFeaturedTools();
+  const recent = getRecentlyVerifiedTools(6);
+  const latestComparisons = comparisons.slice(0, 4);
+  const nowMs = BUILD_NOW_MS;
+
+  const searchTools = tools.map((tool) => ({
+    slug: tool.slug,
+    name: tool.name,
+    vendor: tool.vendor,
+    bestFor: tool.bestFor,
+    tasks: tool.tasks,
+    categories: tool.categories,
+    priceBand: tool.priceBand,
+  }));
 
   return (
     <main>
@@ -30,70 +71,162 @@ export default function Home() {
           featured.map((tool) => ({ name: tool.name, path: `/tools/${tool.slug}` })),
         )}
       />
+      <JsonLd data={faqJsonLd(homeFaqs)} />
+
       <section className="hero">
         <div>
           <p className="section-label" style={{ marginTop: 0 }}>
-            Catalog 01 · Sep 2026
+            Curated AI Tools Directory · {tools.length} Verified Profiles
           </p>
-          <h1>Which AI tool still earns its seat.</h1>
+          <h1>Find the right AI tool. Verified prices, honest verdicts.</h1>
           <p className="lede">
-            Kiln is an independent AI tools directory at kiln.toolfolio.page. Each listing is a product
-            with a public site, a last-verified date, and a skip-if line. We send you to the vendor. We
-            are not ChatGPT, Claude, or Cursor — we review them.
+            Kiln is an independent directory at kiln.toolfolio.page. Every tool has checked pricing,
+            free-tier notes, a &ldquo;who should skip this&rdquo; warning, and a visible verification
+            date.
           </p>
+          <HomeSearch
+            tools={searchTools}
+            categories={categories.map((c) => ({ slug: c.slug, title: c.title }))}
+          />
         </div>
         <aside className="ochre-panel">
           <strong>What this is not</strong>
-          <p style={{ margin: 0, lineHeight: 1.45 }}>
-            Not a scrape of 2,000 logos. Not cracked software. Not medical or investment advice. If a
-            page cannot say when it was checked, it does not belong here.
+          <p style={{ margin: 0, lineHeight: 1.5 }}>
+            Not an automated scrape of 5,000 dead links. Not cracked software. Not pay-to-win
+            rankings. If a price has not been re-checked recently, we flag it openly so you do not
+            get surprised at checkout.
           </p>
         </aside>
       </section>
 
-      <p className="section-label">On the bench today</p>
+      <div className="section-header-flex">
+        <h2 className="section-label" style={{ margin: 0 }}>
+          Featured tools
+        </h2>
+        <Link href="/tools" className="view-all-link">
+          Browse all {tools.length} tools →
+        </Link>
+      </div>
+      <div className="tool-cards-grid">
+        {featured.map((tool) => (
+          <article key={tool.slug} className="tool-card">
+            <div className="tool-card-top">
+              <div className="tool-card-identity">
+                <ToolLogo tool={tool} size="md" />
+                <div>
+                  <h3 className="tool-card-name">
+                    <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
+                  </h3>
+                  <p className="tool-card-vendor">{tool.vendor}</p>
+                </div>
+              </div>
+              <PricingBadge model={tool.pricing} />
+            </div>
+            <p className="tool-card-tagline">{tool.summary}</p>
+            <p className="tool-card-best">
+              <strong>Best for:</strong> {tool.bestFor}
+            </p>
+            <div className="tool-card-pricing">
+              <span className="entry-price-tag">{formatEntryPrice(tool)}</span>
+              {tool.hasFreeTier && tool.freeTierNote ? (
+                <span className="free-note-line">{tool.freeTierNote}</span>
+              ) : null}
+            </div>
+            <div className="tool-card-footer">
+              <VerifiedDate date={tool.lastVerified} referenceNowMs={nowMs} />
+              <Link href={`/tools/${tool.slug}`} className="review-btn">
+                Review →
+              </Link>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <h2 className="section-label">Categories ({categories.length})</h2>
+      <div className="category-grid-cards">
+        {categories.map((category) => {
+          const count = toolsInCategory(category.slug).length;
+          return (
+            <Link
+              key={category.slug}
+              href={`/categories/${category.slug}`}
+              className="category-grid-card"
+            >
+              <div className="category-grid-top">
+                <span className="category-grid-name">{category.title}</span>
+                <span className="category-grid-count">{count} tools</span>
+              </div>
+              <span className="category-grid-head">{category.headline}</span>
+            </Link>
+          );
+        })}
+      </div>
+
+      <div className="section-header-flex" style={{ marginTop: "2.8rem" }}>
+        <h2 className="section-label" style={{ margin: 0 }}>
+          Latest comparisons
+        </h2>
+        <Link href="/compare" className="view-all-link">
+          All {comparisons.length} comparisons →
+        </Link>
+      </div>
+      <div className="other-comps-grid">
+        {latestComparisons.map((comparison) => (
+          <Link
+            key={comparison.slug}
+            href={`/compare/${comparison.slug}`}
+            className="comp-nav-card"
+          >
+            <span className="comp-nav-vs">Head-to-Head</span>
+            <span className="comp-nav-title">{comparison.title}</span>
+            <span className="comp-nav-action">Read verdict →</span>
+          </Link>
+        ))}
+      </div>
+
+      <section className="freshness-promise-box" aria-labelledby="freshness-heading">
+        <h2 id="freshness-heading">Our freshness promise</h2>
+        <p>
+          AI pricing shifts every few weeks—usage pools shrink, free tiers disappear, and Max tiers
+          appear overnight. Every price on Kiln is checked by hand on the vendor&rsquo;s official
+          page and stamped with its verification date. Whenever a check is older than 45 days, we
+          display an explicit amber notice right beside the price box.
+        </p>
+      </section>
+
+      <h2 className="section-label">Recently verified</h2>
       <table className="catalog">
         <thead>
           <tr>
-            <th>#</th>
             <th>Tool</th>
-            <th>Job</th>
-            <th>Price band</th>
+            <th>Vendor</th>
+            <th>Entry price</th>
             <th>Verified</th>
           </tr>
         </thead>
         <tbody>
-          {featured.map((tool, index) => (
+          {recent.map((tool) => (
             <tr key={tool.slug}>
-              <td className="num">{String(index + 1).padStart(2, "0")}</td>
               <td data-label="Tool">
-                <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
-                <div>{tool.vendor}</div>
+                <Link href={`/tools/${tool.slug}`} style={{ fontWeight: 700 }}>
+                  {tool.name}
+                </Link>
               </td>
-              <td data-label="Job">{tool.bestFor}</td>
-              <td data-label="Price">{tool.priceBand}</td>
+              <td data-label="Vendor">{tool.vendor}</td>
+              <td data-label="Entry price">{formatEntryPrice(tool)}</td>
               <td data-label="Verified">
-                <time dateTime={tool.lastVerified}>{formatDate(tool.lastVerified)}</time>
+                <VerifiedDate date={tool.lastVerified} referenceNowMs={nowMs} />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      <div style={{ marginTop: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem" }}>
-        <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--soot)" }}>
-          Want to filter by pricing, coding workflows, or search all verified listings?
-        </p>
-        <Link href="/tools" className="btn btn-ochre" style={{ textDecoration: "none" }}>
-          Open Full Interactive Bench ({tools.length} tools) →
-        </Link>
-      </div>
-
       <div className="split" style={{ marginTop: "3rem" }}>
         <div>
-          <p className="section-label" style={{ marginTop: 0 }}>
-            Best-of pages
-          </p>
+          <h2 className="section-label" style={{ marginTop: 0 }}>
+            Best-of shortlists
+          </h2>
           <div className="stack">
             {rankings.map((ranking) => (
               <Link key={ranking.slug} href={`/best/${ranking.slug}`}>
@@ -103,9 +236,9 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <p className="section-label" style={{ marginTop: 0 }}>
-            Direct comparisons
-          </p>
+          <h2 className="section-label" style={{ marginTop: 0 }}>
+            All comparisons
+          </h2>
           <div className="stack">
             {comparisons.map((comparison) => (
               <Link key={comparison.slug} href={`/compare/${comparison.slug}`}>
@@ -116,34 +249,7 @@ export default function Home() {
         </div>
       </div>
 
-      <p className="section-label">Categories</p>
-      <div className="grid-links">
-        {categories.map((category) => (
-          <Link key={category.slug} href={`/categories/${category.slug}`}>
-            {category.title}
-          </Link>
-        ))}
-      </div>
-
-      <Faq
-        items={[
-          {
-            question: "What is Kiln?",
-            answer:
-              "Kiln is a dated AI tools directory. We list assistants, coding agents, image tools, and automations with skip-if notes and a last-verified date. We do not sell the software.",
-          },
-          {
-            question: "How do you pick the best AI tool?",
-            answer:
-              "We rank for a job, not a leaderboard. A coding page is editors and agents. A writing page is models, checkers, and platforms. Criteria sit on each best-of page. Method: /methodology.",
-          },
-          {
-            question: "Is this ChatGPT, Claude, or another vendor?",
-            answer:
-              "No. Kiln is independent. Official product pages are linked from each profile. Jobs live on Rolepaper, not here.",
-          },
-        ]}
-      />
+      <Faq items={homeFaqs} />
     </main>
   );
 }

@@ -1,0 +1,53 @@
+{
+  "slug": "runway",
+  "name": "Runway",
+  "vendor": "Runway",
+  "website": "https://runwayml.com",
+  "affiliateUrl": null,
+  "categories": [
+    "video"
+  ],
+  "tasks": [
+    "generate-video",
+    "video-editing",
+    "b-roll-clips"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "125 one-time credits, watermark, 5GB storage.",
+  "pricingTiers": [
+    {
+      "name": "Standard",
+      "priceUsdPerMonth": 15,
+      "note": "$15/mo monthly, or $12/mo billed annually"
+    }
+  ],
+  "priceBand": "Free starter credits; Standard $15/mo ($12/mo annual) (Nov 2026)",
+  "bestFor": "Short generative clips and editing experiments with a mature product surface",
+  "skipIf": "You need long-form film or a free YouTube downloader",
+  "keyFeatures": [
+    "Mature browser video editor around the model",
+    "Reliable invoicing and export rights",
+    "Motion brushes and camera controls"
+  ],
+  "limitations": [
+    "Credits burn quickly on retries",
+    "Short clip durations and plan-based watermarks/limits"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "The established AI video bench. Credits disappear. Watermarks and duration caps matter more than demo reels.",
+  "body": "Runway is where many teams still start with generative video because the editor around the model is real. Kling, Hailuo, and others may win a specific visual test this month. Runway wins “we can invoice this.” Illegal movie aggregators are not competitors; they are AdSense suicide. Plans and credit language checked 18 Sep 2026.",
+  "notes": [
+    "Storyboard on paper before you burn credits",
+    "Export rights differ by plan",
+    "Compare duration and resolution, not Twitter clips"
+  ],
+  "alternatives": [
+    "kling",
+    "descript"
+  ],
+  "color": "#0F172A",
+  "featured": false
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "adobe-firefly",
+  "name": "Adobe Firefly",
+  "vendor": "Adobe",
+  "website": "https://www.adobe.com/products/firefly.html",
+  "affiliateUrl": null,
+  "categories": [
+    "image",
+    "design"
+  ],
+  "tasks": [
+    "generative-fill",
+    "commercial-images",
+    "photoshop-edits"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Limited daily generations.",
+  "pricingTiers": [
+    {
+      "name": "Standard",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "Free tier; Standard — check official pricing",
+  "bestFor": "Designers who must stay inside Photoshop, Illustrator, and a commercial license story",
+  "skipIf": "You want the wildest aesthetic and do not own Adobe already",
+  "keyFeatures": [
+    "Generative Fill directly on Photoshop & Illustrator layers",
+    "Clear commercial training-data documentation",
+    "Smooth enterprise legal approval"
+  ],
+  "limitations": [
+    "Less stylistic flair than Midjourney",
+    "Credit limits deplete fast on heavy campaigns"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "The safe commercial image tool for teams that already pay Adobe. Less swagger than Midjourney, better paperwork.",
+  "body": "Firefly’s product is not a pretty Discord. It is generative fill that lands on a layered PSD, with Adobe’s training-data claims attached. Agencies pick it to survive brand legal. Hobbyists who do not have Creative Cloud should not start here. Credit bundles hide inside CC plans, so “Firefly is free” is usually a lie. Product page reviewed 18 Sep 2026.",
+  "notes": [
+    "Count credits before a campaign week",
+    "Compare with Midjourney on style, not on a single prompt",
+    "Pairs with Express for non-designers in the same company"
+  ],
+  "alternatives": [
+    "midjourney",
+    "photoroom",
+    "flux"
+  ],
+  "color": "#D92D20",
+  "featured": false
+}

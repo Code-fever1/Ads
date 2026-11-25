@@ -66,7 +66,7 @@ function stillLive(postedAt: string, expiresAt: string | null) {
 async function getJson(url: string) {
   const response = await fetch(url, {
     headers: { "User-Agent": UA, Accept: "application/json" },
-    next: { revalidate: 300 },
+    next: { revalidate: 86400 },
   });
   if (!response.ok) {
     throw new Error(`${url} failed ${response.status}`);
@@ -236,7 +236,7 @@ async function loadLiveJobs(limit = 100): Promise<Job[]> {
 let memo: { at: number; jobs: Job[] } | null = null;
 
 export async function fetchLiveJobs(limit = 100): Promise<Job[]> {
-  if (memo && Date.now() - memo.at < 300_000) {
+  if (memo && Date.now() - memo.at < 3_600_000) {
     return memo.jobs.slice(0, limit);
   }
   const jobs = await loadLiveJobs(100);

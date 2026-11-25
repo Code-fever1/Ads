@@ -1,0 +1,54 @@
+{
+  "slug": "bolt",
+  "name": "Bolt.new",
+  "vendor": "StackBlitz",
+  "website": "https://bolt.new",
+  "affiliateUrl": null,
+  "categories": [
+    "coding"
+  ],
+  "tasks": [
+    "browser-prototyping",
+    "frontend-spike",
+    "webcontainers"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "1M tokens/mo with a 300K daily limit.",
+  "pricingTiers": [
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": 25,
+      "note": "$25/mo monthly, or $18/mo billed annually ($216/yr)"
+    }
+  ],
+  "priceBand": "Free tier (1M tokens/mo); Pro $25/mo ($18/mo annual) (Nov 2026)",
+  "bestFor": "Spiking a front-end in the browser with WebContainers",
+  "skipIf": "You need native mobile or a long-lived backend",
+  "keyFeatures": [
+    "Runs real Node.js in-browser via WebContainers",
+    "Instant full-stack frontend previews",
+    "One-click project export"
+  ],
+  "limitations": [
+    "Token burn spikes during debugging loops",
+    "Not suited for native mobile or heavy backend services"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "StackBlitz’s agentic browser builder. Fast demos. Token meters bite.",
+  "body": "Bolt runs a real Node environment in the browser, which is still a magic trick. It is the right tab for a Friday spike. It is the wrong tab for a bank integration. Token and message limits are the business model. We verified the public marketing site on 17 Sep 2026.",
+  "notes": [
+    "Download the project before you close the laptop",
+    "Watch token burn on loops",
+    "Compare with v0 if the output should be Next.js UI only"
+  ],
+  "alternatives": [
+    "lovable",
+    "v0",
+    "replit-agent"
+  ],
+  "color": "#1389FD",
+  "featured": false
+}

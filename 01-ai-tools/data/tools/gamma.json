@@ -1,0 +1,54 @@
+{
+  "slug": "gamma",
+  "name": "Gamma",
+  "vendor": "Gamma",
+  "website": "https://gamma.app",
+  "affiliateUrl": null,
+  "categories": [
+    "productivity",
+    "design"
+  ],
+  "tasks": [
+    "build-slide-decks",
+    "presentations",
+    "one-pagers"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "$0 plan with starter one-time credits and watermarked exports — check official limits.",
+  "pricingTiers": [
+    {
+      "name": "Plus",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "Free starter credits; Plus — check official pricing",
+  "bestFor": "First-pass slides when PowerPoint is a tax",
+  "skipIf": "You must deliver a strictly branded Keynote with a designer in the loop",
+  "keyFeatures": [
+    "Prompt-to-slide-deck in minutes",
+    "Clean responsive card layouts",
+    "Exports to PowerPoint and PDF"
+  ],
+  "limitations": [
+    "Generated decks need manual fact and contrast checks",
+    "Cannot match custom designer Keynote/Figma templates"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "Prompt-to-deck. Fine for internal reviews. Dangerous if you present it to a client without editing.",
+  "body": "Gamma is the slide version of Lovable: fast, generic until you push it, and a gift when you need ten screens by 5pm. Export and edit. Do not confuse a generated deck with a strategy. Plans checked 16 Sep 2026.",
+  "notes": [
+    "Replace stock claims with your numbers",
+    "Check contrast; generated themes fail WCAG often",
+    "Not a replacement for Figma for product UI"
+  ],
+  "alternatives": [
+    "v0",
+    "notion-ai"
+  ],
+  "color": "#6366F1",
+  "featured": false
+}

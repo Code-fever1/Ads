@@ -1,0 +1,54 @@
+{
+  "slug": "otter",
+  "name": "Otter.ai",
+  "vendor": "Otter.ai",
+  "website": "https://otter.ai",
+  "affiliateUrl": null,
+  "categories": [
+    "audio",
+    "productivity"
+  ],
+  "tasks": [
+    "transcribe-meetings",
+    "meeting-summaries",
+    "action-items"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Basic free tier with monthly transcription limits — check official limits.",
+  "pricingTiers": [
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "Basic free tier; Pro — check official pricing",
+  "bestFor": "Meeting notes when everyone already talks on Zoom",
+  "skipIf": "Your meetings cannot be recorded by policy",
+  "keyFeatures": [
+    "Automatic Zoom/Meet/Teams note capture",
+    "Searchable speaker-labeled transcripts",
+    "Instant meeting action-item summaries"
+  ],
+  "limitations": [
+    "Auto-joining bots require clear participant consent",
+    "Minute caps push active teams to paid plans"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A meeting notetaker. Useful. Also a consent problem if you surprise the room.",
+  "body": "Otter and its clones (Fireflies, Fathom) are how 2026 meetings become searchable. Tell the room. If you cannot, do not install it. Minute caps are the upsell. Site reviewed 16 Sep 2026.",
+  "notes": [
+    "Consent first",
+    "Export notes; do not treat Otter as a system of record",
+    "Fathom is a common free alternative for some users"
+  ],
+  "alternatives": [
+    "descript",
+    "notion-ai"
+  ],
+  "color": "#1D4ED8",
+  "featured": false
+}

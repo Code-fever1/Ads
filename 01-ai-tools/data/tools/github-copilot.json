@@ -1,0 +1,55 @@
+{
+  "slug": "github-copilot",
+  "name": "GitHub Copilot",
+  "vendor": "GitHub / Microsoft",
+  "website": "https://github.com/features/copilot",
+  "affiliateUrl": null,
+  "categories": [
+    "coding"
+  ],
+  "tasks": [
+    "autocomplete",
+    "ide-chat",
+    "pull-request-review"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Limited chat/agent and 2,000 completions/mo.",
+  "pricingTiers": [
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": 10,
+      "note": "$10/mo monthly, or ~$8.33/mo billed annually ($100/yr)"
+    }
+  ],
+  "priceBand": "Free tier; Pro $10/mo (~$8.33/mo annual) (Nov 2026)",
+  "bestFor": "Teams already on GitHub who want the cheapest serious assistant inside VS Code or JetBrains",
+  "skipIf": "You want an AI-native editor as the whole product",
+  "keyFeatures": [
+    "Plugins for VS Code, JetBrains, and Xcode",
+    "Native GitHub repo & PR integration",
+    "Lower entry seat cost than standalone AI IDEs",
+    "Enterprise compliance and procurement"
+  ],
+  "limitations": [
+    "Weaker as an autonomous multi-file agent than Cursor or Claude Code",
+    "Credit metering applies on premium models"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "The low-friction plugin. Half the price of Cursor Pro for many individuals. Weaker as a standalone agentic IDE.",
+  "body": "Copilot’s win is procurement and habit. It lives in the editor you already open, talks to the repo you already host on GitHub, and costs less than the AI-native IDEs at the individual Pro tier. In 2026 it also routes across models and meters some usage as credits, so the sticker $10 is not always the invoice. For enterprises, Copilot is the default because IT already bought GitHub. For a solo Next.js shop, Cursor still feels like the more complete product. Pricing page reviewed 19 Sep 2026.",
+  "notes": [
+    "Watch the credits policy, not only the seat fee",
+    "Business/Enterprise add the compliance story",
+    "Pair with Claude Code rather than pretending Copilot is a terminal agent"
+  ],
+  "alternatives": [
+    "cursor",
+    "windsurf",
+    "claude-code"
+  ],
+  "color": "#24292F",
+  "featured": false
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "descript",
+  "name": "Descript",
+  "vendor": "Descript",
+  "website": "https://www.descript.com",
+  "affiliateUrl": null,
+  "categories": [
+    "audio",
+    "video",
+    "productivity"
+  ],
+  "tasks": [
+    "edit-podcasts",
+    "transcript-video-edit",
+    "remove-filler-words"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Free tier with limited media hours and starter credits — check official limits.",
+  "pricingTiers": [
+    {
+      "name": "Hobbyist",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "Free tier; Hobbyist — check official pricing",
+  "bestFor": "Editing podcasts and talking-head video as if they were a doc",
+  "skipIf": "You need cinematic generative video",
+  "keyFeatures": [
+    "Edit audio and video by deleting transcript text",
+    "One-click filler-word and silence removal",
+    "Studio Sound cleanup for basic mics"
+  ],
+  "limitations": [
+    "Not a generative cinematic video tool",
+    "Proper nouns still need manual transcript review"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "Transcript-first editing. The AI is in service of cutting ums, not inventing a movie.",
+  "body": "Descript is the tool we recommend to people who record interviews, not to people who want a spaceship trailer. Overdub and filler-word removal are the jobs. Compare it with ElevenLabs only if your bottleneck is voice generation, not editing. Plans checked 16 Sep 2026.",
+  "notes": [
+    "Transcription accuracy still needs a human pass for names",
+    "Good companion to a cheap USB mic",
+    "Not a Runway competitor"
+  ],
+  "alternatives": [
+    "elevenlabs",
+    "otter"
+  ],
+  "color": "#2563EB",
+  "featured": false
+}

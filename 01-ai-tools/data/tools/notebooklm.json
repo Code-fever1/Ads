@@ -1,0 +1,56 @@
+{
+  "slug": "notebooklm",
+  "name": "NotebookLM",
+  "vendor": "Google",
+  "website": "https://notebooklm.google.com",
+  "affiliateUrl": null,
+  "categories": [
+    "research",
+    "productivity"
+  ],
+  "tasks": [
+    "study-pdfs",
+    "source-grounded-qa",
+    "audio-overview"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Standard free tier: 100 notebooks, 50 sources/notebook (now called Gemini Notebook).",
+  "pricingTiers": [
+    {
+      "name": "Google AI Plus (bundled)",
+      "priceUsdPerMonth": 4.99,
+      "note": "Monthly billing only; no standalone subscription"
+    }
+  ],
+  "priceBand": "Free tier; Google AI Plus bundle $4.99/mo (Nov 2026)",
+  "bestFor": "Grounding answers in PDFs, notes, and sources you upload",
+  "skipIf": "You want open web search or a coding agent",
+  "keyFeatures": [
+    "Answers strictly grounded in uploaded sources",
+    "Inline page citations to your PDFs & notes",
+    "Audio overview generation",
+    "Zero open-web hallucination drift"
+  ],
+  "limitations": [
+    "Not for open-web search or coding",
+    "Workspace policies govern sensitive uploads"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A notebook that answers from your sources. The opposite of a hallucinating general chat.",
+  "body": "NotebookLM is the rare Google AI product with a crisp job: put documents in, ask questions, get answers tied to those pages. Audio overviews are a bonus, not the product. It will not replace Perplexity for the live web or Cursor for a repo. Students and researchers who drown in PDFs should start here before buying another “AI notes” SaaS. Limits depend on the Google AI bundle. Verified 18 Sep 2026.",
+  "notes": [
+    "Upload quality beats prompt cleverness",
+    "Keep sensitive docs out unless your Workspace policy allows it",
+    "Pair with Gemini for the rest of Google, not as a second Gemini"
+  ],
+  "alternatives": [
+    "perplexity",
+    "notion-ai",
+    "claude"
+  ],
+  "color": "#2E7D32",
+  "featured": true
+}

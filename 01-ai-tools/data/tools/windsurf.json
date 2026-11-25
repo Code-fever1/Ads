@@ -1,0 +1,54 @@
+{
+  "slug": "windsurf",
+  "name": "Windsurf",
+  "vendor": "Cognition",
+  "website": "https://windsurf.com",
+  "affiliateUrl": null,
+  "categories": [
+    "coding"
+  ],
+  "tasks": [
+    "write-code",
+    "autocomplete",
+    "prototype-app"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Light agent quota and limited models (renamed Devin Desktop by Cognition in Jun 2026).",
+  "pricingTiers": [
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": 20,
+      "note": "$20/mo monthly (no annual price shown; via Devin pricing)"
+    }
+  ],
+  "priceBand": "Free tier; Pro $20/mo via Devin pricing (Nov 2026)",
+  "bestFor": "Trying an AI IDE with a usable free tier, or prototyping in a VS Code-like app",
+  "skipIf": "You need a vendor story that has been stable for years",
+  "keyFeatures": [
+    "VS Code-based AI IDE",
+    "Generous free evaluation quota",
+    "Cascade multi-file agent workflow"
+  ],
+  "limitations": [
+    "2026 ownership transition to Cognition leaves roadmap stability in flux",
+    "Smaller community ecosystem than Cursor"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "An AI IDE with a generous trial posture. Ownership moved to Cognition in 2026, so treat the roadmap as in motion.",
+  "body": "Windsurf (now sitting under Cognition, the Devin company) is the IDE you recommend to someone who will not pay Cursor on day one. The free quota is the hook. Pro pricing moved toward the $20 club. The risk is vendor continuity, not the autocomplete. If your procurement team asks who owns the binary next year, say that out loud. We re-read public pricing notes on 18 Sep 2026. Confirm before you migrate a whole agency.",
+  "notes": [
+    "Fine for evaluation and prototypes",
+    "Ask about data retention like you would any new IDE",
+    "Do not build a tutorial empire on a tool in an ownership transition without dating the article"
+  ],
+  "alternatives": [
+    "cursor",
+    "github-copilot",
+    "replit-agent"
+  ],
+  "color": "#09B6A2",
+  "featured": false
+}

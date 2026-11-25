@@ -70,7 +70,7 @@ Duplicate from Kiln, then change names/domains:
 
 - **Niche**: AI tools directory
 - **Live**: yes
-- **Shipped**: `pageMeta` + canonicals, SoftwareApplication / ItemList / Article / Breadcrumb, OG/Twitter + `opengraph-image`, robots, sitemap, `/feed.xml`, `/llms.txt`, AdSense, Privacy + Ads footer, default title **Kiln · AI tools directory**, 301s `/compare/cursor-vs-claude` → `/compare/cursor-vs-claude-code` and `/categories/code` → `/categories/coding`
+- **Shipped**: `pageMeta` + canonicals, SoftwareApplication / ItemList / FAQPage / Article / Breadcrumb, per-tool `opengraph-image`, robots, sitemap, `/feed.xml`, `/llms.txt`, 37 per-tool JSON profiles (`data/tools/*.json`) with structured `pricingTiers` & `>45d` stale amber warnings, 10 categories, 12 comparisons (including 3-way), 9 best-of rankings, 8 guides, static-only build (`force-static`), AdSense removed per Part A4 until traffic scales, GA4/GSC config placeholders in `lib/site.ts`, `/about`, `/contact`, `/privacy`, `/terms`, `/newsletter`, 301s for `/compare/cursor-vs-claude`, `/compare/cursor-vs-windsurf`, `/compare/chatgpt-vs-gemini`, `/compare/lovable-vs-bolt`, `/categories/code`, `/categories/ai-*`, `/best/best-*`, `/guides/*`, `/affiliate-disclosure`, `/submit-tool`
 - **Search Console**:
   - [x] URL-prefix property: `https://kiln.toolfolio.page`
   - [x] Sitemap submitted: `https://kiln.toolfolio.page/sitemap.xml` — **Status: SUCCESS** (20 Sep 2026)
@@ -83,7 +83,7 @@ Duplicate from Kiln, then change names/domains:
 
 - **Niche**: Software jobs aggregator (electrical/embedded is a supporting filter when feeds match)
 - **Live**: yes
-- **Shipped**: `pageMeta` + canonicals, JobPosting / ItemList / Article / Breadcrumb, OG/Twitter + `opengraph-image`, robots, sitemap (includes live `/job/[id]`), `/feed.xml`, `/llms.txt`, AdSense, Privacy + Ads footer, software-first titles, 301 `/electrical-jobs` → `/electrical-engineer-jobs`
+- **Shipped**: `pageMeta` + canonicals, JobPosting / ItemList / Article / Breadcrumb, OG/Twitter + `opengraph-image`, robots, sitemap (includes live `/job/[id]`), `/feed.xml`, `/llms.txt`, AdSense, Privacy + Ads footer, software-first titles, 301 `/electrical-jobs` → `/electrical-engineer-jobs`, `revalidate = 86400` (24h) across all live routes and API fetches to protect Vercel free-plan ISR budget
 - **Search Console**:
   - [x] URL-prefix property: `https://rolepaper.toolfolio.page`
   - [x] Sitemap submitted: `https://rolepaper.toolfolio.page/sitemap.xml` — **Status: SUCCESS** (20 Sep 2026)

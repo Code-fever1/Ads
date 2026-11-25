@@ -1,0 +1,58 @@
+{
+  "slug": "claude",
+  "name": "Claude",
+  "vendor": "Anthropic",
+  "website": "https://claude.ai",
+  "affiliateUrl": null,
+  "categories": [
+    "assistants",
+    "writing",
+    "coding"
+  ],
+  "tasks": [
+    "long-form-writing",
+    "edit-prose",
+    "analyze-pdfs",
+    "code-review"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Limited usage every 5 hours and weekly.",
+  "pricingTiers": [
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": 20,
+      "note": "$20/mo monthly, or $17/mo billed annually ($200/yr)"
+    }
+  ],
+  "priceBand": "Free tier; Pro $20/mo ($17/mo annual) (Nov 2026)",
+  "bestFor": "Long documents, careful edits, and coding work that needs a large context window",
+  "skipIf": "You want the cheapest Google-integrated assistant or a consumer image studio",
+  "keyFeatures": [
+    "Large context window for long briefs",
+    "Projects and interactive Artifacts",
+    "Nuanced prose editing without flattening voice",
+    "Pairs with Claude Code for terminal repos"
+  ],
+  "limitations": [
+    "Not a dedicated live-web citation engine",
+    "Fewer native Google Drive integrations than Gemini"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "The professional writing and coding assistant. Slower to collect consumer toys, stronger on long context and Claude Code.",
+  "body": "Claude is the assistant we send people to when ChatGPT’s tone feels like a brochure. It holds large briefs, edits without flattening voice, and pairs with Claude Code for repository work. Anthropic ships fewer consumer gadgets. That is a feature if your job is prose, policy, or a messy codebase. Pro is priced like the rest of the $20 club. Heavy agent use pushes people into Max, which is a different budget conversation. Last verified against Anthropic’s public plans on 19 Sep 2026.",
+  "notes": [
+    "Pair with Cursor if you want an IDE plus a terminal agent",
+    "Projects and artifacts matter more than chat skins",
+    "Not the first pick for Google Drive natives"
+  ],
+  "alternatives": [
+    "chatgpt",
+    "claude-code",
+    "cursor"
+  ],
+  "color": "#C15F3C",
+  "featured": true
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "grok",
+  "name": "Grok",
+  "vendor": "xAI",
+  "website": "https://grok.x.ai",
+  "affiliateUrl": null,
+  "categories": [
+    "assistants",
+    "research"
+  ],
+  "tasks": [
+    "social-trends",
+    "real-time-news",
+    "general-chat"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Limited Chat, Imagine, and Grok Build.",
+  "pricingTiers": [
+    {
+      "name": "Plus (X Subscription)",
+      "priceUsdPerMonth": 8,
+      "note": "$8/mo monthly, or ~$7/mo billed annually ($80/yr)"
+    }
+  ],
+  "priceBand": "Free tier; Plus (X Subscription) $8/mo (~$7/mo annual) (Nov 2026)",
+  "bestFor": "People who already pay for X and want a more current, informal assistant",
+  "skipIf": "You need a vendor with boring enterprise procurement",
+  "keyFeatures": [
+    "Real-time X social post context",
+    "Quick reaction on breaking events",
+    "Informal conversational tone"
+  ],
+  "limitations": [
+    "Social-grounded answers are leads, not verified citations",
+    "Weak enterprise procurement and compliance story"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "xAI’s assistant, wired into X. Useful for recent social context. A weak reason to rebuild a whole workflow.",
+  "body": "Grok’s distribution is X, which is either a feature or a deal-breaker. It is quicker to talk about current events than a model that was trained last spring. It is not the coding or compliance pick. Pricing is tangled with X subscriptions, so a “Grok vs ChatGPT” table that ignores the social bundle is dishonest. We checked public xAI/Grok pages on 17 Sep 2026. If you are not already on X Premium, start with Claude or ChatGPT instead of adding a social network to your tool stack.",
+  "notes": [
+    "Treat social-grounded answers as leads, not citations",
+    "Enterprise buyers should wait for a cleaner contract surface",
+    "Do not confuse Grok with GitHub Copilot or Microsoft Copilot"
+  ],
+  "alternatives": [
+    "chatgpt",
+    "perplexity",
+    "claude"
+  ],
+  "color": "#18181B",
+  "featured": false
+}

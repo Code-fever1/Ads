@@ -1,0 +1,54 @@
+{
+  "slug": "leonardo",
+  "name": "Leonardo AI",
+  "vendor": "Leonardo",
+  "website": "https://leonardo.ai",
+  "affiliateUrl": null,
+  "categories": [
+    "image"
+  ],
+  "tasks": [
+    "game-concept-art",
+    "web-image-studio",
+    "asset-generation"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Free daily Fast Tokens — check official limits.",
+  "pricingTiers": [
+    {
+      "name": "Essential",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "Free daily tokens; Essential — check official pricing",
+  "bestFor": "Game-adjacent concept art and people who want a web UI on top of multiple models",
+  "skipIf": "You already live in Midjourney and do not need a second subscription",
+  "keyFeatures": [
+    "Web studio wrapping multiple image models",
+    "Real daily free token bucket",
+    "Useful presets for game and concept sheets"
+  ],
+  "limitations": [
+    "Output consistency varies across selected models",
+    "Weaker commercial IP story than Adobe Firefly"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A web studio with model choice and a real free token bucket. Quality depends on which model you pick that day.",
+  "body": "Leonardo is a dashboard more than a signature look. That helps beginners. It also means two users can have opposite results. Fine for concept sheets. Weak as a legal story compared with Firefly. Token packs reviewed 16 Sep 2026.",
+  "notes": [
+    "Read the license for the specific model you run",
+    "Good stepping stone before a Midjourney subscription",
+    "Avoid third-party “unlimited Leonardo” resellers"
+  ],
+  "alternatives": [
+    "midjourney",
+    "flux",
+    "adobe-firefly"
+  ],
+  "color": "#7C3AED",
+  "featured": false
+}

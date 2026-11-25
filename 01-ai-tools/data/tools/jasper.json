@@ -1,0 +1,54 @@
+{
+  "slug": "jasper",
+  "name": "Jasper",
+  "vendor": "Jasper",
+  "website": "https://www.jasper.ai",
+  "affiliateUrl": null,
+  "categories": [
+    "writing"
+  ],
+  "tasks": [
+    "marketing-campaigns",
+    "brand-voice-copy",
+    "team-content"
+  ],
+  "pricing": "paid",
+  "hasFreeTier": false,
+  "freeTierNote": "",
+  "pricingTiers": [
+    {
+      "name": "Pro (1 seat)",
+      "priceUsdPerMonth": 69,
+      "note": "$69/mo monthly, or $59/mo billed annually"
+    }
+  ],
+  "priceBand": "No free tier; Pro $69/mo ($59/mo annual) (Nov 2026)",
+  "bestFor": "Marketing teams that want brand voices, templates, and seats, not a single chat box",
+  "skipIf": "You are a solo blogger. ChatGPT plus a style guide is cheaper.",
+  "keyFeatures": [
+    "Shared brand voice and style guides",
+    "Multi-channel marketing campaign workflows",
+    "Team collaboration and seat controls"
+  ],
+  "limitations": [
+    "Overpriced for solo bloggers vs ChatGPT or Claude",
+    "Requires clear team workflow to justify B2B pricing"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A content platform with AI inside. Priced like B2B software because that is what it is.",
+  "body": "Jasper survived the “everyone has ChatGPT now” crash by selling workflow: voices, campaigns, collaboration. If you cannot name the workflow, do not buy it. Affiliates like this page because commissions exist. We still say no for most solo operators. Public pricing shape reviewed 16 Sep 2026 (exact tiers move; confirm on-site).",
+  "notes": [
+    "Ask for a brand-voice sample before annual billing",
+    "Thin “AI article spinners” are not Jasper’s best use and still hurt SEO",
+    "Surfer-class SEO tools are a different purchase"
+  ],
+  "alternatives": [
+    "chatgpt",
+    "claude",
+    "grammarly"
+  ],
+  "color": "#B91C1C",
+  "featured": false
+}

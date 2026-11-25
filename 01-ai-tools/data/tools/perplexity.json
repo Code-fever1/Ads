@@ -1,0 +1,56 @@
+{
+  "slug": "perplexity",
+  "name": "Perplexity",
+  "vendor": "Perplexity AI",
+  "website": "https://www.perplexity.ai",
+  "affiliateUrl": null,
+  "categories": [
+    "research",
+    "assistants"
+  ],
+  "tasks": [
+    "web-research",
+    "verify-sources",
+    "market-briefing"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Limited daily usage (~3 Pro searches/day).",
+  "pricingTiers": [
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": 20,
+      "note": "$20/mo monthly, or $17/mo billed annually ($200/yr)"
+    }
+  ],
+  "priceBand": "Free tier; Pro $20/mo ($17/mo annual) (Nov 2026)",
+  "bestFor": "Questions that need links, not a confident paragraph",
+  "skipIf": "You want an IDE, a design tool, or a private document brain without web search",
+  "keyFeatures": [
+    "Inline source citations on every answer",
+    "Web, academic, and social corpus filters",
+    "Multi-model query routing on Pro",
+    "Follow-up research threads"
+  ],
+  "limitations": [
+    "Weaker long-form drafting than Claude",
+    "Not a replacement for NotebookLM on private PDFs"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A research console that retrieves the web and shows sources. Use it when ChatGPT would invent a citation.",
+  "body": "Perplexity is the tool we open before we write, not after. It searches, cites, and lets you narrow the corpus (web, academic, or social). You can route some queries through third-party models, which is useful and easy to overspend. It is a weak daily writer compared with Claude and a weak coder compared with Cursor. That is fine. Rankings that call it a ChatGPT killer miss the job. Last walked the Pro marketing page on 18 Sep 2026.",
+  "notes": [
+    "Force source mode when the topic is even slightly factual",
+    "Pro is worth it if this replaces a pile of Google tabs",
+    "Not a replacement for NotebookLM on your own PDFs"
+  ],
+  "alternatives": [
+    "chatgpt",
+    "notebooklm",
+    "gemini"
+  ],
+  "color": "#20808D",
+  "featured": true
+}

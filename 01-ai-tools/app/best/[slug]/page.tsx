@@ -3,11 +3,22 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/chrome";
 import { Crumbs, Faq } from "@/components/faq";
+import { PricingBadge } from "@/components/PricingBadge";
+import { ToolLogo } from "@/components/ToolLogo";
+import { VerifiedDate } from "@/components/VerifiedDate";
 import { getRanking, rankings } from "@/data/rankings";
 import { getTool } from "@/data/tools";
-import { breadcrumbJsonLd, rankingJsonLd, webPageJsonLd } from "@/lib/jsonld";
+import { BUILD_NOW_MS, formatEntryPrice } from "@/lib/format";
+import {
+  breadcrumbJsonLd,
+  faqJsonLd,
+  rankingJsonLd,
+  webPageJsonLd,
+} from "@/lib/jsonld";
 import { pageMeta } from "@/lib/seo";
 import { formatDate } from "@/lib/site";
+
+export const dynamic = "force-static";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,9 +31,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ranking = getRanking(slug);
   if (!ranking) return { title: "Not found" };
   return pageMeta({
-    title: `${ranking.title} (2026)`,
-    description: ranking.intro.slice(0, 160),
+    title: `${ranking.title} in 2026 — Tested & Ranked`,
+    description: ranking.intro,
     path: `/best/${ranking.slug}`,
+    modifiedTime: ranking.updatedDate,
   });
 }
 
@@ -39,16 +51,17 @@ export default async function RankingPage({ params }: Props) {
 
   const topThree = ranked.slice(0, 3);
   const otherRankings = rankings.filter((r) => r.slug !== ranking.slug);
-
-  const podiumBadges = ["🥇 #1 Editor's Choice", "🥈 #2 Runner-Up", "🥉 #3 Specialist Pick"];
+  const podiumBadges = ["#1 Editor's Choice", "#2 Runner-Up", "#3 Specialist Pick"];
+  const nowMs = BUILD_NOW_MS;
 
   return (
     <main>
       <JsonLd
         data={webPageJsonLd({
-          name: ranking.title,
+          name: `${ranking.title} in 2026`,
           description: ranking.intro,
           path: `/best/${ranking.slug}`,
+          dateModified: ranking.updatedDate,
           about: ranking.keyword,
         })}
       />
@@ -60,6 +73,8 @@ export default async function RankingPage({ params }: Props) {
           { name: ranking.title, path: `/best/${ranking.slug}` },
         ])}
       />
+      <JsonLd data={faqJsonLd(ranking.faqs)} />
+
       <Crumbs
         items={[
           { name: "Home", href: "/" },
@@ -69,57 +84,61 @@ export default async function RankingPage({ params }: Props) {
       />
 
       <p className="section-label" style={{ marginTop: "1.5rem" }}>
-        Curated Guide · {ranking.keyword}
+        Curated Ranking · Updated{" "}
+        <time dateTime={ranking.updatedDate}>{formatDate(ranking.updatedDate)}</time>
       </p>
-      <h1 style={{ fontFamily: "var(--font-body)", fontSize: "clamp(2rem,4vw,3.2rem)", margin: "0 0 0.5rem" }}>
+      <h1
+        style={{
+          fontFamily: "var(--font-body)",
+          fontSize: "clamp(2rem,4vw,3.2rem)",
+          margin: "0 0 0.5rem",
+        }}
+      >
         {ranking.title} in 2026
       </h1>
       <article className="prose">
         <p>{ranking.intro}</p>
       </article>
 
-      <h2 className="section-label" style={{ marginTop: "2rem" }}>Evaluation & Selection Criteria</h2>
-      <ul className="criteria-list">
+      <h2 className="section-label" style={{ marginTop: "2rem" }}>
+        Evaluation &amp; selection criteria
+      </h2>
+      <ul className="notes-list">
         {ranking.criteria.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
 
-      {/* Top 3 Podium Cards */}
       {topThree.length > 0 && (
         <section className="podium-section">
-          <h2 className="section-label">Top Recommended Picks</h2>
+          <h2 className="section-label">Top recommended picks</h2>
           <div className="podium-grid">
             {topThree.map(({ tool }, idx) => (
               <div key={tool.slug} className={`podium-card rank-${idx + 1}`}>
                 <div className="podium-badge">{podiumBadges[idx]}</div>
                 <div className="podium-head">
-                  <div>
-                    <h3 className="podium-name">
-                      <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
-                    </h3>
-                    <span className="podium-vendor">{tool.vendor}</span>
+                  <div className="tool-card-identity">
+                    <ToolLogo tool={tool} size="sm" />
+                    <div>
+                      <h3 className="podium-name">
+                        <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
+                      </h3>
+                      <span className="podium-vendor">{tool.vendor}</span>
+                    </div>
                   </div>
-                  <span className="podium-price">{tool.pricing}</span>
+                  <PricingBadge model={tool.pricing} />
                 </div>
                 <p className="podium-best">
-                  <strong>Why it earned this spot:</strong> {tool.bestFor}
+                  <strong>Best for:</strong> {tool.bestFor}
                 </p>
                 <div className="podium-skip">
                   <strong>Skip if:</strong> {tool.skipIf}
                 </div>
                 <div className="podium-actions">
                   <Link href={`/tools/${tool.slug}`} className="btn btn-ochre small">
-                    Read Full Review →
+                    Read Review →
                   </Link>
-                  <a
-                    href={tool.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="podium-vendor-link"
-                  >
-                    Official Site ↗
-                  </a>
+                  <span className="podium-vendor-link">{formatEntryPrice(tool)}</span>
                 </div>
               </div>
             ))}
@@ -127,59 +146,97 @@ export default async function RankingPage({ params }: Props) {
         </section>
       )}
 
-      {/* Full Catalog Table */}
       <h2 className="section-label" style={{ marginTop: "2.5rem" }}>
-        The Complete Shortlist ({ranked.length} Tools)
+        Summary table ({ranked.length} tools)
       </h2>
-      <table className="catalog">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Tool</th>
-            <th>Why it is here</th>
-            <th>Verified</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ranked.map(({ index, tool }) => (
-            <tr key={tool.slug}>
-              <td className="num">{String(index + 1).padStart(2, "0")}</td>
-              <td data-label="Tool">
-                <Link href={`/tools/${tool.slug}`} style={{ fontWeight: 700 }}>
-                  {tool.name}
-                </Link>
-                <div style={{ fontSize: "0.78rem", color: "var(--soot)" }}>{tool.vendor}</div>
-              </td>
-              <td data-label="Why it is here">{tool.bestFor}</td>
-              <td data-label="Verified">
-                <time dateTime={tool.lastVerified}>{formatDate(tool.lastVerified)}</time>
-              </td>
-              <td data-label="Action">
-                <Link href={`/tools/${tool.slug}`} className="review-btn">
-                  Profile →
-                </Link>
-              </td>
+      <div className="table-scroll">
+        <table className="catalog">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Tool</th>
+              <th>Best for</th>
+              <th>Entry price</th>
+              <th>Free tier</th>
+              <th>Verified</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {ranked.map(({ index, tool }) => (
+              <tr key={tool.slug}>
+                <td className="num">{String(index + 1).padStart(2, "0")}</td>
+                <td data-label="Tool">
+                  <Link href={`/tools/${tool.slug}`} style={{ fontWeight: 700 }}>
+                    {tool.name}
+                  </Link>
+                  <div style={{ fontSize: "0.78rem", color: "var(--soot)" }}>{tool.vendor}</div>
+                </td>
+                <td data-label="Best for">{tool.bestFor}</td>
+                <td data-label="Entry price">{formatEntryPrice(tool)}</td>
+                <td data-label="Free tier">{tool.hasFreeTier ? "Yes" : "No"}</td>
+                <td data-label="Verified">
+                  <VerifiedDate date={tool.lastVerified} referenceNowMs={nowMs} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      {/* Cross-Discovery: Other Best-Of Guides */}
+      <h2 className="section-label" style={{ marginTop: "2.5rem" }}>
+        Ranked breakdown &amp; verdicts
+      </h2>
+      <div className="stack">
+        {ranked.map(({ index, tool }) => {
+          const verdict = ranking.toolVerdicts[tool.slug] ?? tool.summary;
+          return (
+            <article key={tool.slug} className="tool-card">
+              <div className="tool-card-top">
+                <div className="tool-card-identity">
+                  <span className="num" style={{ width: "auto", fontWeight: 700 }}>
+                    #{index + 1}
+                  </span>
+                  <ToolLogo tool={tool} size="sm" />
+                  <div>
+                    <h3 className="tool-card-name">
+                      <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
+                    </h3>
+                    <p className="tool-card-vendor">
+                      {tool.vendor} · {formatEntryPrice(tool)}
+                    </p>
+                  </div>
+                </div>
+                <PricingBadge model={tool.pricing} />
+              </div>
+              <p className="tool-card-tagline">{verdict}</p>
+              <div className="alt-skip">
+                <strong>Skip if:</strong> {tool.skipIf}
+              </div>
+              <div className="tool-card-footer">
+                <VerifiedDate date={tool.lastVerified} referenceNowMs={nowMs} />
+                <Link href={`/tools/${tool.slug}`} className="review-btn">
+                  Full {tool.name} profile →
+                </Link>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+
       {otherRankings.length > 0 && (
         <section className="other-rankings-section">
           <div className="section-header-flex">
             <h2 className="section-label" style={{ margin: 0 }}>
-              Explore Other Best-Of Curations
+              Explore other best-of guides
             </h2>
             <Link href="/best" className="view-all-link">
-              View all guides ({rankings.length}) →
+              View all ({rankings.length}) →
             </Link>
           </div>
           <div className="other-guides-grid">
-            {otherRankings.map((r) => (
+            {otherRankings.slice(0, 6).map((r) => (
               <Link key={r.slug} href={`/best/${r.slug}`} className="guide-nav-card">
-                <span className="guide-kw">{r.keyword}</span>
+                <span className="guide-kw">{r.toolSlugs.length} tools</span>
                 <span className="guide-title">{r.title}</span>
                 <span className="guide-arrow">Read Guide →</span>
               </Link>
@@ -188,21 +245,7 @@ export default async function RankingPage({ params }: Props) {
         </section>
       )}
 
-      <Faq
-        items={[
-          {
-            question: `What is the best pick on this list?`,
-            answer: ranked[0]
-              ? `${ranked[0].tool.name} is first because ${ranked[0].tool.bestFor}. Read the skip-if line on its profile before you pay.`
-              : ranking.intro,
-          },
-          {
-            question: "Does Kiln sell these tools?",
-            answer:
-              "No. Kiln is a directory. Each row links to a Kiln profile and then to the vendor. Rankings drop sunset products.",
-          },
-        ]}
-      />
+      <Faq items={ranking.faqs} />
     </main>
   );
 }

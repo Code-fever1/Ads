@@ -12,7 +12,7 @@ import { pageMeta } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export const revalidate = 300;
+export const revalidate = 86400;
 
 const roleHubs = hubs.filter((hub) => !hub.path.startsWith("/locations/"));
 

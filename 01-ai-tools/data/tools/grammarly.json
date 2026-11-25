@@ -1,0 +1,55 @@
+{
+  "slug": "grammarly",
+  "name": "Grammarly",
+  "vendor": "Grammarly",
+  "website": "https://www.grammarly.com",
+  "affiliateUrl": null,
+  "categories": [
+    "writing",
+    "productivity"
+  ],
+  "tasks": [
+    "proofread-copy",
+    "grammar-check",
+    "tone-editing"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "$0 plan with spelling/grammar, tone, and 100 AI prompts/mo.",
+  "pricingTiers": [
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": 30,
+      "note": "$30/mo monthly, or $12/mo billed annually"
+    }
+  ],
+  "priceBand": "Free tier; Pro $30/mo ($12/mo annual) (Nov 2026)",
+  "bestFor": "Non-native and native writers who need a always-on editor in the browser",
+  "skipIf": "You want long-form strategy or SEO briefs from a content platform",
+  "keyFeatures": [
+    "Works inline across browsers, email, and docs",
+    "Reliable typo and clarity checks for non-native writers",
+    "Enterprise DLP controls available"
+  ],
+  "limitations": [
+    "Tone suggestions can flatten personal voice",
+    "Not built for long-form research or coding"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "The grammar layer. Unsexy, widely installed, still the right first paid writing tool for many people.",
+  "body": "Grammarly is not trying to be your novelist. It sits in the text box. For a developer writing English as a second language, that is worth more than Jasper’s campaign templates. Generative features now crowd the product; the core is still correctness. We checked the public plans on 18 Sep 2026.",
+  "notes": [
+    "Turn off tone features if they flatten your voice",
+    "Enterprise DLP matters on corporate laptops",
+    "Claude is better for rewriting a whole chapter"
+  ],
+  "alternatives": [
+    "claude",
+    "notion-ai",
+    "jasper"
+  ],
+  "color": "#15803D",
+  "featured": false
+}

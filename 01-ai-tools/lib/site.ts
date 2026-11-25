@@ -4,12 +4,21 @@ import { guides } from "@/data/guides";
 import { rankings } from "@/data/rankings";
 import { tools } from "@/data/tools";
 
+/**
+ * Single-source deployment configuration & placeholder constants.
+ * Update via environment variables in Vercel or edit the fallback constants below.
+ */
+export const GA4_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID ?? "";
+export const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "";
+export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@toolfolio.page";
+export const NEWSLETTER_URL = process.env.NEXT_PUBLIC_NEWSLETTER_URL ?? "";
+
 export const site = {
   name: "Kiln",
   domain: "kiln.toolfolio.page",
   tagline: "AI tools, fired and dated.",
   description:
-    "Kiln is an independent AI tools directory: last-verified dates, comparison tables, and skip-if notes. We are not the vendor, and we are not the other product named Kiln.",
+    "Kiln is an independent AI tools directory: hand-verified prices, skip-if notes, and honest comparisons. We are not the vendor.",
 };
 
 export function absUrl(path: string) {
@@ -17,17 +26,18 @@ export function absUrl(path: string) {
 }
 
 export function formatDate(iso: string) {
-  return new Date(`${iso}T00:00:00`).toLocaleDateString("en-GB", {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", {
     day: "numeric",
     month: "short",
     year: "numeric",
+    timeZone: "UTC",
   });
 }
 
 export function relatedForTool(slug: string) {
   return {
     rankings: rankings.filter((item) => item.toolSlugs.includes(slug)),
-    comparisons: comparisons.filter((item) => item.a === slug || item.b === slug),
+    comparisons: comparisons.filter((item) => item.tools.includes(slug)),
   };
 }
 
@@ -36,10 +46,15 @@ export function lastVerifiedForPath(path: string) {
     return tools.find((tool) => `/tools/${tool.slug}` === path)?.lastVerified;
   }
   if (path.startsWith("/blog/")) {
-    return guides.find((guide) => `/blog/${guide.slug}` === path)?.date;
+    const guide = guides.find((item) => `/blog/${item.slug}` === path);
+    return guide?.updatedDate ?? guide?.date;
+  }
+  if (path.startsWith("/compare/")) {
+    return comparisons.find((item) => `/compare/${item.slug}` === path)?.updatedDate;
   }
   if (path.startsWith("/best/")) {
     const ranking = rankings.find((item) => `/best/${item.slug}` === path);
+    if (ranking?.updatedDate) return ranking.updatedDate;
     const dates = ranking?.toolSlugs
       .map((slug) => tools.find((tool) => tool.slug === slug)?.lastVerified)
       .filter(Boolean) as string[];
@@ -56,6 +71,11 @@ export function allIndexablePaths() {
     "/best",
     "/compare",
     "/blog",
+    "/about",
+    "/contact",
+    "/privacy",
+    "/terms",
+    "/newsletter",
     "/submit",
     "/methodology",
     "/disclosure",

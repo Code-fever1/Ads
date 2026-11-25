@@ -1,0 +1,54 @@
+{
+  "slug": "zapier",
+  "name": "Zapier",
+  "vendor": "Zapier",
+  "website": "https://zapier.com",
+  "affiliateUrl": null,
+  "categories": [
+    "automation"
+  ],
+  "tasks": [
+    "saas-integration",
+    "no-code-automation",
+    "alert-routing"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "$0 plan with 100 tasks/mo and two-step Zaps.",
+  "pricingTiers": [
+    {
+      "name": "Professional",
+      "priceUsdPerMonth": 29.99,
+      "note": "$29.99/mo monthly, or $19.99/mo billed annually"
+    }
+  ],
+  "priceBand": "Free tier (100 tasks/mo); Professional $29.99/mo ($19.99/mo annual) (Nov 2026)",
+  "bestFor": "Non-developers connecting popular SaaS tools this afternoon",
+  "skipIf": "Your volume will make task pricing embarrassing, or you need on-prem",
+  "keyFeatures": [
+    "Largest consumer & B2B SaaS app catalog",
+    "Zero-code setup for non-engineers",
+    "Built-in tables, interfaces, and agent layers"
+  ],
+  "limitations": [
+    "Per-task billing escalates quickly at high volume",
+    "No self-hosted or on-prem deployment option"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "The default no-code glue. Enormous app catalog. Task meters are the business.",
+  "body": "Zapier still wins when the app you need is obscure and you are not going to write a webhook. AI agents (Central and friends) are extra. For a jobs board or an AI directory, Zapier can push “new listing” alerts. For high volume, n8n or a worker is cheaper. Pricing page checked 18 Sep 2026.",
+  "notes": [
+    "Count tasks before you celebrate a multi-step Zap",
+    "Prefer official apps over scraping",
+    "Make.com is the usual price/flexibility fork"
+  ],
+  "alternatives": [
+    "n8n",
+    "lindy",
+    "claude"
+  ],
+  "color": "#FF4F00",
+  "featured": false
+}

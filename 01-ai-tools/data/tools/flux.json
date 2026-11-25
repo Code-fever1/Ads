@@ -1,0 +1,54 @@
+{
+  "slug": "flux",
+  "name": "FLUX",
+  "vendor": "Black Forest Labs",
+  "website": "https://bfl.ai",
+  "affiliateUrl": null,
+  "categories": [
+    "image"
+  ],
+  "tasks": [
+    "image-api",
+    "open-weights-images",
+    "photoreal-generation"
+  ],
+  "pricing": "usage",
+  "hasFreeTier": false,
+  "freeTierNote": "No hosted free tier — free only via self-hosting Klein weights.",
+  "pricingTiers": [
+    {
+      "name": "Pay-as-you-go API",
+      "priceUsdPerMonth": null,
+      "note": "Pay-as-you-go API, ~$0.048/image"
+    }
+  ],
+  "priceBand": "Pay-as-you-go API (~$0.048/image); self-host Klein weights free",
+  "bestFor": "Developers who want a modern image model in their own product",
+  "skipIf": "You want a consumer subscription with a pretty gallery",
+  "keyFeatures": [
+    "Modern open and API image model family",
+    "Strong photorealism and text rendering",
+    "Run locally for strict data privacy"
+  ],
+  "limitations": [
+    "No consumer creative gallery subscription",
+    "Third-party wrappers vary on which FLUX checkpoint they run"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A model family, not a social network. Shows up inside many third-party UIs.",
+  "body": "FLUX is what you buy when you are building a feature, not browsing a feed. Some weights can run locally, which changes the privacy story. Consumer wrappers will rebrand it. Kiln lists the lab so you can see the source. API and lab site checked 16 Sep 2026. Prices are usage, not a fake “unlimited art” plan.",
+  "notes": [
+    "Check which FLUX version a wrapper actually calls",
+    "Local vs hosted is the real product decision",
+    "Not a video model"
+  ],
+  "alternatives": [
+    "midjourney",
+    "adobe-firefly",
+    "leonardo"
+  ],
+  "color": "#27272A",
+  "featured": false
+}

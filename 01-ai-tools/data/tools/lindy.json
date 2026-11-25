@@ -1,0 +1,54 @@
+{
+  "slug": "lindy",
+  "name": "Lindy",
+  "vendor": "Lindy",
+  "website": "https://www.lindy.ai",
+  "affiliateUrl": null,
+  "categories": [
+    "automation"
+  ],
+  "tasks": [
+    "email-triage",
+    "hosted-ai-agents",
+    "crm-busywork"
+  ],
+  "pricing": "free-trial",
+  "hasFreeTier": false,
+  "freeTierNote": "No permanent free tier — 7-day trial credits (check official pricing).",
+  "pricingTiers": [
+    {
+      "name": "Team",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "7-day trial; Team — check official pricing",
+  "bestFor": "Hosted “AI employees” for email and CRM busywork",
+  "skipIf": "You need transparent, versioned workflows you can diff in git",
+  "keyFeatures": [
+    "Hosted no-code AI agents for inbox and calendar",
+    "Prebuilt templates for CRM and meeting follow-ups",
+    "Human-in-the-loop approval steps"
+  ],
+  "limitations": [
+    "Opaque execution graph compared with n8n",
+    "Requires careful permission scoping on email/CRM access"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A no-code agent platform. Convenient. Opaque compared with n8n.",
+  "body": "Lindy sells the fantasy of an employee. Sometimes that is email triage. Sometimes it is a loop that books the wrong meeting. We list it because search demand for AI agents is real, and we would rather you see a named vendor than a Twitter demo. Prefer n8n if you want to own the graph. Public site reviewed 16 Sep 2026.",
+  "notes": [
+    "Start with one workflow and a human approval step",
+    "Read data access scopes",
+    "Not a replacement for a junior engineer"
+  ],
+  "alternatives": [
+    "n8n",
+    "zapier",
+    "claude"
+  ],
+  "color": "#4F46E5",
+  "featured": false
+}

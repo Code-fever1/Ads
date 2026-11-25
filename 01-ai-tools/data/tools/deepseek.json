@@ -1,0 +1,55 @@
+{
+  "slug": "deepseek",
+  "name": "DeepSeek",
+  "vendor": "DeepSeek",
+  "website": "https://www.deepseek.com",
+  "affiliateUrl": null,
+  "categories": [
+    "assistants",
+    "coding"
+  ],
+  "tasks": [
+    "api-inference",
+    "code-generation",
+    "reasoning"
+  ],
+  "pricing": "free",
+  "hasFreeTier": true,
+  "freeTierNote": "Chat app is free with no paid subscription.",
+  "pricingTiers": [
+    {
+      "name": "API Pay-Per-Use",
+      "priceUsdPerMonth": null,
+      "note": "No paid subscription — free chat app; pay-as-you-go API ($0.15/1M input, $0.60/1M output off-peak)"
+    }
+  ],
+  "priceBand": "Free chat app; API pay-per-use only (Nov 2026)",
+  "bestFor": "Cost-sensitive API use and people who will read the data-residency notes",
+  "skipIf": "You cannot send prompts to a China-based provider",
+  "keyFeatures": [
+    "Low-cost API inference vs US frontier labs",
+    "Strong coding and reasoning benchmarks",
+    "Open-weight model releases"
+  ],
+  "limitations": [
+    "China-based provider may fail Western data-residency reviews",
+    "Latency and output quality vary by endpoint"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A capable, cheap model family that forced US labs to talk about price. Procurement and data rules decide if you can use it.",
+  "body": "DeepSeek mattered because it made frontier-ish quality available at API prices that embarrassed the $20/seat club. That is still the story: cost, not a unique IDE. If you ship a product on the API, run a latency and policy check before you celebrate the invoice. Consumer chat is optional. Many Western companies will not clear security review. We do not pretend otherwise. Public site and API docs reviewed 17 Sep 2026.",
+  "notes": [
+    "Read the privacy policy before any customer data",
+    "Good as a backup model in a router, not always as a brand assistant",
+    "Quality varies by distillation versus full-size endpoints"
+  ],
+  "alternatives": [
+    "claude",
+    "chatgpt",
+    "huggingface"
+  ],
+  "color": "#4D6BFE",
+  "featured": false
+}

@@ -9,7 +9,7 @@ import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { JobsBoard } from "@/components/JobsBoard";
 
-export const revalidate = 300;
+export const revalidate = 86400;
 
 export const metadata = pageMeta({
   title: "Live software jobs",
@@ -36,7 +36,7 @@ export default async function Home() {
         )}
       />
       <p className="flag">
-        Editorial Classifieds Desk · Curated software, machine learning, and electrical engineering openings refreshed hourly from verified sources.
+        Editorial Classifieds Desk · Curated software, machine learning, and electrical engineering openings refreshed daily from verified sources.
       </p>
       <div className="columns">
         <div>

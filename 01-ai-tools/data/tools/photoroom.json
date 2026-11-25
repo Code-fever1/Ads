@@ -1,0 +1,54 @@
+{
+  "slug": "photoroom",
+  "name": "PhotoRoom",
+  "vendor": "PhotoRoom",
+  "website": "https://www.photoroom.com",
+  "affiliateUrl": null,
+  "categories": [
+    "image",
+    "design"
+  ],
+  "tasks": [
+    "remove-background",
+    "ecommerce-photos",
+    "batch-cutouts"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Limited features/exports for personal non-commercial use.",
+  "pricingTiers": [
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": 12.99,
+      "note": "$12.99/mo monthly, or $7.50/mo billed annually ($89.99/yr)"
+    }
+  ],
+  "priceBand": "Free personal tier; Pro $12.99/mo ($7.50/mo annual) (Nov 2026)",
+  "bestFor": "Catalog photos, marketplace listings, and background removal that has to finish today",
+  "skipIf": "You are making art, not product shots",
+  "keyFeatures": [
+    "Clean subject cutouts for e-commerce SKUs",
+    "Batch studio backgrounds for product catalogs",
+    "Fast mobile and web workflow"
+  ],
+  "limitations": [
+    "Built for product shots, not imaginative illustration",
+    "Batch tools locked behind Pro"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "A boring, profitable job: cut the subject out and put it on a clean background. Does that job well.",
+  "body": "PhotoRoom (and Remove.bg-class tools) print money because shops need 400 SKU photos, not a fantasy illustration. If your “AI image” article skips this category, it is written for Twitter, not for sellers. We last checked PhotoRoom’s public site on 16 Sep 2026.",
+  "notes": [
+    "Batch credits are the paid feature",
+    "Keep original files; marketplaces change background rules",
+    "Not a generator of novel scenes"
+  ],
+  "alternatives": [
+    "adobe-firefly",
+    "figma-ai"
+  ],
+  "color": "#4338CA",
+  "featured": false
+}

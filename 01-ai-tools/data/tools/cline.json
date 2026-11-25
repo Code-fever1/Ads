@@ -1,0 +1,54 @@
+{
+  "slug": "cline",
+  "name": "Cline",
+  "vendor": "Cline",
+  "website": "https://cline.bot",
+  "affiliateUrl": null,
+  "categories": [
+    "coding"
+  ],
+  "tasks": [
+    "vscode-agent",
+    "byo-key-coding",
+    "autonomous-edits"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Open Source $0, BYOK, inference at cost.",
+  "pricingTiers": [
+    {
+      "name": "ClinePass",
+      "priceUsdPerMonth": 9.99,
+      "note": "$9.99/mo monthly (no annual price shown)"
+    }
+  ],
+  "priceBand": "Free open source (BYOK); ClinePass $9.99/mo (Nov 2026)",
+  "bestFor": "VS Code users who want an autonomous agent without switching IDEs",
+  "skipIf": "You refuse to manage API keys",
+  "keyFeatures": [
+    "Lives directly inside standard VS Code",
+    "Transparent per-request API cost visibility",
+    "Supports Anthropic, OpenAI, and OpenRouter keys"
+  ],
+  "limitations": [
+    "Unbounded agent loops can run up API bills if uncapped",
+    "Requires setting up and managing provider API keys"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "Bring-your-own-key coding agent in VS Code. Cost is honest because you see the provider invoice.",
+  "body": "Cline (and similar BYO-key agents) is how you learn what an agent actually spends. There is no bundled “unlimited Pro.” You plug in Anthropic, OpenAI, or OpenRouter and watch. That is healthier than a flat $20 that hides a credit pool. Extension and site checked 16 Sep 2026.",
+  "notes": [
+    "Set hard spend limits on the provider dashboard",
+    "Review diffs like a human junior",
+    "Aider is the terminal cousin"
+  ],
+  "alternatives": [
+    "aider",
+    "claude-code",
+    "github-copilot"
+  ],
+  "color": "#6D28D9",
+  "featured": false
+}

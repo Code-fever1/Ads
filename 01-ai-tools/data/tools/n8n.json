@@ -1,0 +1,54 @@
+{
+  "slug": "n8n",
+  "name": "n8n",
+  "vendor": "n8n",
+  "website": "https://n8n.io",
+  "affiliateUrl": null,
+  "categories": [
+    "automation"
+  ],
+  "tasks": [
+    "workflow-automation",
+    "self-host-agents",
+    "webhook-pipelines"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Community Edition, self-hosted free.",
+  "pricingTiers": [
+    {
+      "name": "Starter",
+      "priceUsdPerMonth": 24,
+      "currency": "EUR",
+      "note": "€24/mo monthly, or €20/mo billed annually (EUR, not USD)"
+    }
+  ],
+  "priceBand": "Self-hosted free; Starter €24/mo (€20/mo annual, EUR) (Nov 2026)",
+  "bestFor": "Developers who want Zapier-like workflows with less vendor lock and more code",
+  "skipIf": "You need the largest catalog of one-click consumer apps and zero ops",
+  "keyFeatures": [
+    "Visual workflow builder with real JS/Python code nodes",
+    "Self-hostable for predictable costs",
+    "Built-in AI agent and LLM tool nodes"
+  ],
+  "limitations": [
+    "Smaller one-click consumer app catalog than Zapier",
+    "Requires basic ops/debugging comfort when self-hosted"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "The automation tool we actually self-host. Fair-code, execution-priced cloud, and a real code node.",
+  "body": "n8n is how you keep Zapier’s idea without renting every execution at consumer SaaS rates. Self-hosting is the point for a lot of us. Cloud is there when you do not want a VPS. Agents and AI nodes exist; they are not a reason to ignore error handling. We re-read n8n’s public pricing on 18 Sep 2026. If you outgrow Make/Zapier on cost, start here before writing a custom worker.",
+  "notes": [
+    "Self-hosting on a modest VPS or private server keeps operational costs predictable as workflows grow.",
+    "Log failures. Silent workflows destroy trust.",
+    "Not a “set and forget wealth” toy"
+  ],
+  "alternatives": [
+    "zapier",
+    "lindy"
+  ],
+  "color": "#EA4B71",
+  "featured": true
+}

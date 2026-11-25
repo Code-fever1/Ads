@@ -1,0 +1,54 @@
+{
+  "slug": "huggingface",
+  "name": "Hugging Face",
+  "vendor": "Hugging Face",
+  "website": "https://huggingface.co",
+  "affiliateUrl": null,
+  "categories": [
+    "coding",
+    "research"
+  ],
+  "tasks": [
+    "host-open-models",
+    "download-weights",
+    "run-inference"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Free Hub account with CPU Basic and ZeroGPU.",
+  "pricingTiers": [
+    {
+      "name": "PRO",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "Free Hub account; PRO — check official pricing",
+  "bestFor": "Finding, running, and shipping open models without pretending they are consumer apps",
+  "skipIf": "You want a chat UI with a support phone number",
+  "keyFeatures": [
+    "Canonical hub for open model weights and datasets",
+    "Model cards with license and eval disclosures",
+    "Hosted Spaces for quick model demos"
+  ],
+  "limitations": [
+    "Infrastructure hub, not a consumer chat app",
+    "Production inference requires separate compute billing"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "The model hub. Not an assistant. If you cannot tell the difference, you are not the customer yet.",
+  "body": "Hugging Face is infrastructure and community, not “an AI tool” in the ChatGPT sense. We include it because every serious builder ends up there for weights, Spaces, or datasets. Inference pricing is a separate bill. Hub checked 16 Sep 2026.",
+  "notes": [
+    "Read model cards, especially licenses",
+    "Spaces are demos, not SLAs",
+    "Pair with Groq or other hosts for speed"
+  ],
+  "alternatives": [
+    "claude",
+    "deepseek"
+  ],
+  "color": "#D97706",
+  "featured": false
+}

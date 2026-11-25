@@ -5,7 +5,7 @@ import { fetchLiveJobs } from "@/lib/jobs";
 import { itemListJsonLd } from "@/lib/jsonld";
 import { pageMeta } from "@/lib/seo";
 
-export const revalidate = 300;
+export const revalidate = 86400;
 
 export const metadata = pageMeta({
   title: "Live 100 software and engineering jobs",

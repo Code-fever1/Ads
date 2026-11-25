@@ -1,19 +1,13 @@
 import Link from "next/link";
+import { FaqAccordion } from "@/components/FaqAccordion";
+import type { FaqItem } from "@/lib/types";
 
-export function Faq({
-  items,
-}: {
-  items: { question: string; answer: string }[];
-}) {
+export function Faq({ items }: { items: FaqItem[] }) {
+  if (!items.length) return null;
   return (
     <section className="faq" aria-labelledby="faq-heading">
       <h2 id="faq-heading">Questions people ask</h2>
-      {items.map((item) => (
-        <div key={item.question}>
-          <h3>{item.question}</h3>
-          <p>{item.answer}</p>
-        </div>
-      ))}
+      <FaqAccordion items={items} />
     </section>
   );
 }

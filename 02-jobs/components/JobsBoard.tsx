@@ -80,7 +80,7 @@ export function JobsBoard({
     setPending(true);
     setStatus("Refreshing from public APIs…");
     try {
-      const response = await fetch("/api/jobs/live", { cache: "no-store" });
+      const response = await fetch("/api/jobs/live");
       const payload = (await response.json()) as { jobs: Job[]; fetchedAt: string; count: number };
       const next = keywords?.length
         ? payload.jobs.filter((job) => matchesHub(job, keywords))

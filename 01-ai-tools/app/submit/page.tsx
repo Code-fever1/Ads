@@ -1,59 +1,47 @@
+import { CONTACT_EMAIL } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
-import { redirect } from "next/navigation";
+
+export const dynamic = "force-static";
 
 export const metadata = pageMeta({
-  title: "Submit an AI tool",
-  description: "Suggest an AI tool for Kiln. Manual review only — no cracked software.",
+  title: "Submit an AI Tool",
+  description:
+    "How to request a listing or price correction on Kiln. Manual editorial review only — no paid queue-jumps.",
   path: "/submit",
 });
 
-export default async function SubmitPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ sent?: string }>;
-}) {
-  const { sent } = await searchParams;
-
-  async function submit(formData: FormData) {
-    "use server";
-    const name = String(formData.get("name") ?? "").trim();
-    const url = String(formData.get("url") ?? "").trim();
-    if (!name || !url) return;
-    redirect("/submit?sent=1");
-  }
+export default function SubmitPage() {
+  const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+    "Kiln Tool Submission / Price Correction",
+  )}`;
 
   return (
     <main>
-      <h1 style={{ fontFamily: "var(--font-body)", fontSize: "clamp(2rem,4vw,3rem)" }}>
+      <p className="section-label">Submissions &amp; Corrections</p>
+      <h1 style={{ fontFamily: "var(--font-body)", fontSize: "clamp(2rem,4vw,3rem)", margin: "0 0 0.5rem" }}>
         Submit a tool
       </h1>
       <p className="lede">
-        Built or discovered an exceptional AI tool? We review submissions by hand. Every listing must
-        have a live public product, transparent pricing or open-source repository, and a proven job to
-        be done. We do not accept paid queue-jumps, low-effort model wrappers, or unsubstantiated claims.
+        Built a legitimate AI product or spotted a price change we missed? Every listing is
+        reviewed by hand before publishing. We do not accept paid queue-jumps, cracked software, or
+        unverified wrappers.
       </p>
-      {sent ? (
-        <p className="ochre-panel">
-          Submission received. Our editorial team will review the product, verify the pricing, and
-          index it if it meets our catalog criteria.
+
+      <div className="prose" style={{ marginTop: "1.5rem" }}>
+        <h2>What to include in your email</h2>
+        <ul>
+          <li>Tool name, vendor name, and official product URL</li>
+          <li>Link to the public pricing page (and free-tier limits, if any)</li>
+          <li>One sentence explaining what the tool is best for</li>
+          <li>One sentence explaining who should skip it</li>
+        </ul>
+
+        <p style={{ marginTop: "1.25rem" }}>
+          <a href={mailtoHref} className="btn btn-ochre">
+            Email submission to {CONTACT_EMAIL}
+          </a>
         </p>
-      ) : (
-        <form className="form" action={submit}>
-          <label>
-            Tool name
-            <input name="name" required />
-          </label>
-          <label>
-            Official URL
-            <input name="url" type="url" required placeholder="https://" />
-          </label>
-          <label>
-            Why it belongs
-            <textarea name="why" rows={5} />
-          </label>
-          <button type="submit">Send for review</button>
-        </form>
-      )}
+      </div>
     </main>
   );
 }

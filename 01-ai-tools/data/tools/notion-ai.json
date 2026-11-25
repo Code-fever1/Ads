@@ -1,0 +1,55 @@
+{
+  "slug": "notion-ai",
+  "name": "Notion AI",
+  "vendor": "Notion",
+  "website": "https://www.notion.so/product/ai",
+  "affiliateUrl": null,
+  "categories": [
+    "productivity",
+    "writing"
+  ],
+  "tasks": [
+    "wiki-qa",
+    "summarize-notes",
+    "draft-specs"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "$0 plan includes a limited Notion AI trial (5 MB uploads); full Notion AI requires Business tier.",
+  "pricingTiers": [
+    {
+      "name": "Plus (per member)",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "Limited AI trial on Free/Plus; full Notion AI on Business — check official pricing",
+  "bestFor": "Teams whose wiki, tasks, and specs already live in Notion",
+  "skipIf": "You do not use Notion. Buying it for the AI alone is backwards.",
+  "keyFeatures": [
+    "Queries your existing Notion wikis and databases",
+    "Summarizes project specs in place",
+    "Respects workspace permissions"
+  ],
+  "limitations": [
+    "Not worth adopting Notion solely for the AI",
+    "Weaker standalone proofer than Grammarly"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "AI that is only as good as the workspace it sits on. A weak reason to migrate a company. A strong reason to stay.",
+  "body": "Notion AI writes inside the pages you already have. That context is the product. Compared with Grammarly it is a worse proofreader and a better wiki summarizer. Compared with ChatGPT it is worse at general chat and better at “summarize this spec database.” Pricing is bundled in ways that change; we read the public AI product page on 18 Sep 2026. If a comparison site ranks it as a ChatGPT killer, close the tab.",
+  "notes": [
+    "Clean the workspace before you blame the model",
+    "Permissions still apply. AI is not a backdoor.",
+    "Jasper is for marketing teams who do not live in Notion"
+  ],
+  "alternatives": [
+    "grammarly",
+    "chatgpt",
+    "microsoft-copilot"
+  ],
+  "color": "#1F2937",
+  "featured": false
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "midjourney",
+  "name": "Midjourney",
+  "vendor": "Midjourney",
+  "website": "https://www.midjourney.com",
+  "affiliateUrl": null,
+  "categories": [
+    "image"
+  ],
+  "tasks": [
+    "generate-images",
+    "concept-art",
+    "brand-visuals"
+  ],
+  "pricing": "paid",
+  "hasFreeTier": false,
+  "freeTierNote": "",
+  "pricingTiers": [
+    {
+      "name": "Basic",
+      "priceUsdPerMonth": 10,
+      "note": "$10/mo monthly, or $8/mo billed annually ($96/yr)"
+    },
+    {
+      "name": "Standard",
+      "priceUsdPerMonth": 30,
+      "note": "$30/mo monthly, or $24/mo billed annually"
+    },
+    {
+      "name": "Pro",
+      "priceUsdPerMonth": 60,
+      "note": "$60/mo monthly, or $48/mo billed annually"
+    },
+    {
+      "name": "Mega",
+      "priceUsdPerMonth": 120,
+      "note": "$120/mo monthly, or $96/mo billed annually"
+    }
+  ],
+  "priceBand": "No free tier; Basic $10/mo ($8/mo annual) (Nov 2026)",
+  "bestFor": "Art-directed stills when style matters more than Photoshop round-trip",
+  "skipIf": "You need commercially safe Adobe-stack files or a free generator",
+  "keyFeatures": [
+    "Distinctive art-directed aesthetic quality",
+    "Web studio and prompt style references",
+    "Consistent visual taste for concept decks"
+  ],
+  "limitations": [
+    "No meaningful free plan",
+    "Outputs flat images rather than layered PSDs"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "Still the taste leader for many illustrators. Paid-only. Discord-era habits linger.",
+  "body": "Midjourney remains the look people mean by “AI art” in client decks. There is no meaningful free plan, which is honest. Firefly wins when Legal asks about training data and Creative Cloud. Flux and Ideogram win on some typography and photoreal niches. If a site offers “Midjourney premium free,” it is malware. Plans checked 18 Sep 2026.",
+  "notes": [
+    "Read the current commercial terms for client work",
+    "Keep a prompt log; the UI is not your DAM",
+    "Not a video tool, even if the company experiments"
+  ],
+  "alternatives": [
+    "adobe-firefly",
+    "flux",
+    "leonardo"
+  ],
+  "color": "#1E1B4B",
+  "featured": true
+}

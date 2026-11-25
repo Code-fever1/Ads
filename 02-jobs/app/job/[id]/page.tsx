@@ -10,7 +10,7 @@ import { pageMeta } from "@/lib/seo";
 
 type Props = { params: Promise<{ id: string }> };
 
-export const revalidate = 300;
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;

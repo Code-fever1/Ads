@@ -1,0 +1,54 @@
+{
+  "slug": "figma-ai",
+  "name": "Figma AI",
+  "vendor": "Figma",
+  "website": "https://www.figma.com",
+  "affiliateUrl": null,
+  "categories": [
+    "design"
+  ],
+  "tasks": [
+    "ui-wireframing",
+    "figma-layers",
+    "design-systems"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Starter $0 plan includes 150 AI credits/day (up to 500/mo).",
+  "pricingTiers": [
+    {
+      "name": "Professional (Full seat)",
+      "priceUsdPerMonth": 20,
+      "note": "$20/mo monthly, or $16/mo billed annually (3,000 AI credits/mo inside Figma seats)"
+    }
+  ],
+  "priceBand": "Starter $0 (500 AI credits/mo); Professional Full seat $20/mo ($16/mo annual) (Nov 2026)",
+  "bestFor": "Designers already in Figma who want first-pass layers, not a new tool",
+  "skipIf": "You do not have a Figma seat",
+  "keyFeatures": [
+    "Generates editable Figma layers, not flat PNGs",
+    "First-party integration inside existing design files",
+    "Speeds up placeholder copy and layout variations"
+  ],
+  "limitations": [
+    "Requires an existing paid Figma seat for full access",
+    "Generated screens still need contrast and design-system review"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "AI that emits Figma objects. That single fact beats a hundred screenshot generators.",
+  "body": "If the file has to be a Figma file, generate in Figma. Everything else is a picture of a UI. Feature names and credit bundles shift; we confirmed AI is still a first-party Figma surface on 16 Sep 2026. v0 is the engineer-facing cousin.",
+  "notes": [
+    "Design systems still need humans",
+    "Do not paste generated screens into production without contrast checks",
+    "Adobe is the other design-suite gravity well"
+  ],
+  "alternatives": [
+    "v0",
+    "adobe-firefly",
+    "gamma"
+  ],
+  "color": "#A259FF",
+  "featured": false
+}

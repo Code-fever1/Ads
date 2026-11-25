@@ -4,7 +4,7 @@ import { hubs } from "@/data/hubs";
 import { fetchLiveJobs } from "@/lib/jobs";
 import { absUrl } from "@/lib/site";
 
-export const revalidate = 300;
+export const revalidate = 86400;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const jobs = await fetchLiveJobs(100);
@@ -21,13 +21,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticPaths.map((path) => ({
       url: absUrl(path),
       lastModified: new Date(),
-      changeFrequency: (path === "/jobs" || path === "/" ? "hourly" : "weekly") as "hourly" | "weekly",
+      changeFrequency: "daily" as const,
       priority: path === "/" || path === "/jobs" ? 1 : 0.7,
     })),
     ...jobs.map((job) => ({
       url: absUrl(`/job/${job.id}`),
       lastModified: new Date(job.postedAt),
-      changeFrequency: "hourly" as const,
+      changeFrequency: "daily" as const,
       priority: 0.6,
     })),
   ];

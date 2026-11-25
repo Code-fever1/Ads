@@ -1,0 +1,53 @@
+{
+  "slug": "elevenlabs",
+  "name": "ElevenLabs",
+  "vendor": "ElevenLabs",
+  "website": "https://elevenlabs.io",
+  "affiliateUrl": null,
+  "categories": [
+    "audio"
+  ],
+  "tasks": [
+    "text-to-speech",
+    "voiceover",
+    "audio-localization"
+  ],
+  "pricing": "freemium",
+  "hasFreeTier": true,
+  "freeTierNote": "Free non-commercial monthly credits — check official limits.",
+  "pricingTiers": [
+    {
+      "name": "Starter",
+      "priceUsdPerMonth": null,
+      "note": "Check official pricing"
+    }
+  ],
+  "priceBand": "Free non-commercial tier; Starter — check official pricing",
+  "bestFor": "Product voiceover, localization, and realistic TTS",
+  "skipIf": "You want to clone a person who did not consent",
+  "keyFeatures": [
+    "Natural-sounding multilingual TTS",
+    "Developer-friendly voice API",
+    "Voice dubbing and localization tools"
+  ],
+  "limitations": [
+    "Character meters punish uncached regeneration",
+    "Requires strict consent checks for voice cloning"
+  ],
+  "lastVerified": "2026-11-25",
+  "verifiedBy": "Kiln editorial",
+  "status": "active",
+  "summary": "The default high-quality voice API. Cheap to start, easy to overspend on characters.",
+  "body": "ElevenLabs made TTS good enough for shipping in an app. The ethical line is consent. Kiln will not list “undetectable voice clone of a celebrity” tutorials. Starter pricing is one of the better on-ramps in audio. Character meters still surprise people. Public pricing reviewed 18 Sep 2026.",
+  "notes": [
+    "Use instant voice cloning only with a signed release",
+    "Cache generated audio; do not regenerate the same line",
+    "Descript may be enough if you only edit podcasts"
+  ],
+  "alternatives": [
+    "descript",
+    "otter"
+  ],
+  "color": "#111111",
+  "featured": false
+}
