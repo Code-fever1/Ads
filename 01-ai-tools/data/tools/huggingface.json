@@ -39,7 +39,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "The model hub. Not an assistant. If you cannot tell the difference, you are not the customer yet.",
-  "body": "Hugging Face is infrastructure and community, not “an AI tool” in the ChatGPT sense. We include it because every serious builder ends up there for weights, Spaces, or datasets. Inference pricing is a separate bill. Hub checked 16 Sep 2026.",
+  "body": "Hugging Face is infrastructure and community, not “an AI tool” in the ChatGPT sense. We include it because every serious builder ends up there for weights, Spaces, or datasets. Free Hub accounts cover public models and basic ZeroGPU/CPU Spaces, while compute and storage are billed separately.",
   "notes": [
     "Read model cards, especially licenses",
     "Spaces are demos, not SLAs",

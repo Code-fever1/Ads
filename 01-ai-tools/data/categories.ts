@@ -88,7 +88,7 @@ export const categories: Category[] = [
       {
         question: "Does Midjourney have a free tier?",
         answer:
-          "No meaningful free plan exists—Midjourney starts on paid tiers (Basic around $10/mo in Sep 2026). For free starter tokens, try Leonardo AI or local FLUX weights.",
+          "No free plan exists—Midjourney starts on paid tiers (Basic $10/mo monthly, $8/mo annual). For free starter tokens, try Leonardo AI or local FLUX Klein weights.",
       },
       {
         question: "What is best for e-commerce product cutouts?",
@@ -141,7 +141,7 @@ export const categories: Category[] = [
       {
         question: "How does ElevenLabs price voice generation?",
         answer:
-          "By monthly character pools—Starter sat around $6–$12/mo in Sep 2026—so cache generated audio rather than regenerating the same script repeatedly.",
+          "By monthly character pools (with a non-commercial free tier)—check ElevenLabs' official pricing page before scaling, and cache generated audio rather than regenerating the same script repeatedly.",
       },
     ],
   },

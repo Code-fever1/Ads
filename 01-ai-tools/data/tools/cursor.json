@@ -40,7 +40,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "A VS Code fork where tab completion, chat, and agents are the editor. The default pick for many full-time builders.",
-  "body": "Cursor is what happens when an editor is designed around the model instead of bolting a panel onto VS Code. Tab, Composer, and repo-aware chat are the reasons people pay. Copilot is cheaper if you refuse to switch editors. Claude Code is stronger on long unattended refactors if you like the terminal. Many seniors run both: Cursor for the file in front of them, Claude Code for the scary migration. Pricing: Hobby is a trial, Pro is the real product, Ultra is for people who burn agents all day. Plans checked 19 Sep 2026. Confirm the live page before you invoice a client.",
+  "body": "Cursor is what happens when an editor is designed around the model instead of bolting a panel onto VS Code. Tab, Composer, and repo-aware chat are the reasons people pay. Copilot is cheaper if you refuse to switch editors. Claude Code is stronger on long unattended refactors if you like the terminal. Many seniors run both: Cursor for the file in front of them, Claude Code for the scary migration. Confirm live tiers on the official pricing page before you invoice a client.",
   "notes": [
     "Budget extra for frontier model usage beyond the included pool",
     "Works best if the team accepts a VS Code-shaped workflow",

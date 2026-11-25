@@ -38,7 +38,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "Browser IDE plus agent plus hosting. Excellent for students and spikes. Awkward as a long-term production home.",
-  "body": "Replit’s agent is convincing because the result runs in the same tab. For a student in Lahore on a weak laptop, that matters more than Cursor’s desktop install. For a production SaaS, you will outgrow the platform story. Price the compute, not only the agent. We opened Replit’s public plans on 17 Sep 2026.",
+  "body": "Replit’s agent is convincing because the result runs in the same tab. For a student in Lahore on a weak laptop, that matters more than Cursor’s desktop install. For a production SaaS, you will outgrow the platform story. Price the compute, not only the Core subscription ($20/mo monthly or $18/mo annual).",
   "notes": [
     "Good workshop environment",
     "Export early so you are not trapped",

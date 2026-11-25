@@ -42,7 +42,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "The professional writing and coding assistant. Slower to collect consumer toys, stronger on long context and Claude Code.",
-  "body": "Claude is the assistant we send people to when ChatGPT’s tone feels like a brochure. It holds large briefs, edits without flattening voice, and pairs with Claude Code for repository work. Anthropic ships fewer consumer gadgets. That is a feature if your job is prose, policy, or a messy codebase. Pro is priced like the rest of the $20 club. Heavy agent use pushes people into Max, which is a different budget conversation. Last verified against Anthropic’s public plans on 19 Sep 2026.",
+  "body": "Claude is the assistant we send people to when ChatGPT’s tone feels like a brochure. It holds large briefs, edits without flattening voice, and pairs with Claude Code for repository work. Anthropic ships fewer consumer gadgets. That is a feature if your job is prose, policy, or a messy codebase. Pro sits at $20/mo ($17/mo billed annually), while heavy agent use pushes people into Max.",
   "notes": [
     "Pair with Cursor if you want an IDE plus a terminal agent",
     "Projects and artifacts matter more than chat skins",

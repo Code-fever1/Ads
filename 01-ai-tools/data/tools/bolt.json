@@ -38,7 +38,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "StackBlitz’s agentic browser builder. Fast demos. Token meters bite.",
-  "body": "Bolt runs a real Node environment in the browser, which is still a magic trick. It is the right tab for a Friday spike. It is the wrong tab for a bank integration. Token and message limits are the business model. We verified the public marketing site on 17 Sep 2026.",
+  "body": "Bolt runs a real Node environment in the browser, which is still a magic trick. It is the right tab for a Friday spike. It is the wrong tab for a bank integration. Token and message limits are the business model.",
   "notes": [
     "Download the project before you close the laptop",
     "Watch token burn on loops",

@@ -38,7 +38,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "Bring-your-own-key coding agent in VS Code. Cost is honest because you see the provider invoice.",
-  "body": "Cline (and similar BYO-key agents) is how you learn what an agent actually spends. There is no bundled “unlimited Pro.” You plug in Anthropic, OpenAI, or OpenRouter and watch. That is healthier than a flat $20 that hides a credit pool. Extension and site checked 16 Sep 2026.",
+  "body": "Cline (and similar BYO-key agents) is how you learn what an agent actually spends. The core VS Code extension is open source and free with your own API key, and ClinePass ($9.99/mo) sits alongside BYOK for users who want a hosted pass. Watching real inference spend is healthier than an opaque credit pool.",
   "notes": [
     "Set hard spend limits on the provider dashboard",
     "Review diffs like a human junior",

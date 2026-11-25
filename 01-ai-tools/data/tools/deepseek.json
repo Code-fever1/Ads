@@ -39,7 +39,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "A capable, cheap model family that forced US labs to talk about price. Procurement and data rules decide if you can use it.",
-  "body": "DeepSeek mattered because it made frontier-ish quality available at API prices that embarrassed the $20/seat club. That is still the story: cost, not a unique IDE. If you ship a product on the API, run a latency and policy check before you celebrate the invoice. Consumer chat is optional. Many Western companies will not clear security review. We do not pretend otherwise. Public site and API docs reviewed 17 Sep 2026.",
+  "body": "DeepSeek mattered because it made frontier-ish quality available at API prices that embarrassed the $20/seat club. The consumer chat app is free with no paid subscription; API access is strictly pay-per-use. If you ship a product on the API, run a latency and data-residency check before you celebrate the invoice—many Western companies will not clear security review.",
   "notes": [
     "Read the privacy policy before any customer data",
     "Good as a backup model in a router, not always as a brand assistant",

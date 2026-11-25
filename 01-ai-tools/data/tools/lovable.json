@@ -39,7 +39,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "Chat-to-app for people who do not want to name a folder. Engineers outgrow it. Founders use it to see the idea.",
-  "body": "Lovable (and cousins like Bolt) compress the “can we see it?” phase. The danger is publishing the generated app as if it were a maintained product. Use it to get screens, then move the code to Git. Message caps on the free tier are the throttle. Pricing checked 17 Sep 2026.",
+  "body": "Lovable (and cousins like Bolt) compress the “can we see it?” phase. The danger is publishing the generated app as if it were a maintained product. Use it to get screens, then move the code to Git. Daily build credits on the free tier are the throttle; check the live pricing page before upgrading.",
   "notes": [
     "Treat output as a prototype until tests exist",
     "Check what the vendor stores from your prompts",

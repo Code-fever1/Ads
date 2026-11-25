@@ -39,7 +39,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "Two products sharing a name: a free consumer assistant, and a paid Office copilot. Do not mix the pricing pages.",
-  "body": "Copilot is a naming mess on purpose. The free consumer app competes with ChatGPT. The paid Microsoft 365 Copilot sits in Word, Excel, and Outlook and is priced like enterprise software, not like a $20 hobby. If your company already standardized on Microsoft, this is the path of least resistance. If you are a freelance developer on Google Docs, skip it. We verified the public Copilot entry points on 18 Sep 2026 and still found overlapping product names. Read the SKU, not the logo.",
+  "body": "Copilot is a naming mess on purpose. The free consumer app competes with ChatGPT, while Microsoft discontinued standalone Copilot Pro in October 2025 in favor of Microsoft 365 Premium and enterprise Microsoft 365 Copilot SKUs. If your company already standardized on Microsoft, this is the path of least resistance. If you are a freelance developer on Google Docs, skip it. Read the SKU, not the logo.",
   "notes": [
     "Ask IT which Copilot SKU is actually licensed",
     "Excel copilot quality depends on clean tables",

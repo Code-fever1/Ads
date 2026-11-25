@@ -38,7 +38,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "A model family, not a social network. Shows up inside many third-party UIs.",
-  "body": "FLUX is what you buy when you are building a feature, not browsing a feed. Some weights can run locally, which changes the privacy story. Consumer wrappers will rebrand it. Kiln lists the lab so you can see the source. API and lab site checked 16 Sep 2026. Prices are usage, not a fake “unlimited art” plan.",
+  "body": "FLUX is what you buy when you are building a feature, not browsing a feed. Select Klein weights can run locally, while Black Forest Labs’ hosted API has no monthly subscription and bills strictly pay-as-you-go per image. Consumer wrappers will rebrand it; Kiln lists the lab so you can see the source.",
   "notes": [
     "Check which FLUX version a wrapper actually calls",
     "Local vs hosted is the real product decision",

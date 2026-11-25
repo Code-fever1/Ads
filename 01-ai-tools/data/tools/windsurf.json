@@ -38,7 +38,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "An AI IDE with a generous trial posture. Ownership moved to Cognition in 2026, so treat the roadmap as in motion.",
-  "body": "Windsurf (now sitting under Cognition, the Devin company) is the IDE you recommend to someone who will not pay Cursor on day one. The free quota is the hook. Pro pricing moved toward the $20 club. The risk is vendor continuity, not the autocomplete. If your procurement team asks who owns the binary next year, say that out loud. We re-read public pricing notes on 18 Sep 2026. Confirm before you migrate a whole agency.",
+  "body": "Windsurf (renamed Devin Desktop by Cognition in June 2026, with windsurf.com redirecting to devin.ai) is the IDE you evaluate for its free agent quota before paying $20/mo for Pro. The risk is vendor continuity during the transition, not the autocomplete. If your procurement team asks who owns the binary next year, say that out loud before migrating an agency.",
   "notes": [
     "Fine for evaluation and prototypes",
     "Ask about data retention like you would any new IDE",

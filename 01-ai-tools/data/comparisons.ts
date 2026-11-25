@@ -22,7 +22,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["AI-native IDE (VS Code fork)", "Terminal CLI agent"] },
-      { label: "Entry paid price", values: ["Pro ~$20/mo (Sep 2026)", "Included in Claude Pro ~$20/mo (Sep 2026)"] },
+      { label: "Entry paid price", values: ["Check official pricing", "Claude Pro $20/mo ($17/mo annual)"] },
       { label: "Free tier", values: ["Hobby free tier (limited)", "None (requires Claude Pro or API)"] },
       { label: "Best for", values: ["Day-to-day feature work & Tab edits", "Whole-repo refactors, migrations & CLI loops"] },
       { label: "Key strength", values: ["Fastest inline editing & Composer loop", "Deep autonomous repo context & shell test runs"] },
@@ -72,7 +72,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["AI-native IDE (VS Code fork)", "AI-native IDE (VS Code fork)"] },
-      { label: "Entry paid price", values: ["Pro ~$20/mo (Sep 2026)", "Pro ~$20/mo (Sep 2026)"] },
+      { label: "Entry paid price", values: ["Pro $20/mo (via Devin pricing)", "Check official pricing"] },
       { label: "Free tier", values: ["Usable starter quota", "Hobby limited trial"] },
       { label: "Best for", values: ["Evaluating an AI IDE without paying upfront", "Full-time product engineering & daily Tab edits"] },
       { label: "Key strength", values: ["Accessible free quota & Cascade agent", "Best-in-class Tab autocomplete & Composer"] },
@@ -82,7 +82,7 @@ export const comparisons: Comparison[] = [
       {
         question: "Is Windsurf cheaper than Cursor?",
         answer:
-          "At the Pro tier, both hovered around $20/mo in our Sep 2026 check. Windsurf's main edge is a more usable free starter quota before you upgrade.",
+          "Windsurf Pro sits at $20/mo (via Devin pricing) with a free agent quota; confirm Cursor's current paid tiers directly on cursor.com/pricing before comparing invoices.",
       },
       {
         question: "Why does Kiln mention Cognition on the Windsurf page?",
@@ -117,7 +117,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["Terminal CLI agent", "IDE plugin (VS Code, JetBrains, Xcode)"] },
-      { label: "Entry paid price", values: ["Claude Pro ~$20/mo (Sep 2026)", "Pro ~$10/mo plus credits (Sep 2026)"] },
+      { label: "Entry paid price", values: ["Claude Pro $20/mo ($17/mo annual)", "Pro $10/mo (~$8.33/mo annual)"] },
       { label: "Free tier", values: ["None (paid subscription or API)", "Limited free tier in VS Code"] },
       { label: "Best for", values: ["Unattended multi-file refactors & migrations", "Inline autocomplete & enterprise compliance"] },
       { label: "Key strength", values: ["Deep repo reasoning & shell execution", "Half the entry price; works in JetBrains"] },
@@ -162,7 +162,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["AI-native IDE (VS Code fork)", "Plugin in existing IDEs"] },
-      { label: "Entry paid price", values: ["Pro ~$20/mo (Sep 2026)", "Pro ~$10/mo plus credits (Sep 2026)"] },
+      { label: "Entry paid price", values: ["Check official pricing", "Pro $10/mo (~$8.33/mo annual)"] },
       { label: "Free tier", values: ["Hobby limited trial", "Limited free monthly completions"] },
       { label: "Best for", values: ["Solo/product devs wanting deep IDE AI", "GitHub teams & JetBrains developers"] },
       { label: "Key strength", values: ["Aggressive Tab & Composer multi-file flow", "Low entry cost & corporate procurement"] },
@@ -192,7 +192,7 @@ export const comparisons: Comparison[] = [
     tools: ["lovable", "bolt"],
     updatedDate: "2026-11-25",
     intro:
-      "Both tools turn plain-English prompts into working web apps in the browser, and both target roughly $20/month Pro plans. The difference is how they run your code and who gets stuck first when the prototype grows.",
+      "Both tools turn plain-English prompts into working web apps in the browser. Bolt.new Pro runs $25/mo ($18/mo annual); check Lovable's live pricing page directly. The key difference is how they run your code and who gets stuck first when the prototype grows.",
     verdict:
       "Pick Lovable if you are a founder or non-engineer validating an MVP and want a clean GitHub handoff path. Pick Bolt.new if you are a builder spiking a frontend in real in-browser Node.js WebContainers and want direct code control.",
     picks: [
@@ -207,7 +207,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["Hosted prompt-to-app builder", "In-browser WebContainers IDE & agent"] },
-      { label: "Entry paid price", values: ["Pro ~$20/mo (Sep 2026)", "Pro ~$20/mo (Sep 2026)"] },
+      { label: "Entry paid price", values: ["Check official pricing", "Pro $25/mo ($18/mo annual)"] },
       { label: "Free tier", values: ["Strict free message cap", "Daily free message & token cap"] },
       { label: "Best for", values: ["Founders validating full-stack MVP flows", "Developers spiking frontend apps in-tab"] },
       { label: "Key strength", values: ["Non-coder friendly UX & GitHub sync", "Live Node runtime inside your browser tab"] },
@@ -237,7 +237,7 @@ export const comparisons: Comparison[] = [
     tools: ["lovable", "v0"],
     updatedDate: "2026-11-25",
     intro:
-      "Both build web interfaces from chat prompts at the ~$20/month band, but they solve different parts of the job. Lovable tries to generate the whole app; v0 focuses on clean React, Tailwind, and shadcn UI components for developers.",
+      "Both build web interfaces from chat prompts, but they solve different parts of the job. Lovable tries to generate the whole app; v0 focuses on clean React, Tailwind, and shadcn UI components for developers.",
     verdict:
       "Pick v0 if you already have a Next.js or React repository and want sharp UI components you will own in git. Pick Lovable if you want a standalone prompt-to-app environment without setting up a local codebase first.",
     picks: [
@@ -252,7 +252,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["Full-stack prompt-to-app builder", "Component & UI generator for React/Next.js"] },
-      { label: "Entry paid price", values: ["Pro ~$20/mo (Sep 2026)", "Paid ~$20/mo (Sep 2026)"] },
+      { label: "Entry paid price", values: ["Check official pricing", "Check official pricing"] },
       { label: "Free tier", values: ["Limited free messages", "Free monthly credits"] },
       { label: "Best for", values: ["Non-engineers & solo founders building MVPs", "Frontend/Next.js devs fixing blank-page UI"] },
       { label: "Key strength", values: ["All-in-one app flow & GitHub sync", "Clean Tailwind & shadcn code output"] },
@@ -282,7 +282,7 @@ export const comparisons: Comparison[] = [
     tools: ["cursor", "claude-code", "windsurf"],
     updatedDate: "2026-11-25",
     intro:
-      "The flagship 2026 AI coding comparison. All three sit around ~$20/month at the entry paid tier, yet they split across two different interfaces: AI-native VS Code forks (Cursor, Windsurf) versus a pure terminal agent (Claude Code).",
+      "The flagship 2026 AI coding comparison. They split across two different interfaces: AI-native VS Code forks (Cursor, Windsurf/Devin Desktop at $20/mo Pro) versus a pure terminal agent (Claude Code inside Claude Pro at $20/mo or $17/mo annual).",
     verdict:
       "Pick Cursor as the strongest everyday AI editor. Pick Windsurf if you want a generous free starter quota before paying $20/mo. Pick Claude Code if you prefer keeping your current editor and running autonomous multi-file tasks from the terminal.",
     picks: [
@@ -301,7 +301,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["AI-native IDE (VS Code fork)", "Terminal CLI agent", "AI-native IDE (VS Code fork)"] },
-      { label: "Entry paid price", values: ["Pro ~$20/mo (Sep 2026)", "Claude Pro ~$20/mo (Sep 2026)", "Pro ~$20/mo (Sep 2026)"] },
+      { label: "Entry paid price", values: ["Check official pricing", "Claude Pro $20/mo ($17/mo annual)", "Pro $20/mo (via Devin pricing)"] },
       { label: "Free tier", values: ["Hobby limited trial", "None (paid plan or API)", "Usable free starter quota"] },
       { label: "Best for", values: ["Daily full-time product engineering", "Deep multi-file refactors & CLI loops", "Evaluating an AI IDE on a free quota"] },
       { label: "Key strength", values: ["Fastest Tab + Composer workflow", "Deep repo planning & shell test runs", "Accessible free quota & Cascade agent"] },
@@ -351,7 +351,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["Multimodal generalist assistant", "Long-context writing & coding assistant"] },
-      { label: "Entry paid price", values: ["Plus ~$20/mo (Sep 2026)", "Pro ~$20/mo (Sep 2026)"] },
+      { label: "Entry paid price", values: ["Go $8/mo; Plus $20/mo", "Pro $20/mo ($17/mo annual)"] },
       { label: "Free tier", values: ["Generous free tier (rate-capped)", "Free tier with daily limits"] },
       { label: "Best for", values: ["All-round tasks, spreadsheets & images", "Long-form briefs, nuanced edits & Claude Code"] },
       { label: "Key strength", values: ["Breadth of bundled tools & voice/images", "Tone control, Artifacts & terminal coding bundle"] },
@@ -396,7 +396,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["Standalone assistant + sandbox", "Google-native assistant & Workspace add-on"] },
-      { label: "Entry paid price", values: ["Plus ~$20/mo (Sep 2026)", "Check official Google AI pricing"] },
+      { label: "Entry paid price", values: ["Go $8/mo; Plus $20/mo", "Google AI Plus $4.99/mo"] },
       { label: "Free tier", values: ["Generous free tier (rate-capped)", "Free with any Google account"] },
       { label: "Best for", values: ["Independent workflows & data analysis", "Teams operating in Gmail, Docs & Drive"] },
       { label: "Key strength", values: ["Versatile multi-tool surface", "Zero copy-paste inside Google Workspace"] },
@@ -441,7 +441,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["Web studio & Discord generator", "Creative Cloud & web generator"] },
-      { label: "Entry paid price", values: ["Basic ~$10/mo (Sep 2026)", "Bundled in Creative Cloud plans"] },
+      { label: "Entry paid price", values: ["Basic $10/mo ($8/mo annual)", "Check official pricing"] },
       { label: "Free tier", values: ["No meaningful free plan", "Small free starter credits"] },
       { label: "Best for", values: ["Art-directed stills & concept art", "Commercial brand teams inside Photoshop"] },
       { label: "Key strength", values: ["Distinctive aesthetic taste & lighting", "Editable PSD layers & commercial licensing"] },
@@ -486,7 +486,7 @@ export const comparisons: Comparison[] = [
     ],
     rows: [
       { label: "Format", values: ["AI answer & citation engine", "General multimodal chat assistant"] },
-      { label: "Entry paid price", values: ["Pro ~$20/mo (Sep 2026)", "Plus ~$20/mo (Sep 2026)"] },
+      { label: "Entry paid price", values: ["Pro $20/mo ($17/mo annual)", "Go $8/mo; Plus $20/mo"] },
       { label: "Free tier", values: ["Free standard search + limited Pro", "Generous free tier (rate-capped)"] },
       { label: "Best for", values: ["Sourced web & academic research", "Drafting, coding snippets & file analysis"] },
       { label: "Key strength", values: ["Inline citations & corpus filters", "Stronger writing & Python execution"] },
@@ -506,7 +506,7 @@ export const comparisons: Comparison[] = [
       {
         question: "Are both around the same price?",
         answer:
-          "Yes—both Perplexity Pro and ChatGPT Plus sat near $20/mo in our Sep 2026 check.",
+          "Perplexity Pro is $20/mo ($17/mo annual) and ChatGPT Plus is $20/mo, though ChatGPT also offers a cheaper $8/mo Go tier below Plus.",
       },
     ],
   },

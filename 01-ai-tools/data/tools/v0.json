@@ -39,7 +39,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "A UI generator that emits real components for the Next.js world. Not a whole engineering department.",
-  "body": "v0 is opinionated in a useful way: it speaks React, Tailwind, and shadcn-shaped interfaces, then hands you code. That is a different product from Lovable or Bolt, which try to be the app. If you already ship on Vercel, v0 shortens the blank-page problem. If you need a Python service, go to Cursor. Credits run out faster than the marketing site implies. Plans checked 18 Sep 2026.",
+  "body": "v0 is opinionated in a useful way: it speaks React, Tailwind, and shadcn-shaped interfaces, then hands you code. That is a different product from Lovable or Bolt, which try to be the app. If you already ship on Vercel, v0 shortens the blank-page problem. If you need a Python service, go to Cursor. Credits run out faster than the marketing site implies, so verify current paid seat pricing on v0’s page.",
   "notes": [
     "Always paste the output into version control the same day",
     "Design quality still needs a pass for accessibility",

@@ -13,7 +13,7 @@ export const rankings: Ranking[] = [
       "Does it touch a real git repo",
       "Can a full-time developer live in it for a week",
       "Is pricing a seat, a credit pool, or BYO key",
-      "Verified against a public vendor page (Sep 2026 baseline — check vendor site before buying)",
+      "Verified against a public vendor page (Nov 2026 baseline — check vendor site before buying)",
     ],
     toolVerdicts: {
       cursor:
@@ -164,7 +164,7 @@ export const rankings: Ranking[] = [
     criteria: [
       "Transparent vendor licensing and billing",
       "Practical output for real design or product jobs",
-      "Verified Sep 2026 baseline (check vendor site before buying)",
+      "Verified Nov 2026 baseline (check vendor site before buying)",
     ],
     toolVerdicts: {
       midjourney:

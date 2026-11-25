@@ -39,7 +39,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "AI that is only as good as the workspace it sits on. A weak reason to migrate a company. A strong reason to stay.",
-  "body": "Notion AI writes inside the pages you already have. That context is the product. Compared with Grammarly it is a worse proofreader and a better wiki summarizer. Compared with ChatGPT it is worse at general chat and better at “summarize this spec database.” Pricing is bundled in ways that change; we read the public AI product page on 18 Sep 2026. If a comparison site ranks it as a ChatGPT killer, close the tab.",
+  "body": "Notion AI writes inside the pages you already have. That context is the product. Compared with Grammarly it is a worse proofreader and a better wiki summarizer. Compared with ChatGPT it is worse at general chat and better at “summarize this spec database.” Free and Plus plans only include a limited AI trial—full Notion AI sits on the Business tier, so confirm current plan pricing directly on Notion’s site.",
   "notes": [
     "Clean the workspace before you blame the model",
     "Permissions still apply. AI is not a backdoor.",

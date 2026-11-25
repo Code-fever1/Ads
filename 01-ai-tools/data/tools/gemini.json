@@ -41,7 +41,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "The assistant that wins on distribution: Gmail, Docs, Drive, and Android. Image models are competitive. Coding IDEs are not the point.",
-  "body": "Gemini’s distinct advantage is native integration across Google Workspace, Android, and YouTube. For teams already storing documents in Google Drive, drafting in Docs, and operating out of Gmail, having an assistant embedded directly in those tools removes the constant friction of copy-pasting across browser tabs. Its multimodal reasoning and 2M-token context window on Advanced tiers handle massive technical manuals and hour-long video transcripts with ease. However, its coding assistance still lags dedicated tools like Cursor or Claude Code for complex multi-file engineering. Choose Gemini if your team lives inside the Google ecosystem. Pricing integrates with Google One AI Premium. We verified plans and models on 19 Sep 2026.",
+  "body": "Gemini’s distinct advantage is native integration across Google Workspace, Android, and YouTube. For teams already storing documents in Google Drive, drafting in Docs, and operating out of Gmail, having an assistant embedded directly in those tools removes the constant friction of copy-pasting across browser tabs. Its multimodal reasoning handles large documents and long video transcripts with ease, though its coding assistance still lags Cursor or Claude Code for complex multi-file engineering. Choose Gemini if your team lives inside the Google ecosystem.",
   "notes": [
     "Workspace admin controls matter for any company deployment",
     "Do not treat Android preinstall as a quality signal",

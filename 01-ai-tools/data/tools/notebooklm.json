@@ -40,7 +40,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "A notebook that answers from your sources. The opposite of a hallucinating general chat.",
-  "body": "NotebookLM is the rare Google AI product with a crisp job: put documents in, ask questions, get answers tied to those pages. Audio overviews are a bonus, not the product. It will not replace Perplexity for the live web or Cursor for a repo. Students and researchers who drown in PDFs should start here before buying another “AI notes” SaaS. Limits depend on the Google AI bundle. Verified 18 Sep 2026.",
+  "body": "NotebookLM (now branded Gemini Notebook) is the rare Google AI product with a crisp job: put documents in, ask questions, get answers tied to those pages. Audio overviews are a bonus, not the product. It will not replace Perplexity for the live web or Cursor for a repo. Students and researchers who drown in PDFs get generous limits on the free tier, while higher quotas bundle into Google AI Plus/Pro rather than a standalone subscription.",
   "notes": [
     "Upload quality beats prompt cleverness",
     "Keep sensitive docs out unless your Workspace policy allows it",

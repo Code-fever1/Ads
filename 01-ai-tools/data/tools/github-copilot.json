@@ -39,7 +39,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "The low-friction plugin. Half the price of Cursor Pro for many individuals. Weaker as a standalone agentic IDE.",
-  "body": "Copilot’s win is procurement and habit. It lives in the editor you already open, talks to the repo you already host on GitHub, and costs less than the AI-native IDEs at the individual Pro tier. In 2026 it also routes across models and meters some usage as credits, so the sticker $10 is not always the invoice. For enterprises, Copilot is the default because IT already bought GitHub. For a solo Next.js shop, Cursor still feels like the more complete product. Pricing page reviewed 19 Sep 2026.",
+  "body": "Copilot’s win is procurement and habit. It lives in the editor you already open, talks to the repo you already host on GitHub, and costs less than AI-native IDEs at the individual Pro tier ($10/mo monthly, ~$8.33/mo annual). It also routes across models and meters premium usage as credits. For enterprises, Copilot is the default because IT already bought GitHub. For a solo Next.js shop, Cursor still feels like the more complete editor.",
   "notes": [
     "Watch the credits policy, not only the seat fee",
     "Business/Enterprise add the compliance story",

@@ -39,7 +39,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "The automation tool we actually self-host. Fair-code, execution-priced cloud, and a real code node.",
-  "body": "n8n is how you keep Zapier’s idea without renting every execution at consumer SaaS rates. Self-hosting is the point for a lot of us. Cloud is there when you do not want a VPS. Agents and AI nodes exist; they are not a reason to ignore error handling. We re-read n8n’s public pricing on 18 Sep 2026. If you outgrow Make/Zapier on cost, start here before writing a custom worker.",
+  "body": "n8n is how you keep Zapier’s idea without renting every execution at consumer SaaS rates. Self-hosting the Community Edition is free for a lot of us, while n8n Cloud is billed in EUR by workflow executions (Starter €24/mo monthly or €20/mo annual). Agents and AI nodes exist; they are not a reason to ignore error handling. If you outgrow Make or Zapier on cost, start here before writing a custom worker.",
   "notes": [
     "Self-hosting on a modest VPS or private server keeps operational costs predictable as workflows grow.",
     "Log failures. Silent workflows destroy trust.",

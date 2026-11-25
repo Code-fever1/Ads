@@ -39,7 +39,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "Prompt-to-deck. Fine for internal reviews. Dangerous if you present it to a client without editing.",
-  "body": "Gamma is the slide version of Lovable: fast, generic until you push it, and a gift when you need ten screens by 5pm. Export and edit. Do not confuse a generated deck with a strategy. Plans checked 16 Sep 2026.",
+  "body": "Gamma is the slide version of Lovable: fast, generic until you push it, and a gift when you need ten screens by 5pm. Export and edit. Do not confuse a generated deck with a strategy.",
   "notes": [
     "Replace stock claims with your numbers",
     "Check contrast; generated themes fail WCAG often",

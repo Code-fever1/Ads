@@ -38,7 +38,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "The default no-code glue. Enormous app catalog. Task meters are the business.",
-  "body": "Zapier still wins when the app you need is obscure and you are not going to write a webhook. AI agents (Central and friends) are extra. For a jobs board or an AI directory, Zapier can push “new listing” alerts. For high volume, n8n or a worker is cheaper. Pricing page checked 18 Sep 2026.",
+  "body": "Zapier still wins when the app you need is obscure and you are not going to write a webhook. AI agents (Central and friends) sit on top of the catalog. The free plan caps out at 100 tasks/month on two-step Zaps, while Professional starts at $29.99/mo monthly ($19.99/mo annual). For high volume, self-hosted n8n or a custom worker is cheaper.",
   "notes": [
     "Count tasks before you celebrate a multi-step Zap",
     "Prefer official apps over scraping",

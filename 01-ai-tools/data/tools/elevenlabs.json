@@ -38,7 +38,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "The default high-quality voice API. Cheap to start, easy to overspend on characters.",
-  "body": "ElevenLabs made TTS good enough for shipping in an app. The ethical line is consent. Kiln will not list “undetectable voice clone of a celebrity” tutorials. Starter pricing is one of the better on-ramps in audio. Character meters still surprise people. Public pricing reviewed 18 Sep 2026.",
+  "body": "ElevenLabs made TTS good enough for shipping in an app. The ethical line is consent. Kiln will not list “undetectable voice clone of a celebrity” tutorials. Character meters still surprise people, so check official tier limits before scaling.",
   "notes": [
     "Use instant voice cloning only with a signed release",
     "Cache generated audio; do not regenerate the same line",

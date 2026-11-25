@@ -40,7 +40,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "A research console that retrieves the web and shows sources. Use it when ChatGPT would invent a citation.",
-  "body": "Perplexity is the tool we open before we write, not after. It searches, cites, and lets you narrow the corpus (web, academic, or social). You can route some queries through third-party models, which is useful and easy to overspend. It is a weak daily writer compared with Claude and a weak coder compared with Cursor. That is fine. Rankings that call it a ChatGPT killer miss the job. Last walked the Pro marketing page on 18 Sep 2026.",
+  "body": "Perplexity is the tool we open before we write, not after. It searches, cites, and lets you narrow the corpus (web, academic, or social). You can route some queries through third-party models on Pro ($20/mo monthly or $17/mo annual), which is useful and easy to overspend. It is a weak daily writer compared with Claude and a weak coder compared with Cursor. Rankings that call it a ChatGPT killer miss the job.",
   "notes": [
     "Force source mode when the topic is even slightly factual",
     "Pro is worth it if this replaces a pile of Google tabs",

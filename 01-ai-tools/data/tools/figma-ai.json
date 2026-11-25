@@ -38,7 +38,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "AI that emits Figma objects. That single fact beats a hundred screenshot generators.",
-  "body": "If the file has to be a Figma file, generate in Figma. Everything else is a picture of a UI. Feature names and credit bundles shift; we confirmed AI is still a first-party Figma surface on 16 Sep 2026. v0 is the engineer-facing cousin.",
+  "body": "If the file has to be a Figma file, generate in Figma. Everything else is a picture of a UI. AI is a credit allowance inside Figma seats rather than a separate product—Starter includes limited daily/monthly AI credits, while Professional Full seats include a larger monthly pool. v0 is the engineer-facing cousin.",
   "notes": [
     "Design systems still need humans",
     "Do not paste generated screens into production without contrast checks",

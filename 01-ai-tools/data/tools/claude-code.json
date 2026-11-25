@@ -40,7 +40,7 @@
   "verifiedBy": "Kiln editorial",
   "status": "active",
   "summary": "A terminal agent with the whole repo in context. Slow and pricey if you use it for every semicolon.",
-  "body": "Claude Code is not an editor theme. It is an agent that reads the project, plans, and edits across files. That is why CTOs put it on architecture and migrations, then keep Cursor or Copilot for the daily keystrokes. The $20 Claude Pro bundle is the on-ramp. People who let it run all afternoon land on Max. If your only complaint about Copilot is “it does not rewrite the module,” try this before buying a $200 Ultra IDE plan. Site and bundle notes checked 19 Sep 2026.",
+  "body": "Claude Code is not an editor theme. It is an agent that reads the project, plans, and edits across files. That is why CTOs put it on architecture and migrations, then keep Cursor or Copilot for the daily keystrokes. It has no standalone price and is not included on Claude’s $0 plan—every paid Claude plan (Pro at $20/mo or $17/mo annual, Max, Team, Enterprise) includes it. People who let it run all afternoon land on Max.",
   "notes": [
     "Use it for jobs with a clear definition of done",
     "Keep secrets out of the working tree you hand the agent",
